@@ -1,3 +1,4 @@
+
 import { Play, Shield, TrendingUp, Users, ArrowRight, Star, CheckCircle, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,7 +13,7 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 px-6 sm:px-8 lg:px-4 overflow-hidden">
+      <section className="relative pt-32 pb-24 px-8 sm:px-8 lg:px-4 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
@@ -89,13 +90,13 @@ const Index = () => {
                 </div>
               </div>
               
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 bg-white/90 backdrop-blur-sm p-3 rounded-2xl shadow-lg border border-neutral-200">
+              {/* Floating elements - hidden on mobile to avoid overlap */}
+              <div className="hidden lg:block absolute -top-4 -right-4 bg-white/90 backdrop-blur-sm p-3 rounded-2xl shadow-lg border border-neutral-200">
                 <div className="text-2xl font-bold text-emerald-600">12%</div>
                 <div className="text-xs text-neutral-500">ROI promedio</div>
               </div>
               
-              <div className="absolute -bottom-4 -left-4 bg-white/90 backdrop-blur-sm p-3 rounded-2xl shadow-lg border border-neutral-200">
+              <div className="hidden lg:block absolute -bottom-4 -left-4 bg-white/90 backdrop-blur-sm p-3 rounded-2xl shadow-lg border border-neutral-200">
                 <div className="text-2xl font-bold text-blue-600">180%</div>
                 <div className="text-xs text-neutral-500">Potencial alcista</div>
               </div>
