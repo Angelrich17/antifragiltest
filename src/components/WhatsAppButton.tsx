@@ -1,0 +1,27 @@
+
+import { MessageCircle } from "lucide-react";
+
+const WhatsAppButton = () => {
+  const phoneNumber = "+447909317995";
+  const message = "Hola, me interesa conocer más sobre las oportunidades de inversión en Buenos Aires.";
+  
+  const handleWhatsAppClick = () => {
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  return (
+    <button
+      onClick={handleWhatsAppClick}
+      className="fixed bottom-8 right-8 z-50 w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+      aria-label="Contactar por WhatsApp"
+    >
+      <MessageCircle className="h-8 w-8" />
+      <div className="absolute right-full mr-4 bg-neutral-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+        Contactar por WhatsApp
+      </div>
+    </button>
+  );
+};
+
+export default WhatsAppButton;
