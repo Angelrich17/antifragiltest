@@ -21,9 +21,9 @@ const Index = () => {
         
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-10">
+            <div className="space-y-10 text-center lg:text-left">
               <div className="space-y-6">
-                <div className="flex items-center space-x-3 mb-6">
+                <div className="flex items-center space-x-3 mb-6 justify-center lg:justify-start">
                   <div className="h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent flex-1"></div>
                   <div className="flex items-center space-x-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-neutral-200">
                     <Sparkles className="h-4 w-4 text-amber-600" />
@@ -32,7 +32,7 @@ const Index = () => {
                   <div className="h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent flex-1"></div>
                 </div>
                 
-                <h1 className="text-6xl lg:text-7xl font-light text-neutral-900 leading-tight tracking-tight">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-neutral-900 leading-tight tracking-tight">
                   Tu acceso al
                   <span className="block font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent">
                     futuro inmobiliario
@@ -40,13 +40,13 @@ const Index = () => {
                   de Buenos Aires
                 </h1>
                 
-                <p className="text-xl text-neutral-600 leading-relaxed font-light max-w-2xl">
+                <p className="text-lg sm:text-xl text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
                   Navegamos la complejidad del mercado argentino para transformar la incertidumbre 
                   en oportunidades de renta excepcionales. Acompañamiento integral desde la estrategia hasta la ejecución.
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button size="lg" className="bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white text-lg px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                   Agenda tu consulta
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -57,7 +57,7 @@ const Index = () => {
                 </Button>
               </div>
               
-              <div className="flex items-center space-x-8 text-sm text-neutral-500">
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-8 text-sm text-neutral-500">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="h-4 w-4 text-emerald-500" />
                   <span>Consulta inicial sin costo</span>
@@ -73,7 +73,7 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="relative lg:ml-8">
+            <div className="relative lg:ml-8 mx-auto lg:mx-0 max-w-lg lg:max-w-none">
               <div className="relative aspect-[4/3] bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 rounded-3xl shadow-2xl overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
