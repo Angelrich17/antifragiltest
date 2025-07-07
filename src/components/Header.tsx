@@ -22,17 +22,17 @@ const Header = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-neutral-200/50">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-amber-600 rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-lg">BA</span>
+          <Link to="/" className="flex items-center space-x-4">
+            <div className="w-10 h-10 bg-gradient-to-br from-neutral-900 to-neutral-700 rounded-xl flex items-center justify-center shadow-sm">
+              <span className="text-white font-bold text-lg">A</span>
             </div>
             <div className="hidden sm:block">
-              <span className="text-xl font-bold text-slate-800">Buenos Aires</span>
-              <span className="text-sm text-slate-500 block leading-none">Investment Group</span>
+              <span className="text-xl font-light text-neutral-900">Antifragile</span>
+              <span className="text-sm text-neutral-500 block leading-none font-light">Advisors</span>
             </div>
           </Link>
 
@@ -42,10 +42,10 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                className={`px-4 py-2 text-sm font-light rounded-xl transition-all duration-200 ${
                   isActive(item.href)
-                    ? "bg-blue-50 text-blue-600"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                    ? "bg-neutral-100 text-neutral-900"
+                    : "text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50"
                 }`}
               >
                 {item.name}
@@ -56,8 +56,8 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/contacto">
-              <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
-                Reservar llamada
+              <Button className="bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl px-6 py-2 font-light shadow-sm">
+                Agenda consulta
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -66,7 +66,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+            className="lg:hidden p-2 rounded-xl text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50 transition-colors"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -74,26 +74,26 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-slate-200 py-4">
+          <div className="lg:hidden border-t border-neutral-200/50 py-6 bg-white/95 backdrop-blur-xl">
             <nav className="flex flex-col space-y-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                  className={`px-4 py-3 text-sm font-light rounded-xl transition-all duration-200 ${
                     isActive(item.href)
-                      ? "bg-blue-50 text-blue-600"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                      ? "bg-neutral-100 text-neutral-900"
+                      : "text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50"
                   }`}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-slate-200">
+              <div className="pt-4 border-t border-neutral-200">
                 <Link to="/contacto" onClick={() => setIsMenuOpen(false)}>
-                  <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
-                    Reservar llamada
+                  <Button className="w-full bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl font-light">
+                    Agenda consulta
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
