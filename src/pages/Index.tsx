@@ -1,4 +1,3 @@
-
 import { Play, Shield, TrendingUp, Users, ArrowRight, Star, CheckCircle, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,7 +11,7 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 px-4 overflow-hidden">
+      <section className="relative pt-32 pb-24 px-6 sm:px-8 lg:px-4 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
@@ -21,7 +20,7 @@ const Index = () => {
         
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-10 text-center lg:text-left">
+            <div className="space-y-10 text-center lg:text-left px-2 sm:px-0">
               <div className="space-y-6">
                 <div className="flex items-center space-x-3 mb-6 justify-center lg:justify-start">
                   <div className="h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent flex-1"></div>
@@ -73,7 +72,7 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="relative lg:ml-8 mx-auto lg:mx-0 max-w-lg lg:max-w-none">
+            <div className="relative lg:ml-8 mx-auto lg:mx-0 max-w-lg lg:max-w-none px-2 sm:px-0">
               <div className="relative aspect-[4/3] bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 rounded-3xl shadow-2xl overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -105,7 +104,7 @@ const Index = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-24 px-4 bg-white border-y border-neutral-100">
+      <section className="py-24 px-6 sm:px-8 lg:px-4 bg-white border-y border-neutral-100">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-neutral-50 rounded-full border border-neutral-200 mb-8">
@@ -177,7 +176,7 @@ const Index = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-neutral-50 to-white">
+      <section className="py-24 px-6 sm:px-8 lg:px-4 bg-gradient-to-br from-neutral-50 to-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-neutral-200 mb-8">
@@ -248,7 +247,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-24 px-6 sm:px-8 lg:px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-neutral-50 rounded-full border border-neutral-200 mb-8">
