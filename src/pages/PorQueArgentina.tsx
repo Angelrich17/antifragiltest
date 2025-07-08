@@ -21,7 +21,7 @@ const PorQueArgentina = () => {
         {/* Hero Content */}
         <section className="relative pt-24 pb-16 px-4 z-10">
           <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 pt-8">
               <h1 className="text-5xl font-bold text-slate-800 mb-6">
                 ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-sky-600">Argentina</span> ahora?
               </h1>
