@@ -36,14 +36,6 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-10 text-center lg:text-left px-2 sm:px-0">
               <div className="space-y-6">
-                <div className="flex items-center space-x-3 mb-6 justify-center lg:justify-start">
-                  <div className="h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent flex-1"></div>
-                  <div className="flex items-center space-x-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-neutral-200">
-                    <Sparkles className="h-4 w-4 text-amber-600" />
-                    <span className="text-sm font-medium text-neutral-700">Inversión Antifragile</span>
-                  </div>
-                  <div className="h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent flex-1"></div>
-                </div>
                 
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-neutral-900 leading-tight tracking-tight">
                   Tu acceso al
