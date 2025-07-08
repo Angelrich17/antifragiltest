@@ -154,7 +154,7 @@ const PorQueArgentina = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
                 <div className="text-center space-y-2">
                   <div className="text-2xl font-bold text-slate-800">$1,200</div>
                   <div className="text-sm text-slate-600">Buenos Aires</div>
@@ -181,6 +181,13 @@ const PorQueArgentina = () => {
                   <div className="text-sm text-slate-600">Madrid</div>
                   <div className="w-full h-2 bg-red-200 rounded-full">
                     <div className="w-full h-2 bg-red-600 rounded-full"></div>
+                  </div>
+                </div>
+                <div className="text-center space-y-2">
+                  <div className="text-2xl font-bold text-slate-800">$50,000</div>
+                  <div className="text-sm text-slate-600">Mónaco</div>
+                  <div className="w-full h-2 bg-purple-200 rounded-full">
+                    <div className="w-full h-2 bg-purple-600 rounded-full"></div>
                   </div>
                 </div>
               </div>
