@@ -19,7 +19,7 @@ const PorQueArgentina = () => {
         </div>
 
         {/* Hero Content */}
-        <section className="relative pt-24 pb-16 px-4 z-10">
+        <section className="relative pt-16 pb-8 px-4 z-10">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16 pt-8">
               <h1 className="text-5xl font-bold text-slate-800 mb-6">
