@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Contacto = () => {
   return (
@@ -61,6 +62,7 @@ const Contacto = () => {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

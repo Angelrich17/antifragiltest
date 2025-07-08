@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Tarifas = () => {
   return (
@@ -182,6 +183,7 @@ const Tarifas = () => {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

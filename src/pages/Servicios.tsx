@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Servicios = () => {
   const services = [
@@ -262,6 +263,7 @@ const Servicios = () => {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

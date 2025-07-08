@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const CasosReales = () => {
   return (
@@ -37,6 +38,7 @@ const CasosReales = () => {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

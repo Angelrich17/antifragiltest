@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Target, Award } from "lucide-react";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Nosotros = () => {
   return (
@@ -74,6 +75,7 @@ const Nosotros = () => {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
