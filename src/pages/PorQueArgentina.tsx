@@ -1,13 +1,10 @@
-
 import { Play, Download, TrendingUp, DollarSign, BarChart3, Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
 const PorQueArgentina = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+  return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
       
       {/* Hero Section */}
@@ -95,9 +92,7 @@ const PorQueArgentina = () => {
             <h2 className="text-4xl font-bold text-slate-800 mb-4">
               Los números no mienten
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Datos históricos que demuestran el momento excepcional para invertir en Buenos Aires
-            </p>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">Datos comparativos que demuestran el momento excepcional para invertir en Buenos Aires</p>
           </div>
           
           
@@ -278,8 +273,6 @@ const PorQueArgentina = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default PorQueArgentina;
