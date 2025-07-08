@@ -5,28 +5,21 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
-
-
 const Index = () => {
   const openCalendly = () => {
     // Simple direct approach - open Calendly in new tab
     window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600');
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-neutral-100">
+  return <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-neutral-100">
       <Header />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 px-8 sm:px-8 lg:px-4 overflow-hidden">
         <div className="absolute inset-0">
           {/* Background image with transparency */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-            style={{
-              backgroundImage: "url('/lovable-uploads/21e4c240-bc54-4cdd-97b6-0f61ba0c6be5.png')"
-            }}
-          ></div>
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
+          backgroundImage: "url('/lovable-uploads/21e4c240-bc54-4cdd-97b6-0f61ba0c6be5.png')"
+        }}></div>
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
@@ -45,10 +38,7 @@ const Index = () => {
                   de Buenos Aires
                 </h1>
                 
-                <p className="text-lg sm:text-xl text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
-                  Navegamos la complejidad del mercado argentino para transformar la incertidumbre 
-                  en oportunidades de renta excepcionales. Acompañamiento integral desde la estrategia hasta la ejecución.
-                </p>
+                <p className="text-lg sm:text-xl text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">Navegamos la complejidad del mercado argentino para transformar las dudas en oportunidades de renta excepcionales. Acompañamiento integral desde la estrategia hasta la ejecución.</p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -272,9 +262,7 @@ const Index = () => {
             <Card className="border-0 bg-gradient-to-br from-white to-neutral-50 shadow-sm hover:shadow-lg transition-all duration-300 rounded-2xl">
               <CardContent className="p-8 space-y-6">
                 <div className="flex text-amber-400 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-current" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
                 </div>
                 <p className="text-neutral-700 italic leading-relaxed font-light text-lg">
                   "ROI del 14% en el primer año. El proceso fue impecablemente profesional 
@@ -295,9 +283,7 @@ const Index = () => {
             <Card className="border-0 bg-gradient-to-br from-white to-neutral-50 shadow-sm hover:shadow-lg transition-all duration-300 rounded-2xl">
               <CardContent className="p-8 space-y-6">
                 <div className="flex text-amber-400 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-current" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
                 </div>
                 <p className="text-neutral-700 italic leading-relaxed font-light text-lg">
                   "Operación 100% remota desde Madrid. Seguridad jurídica absoluta 
@@ -318,9 +304,7 @@ const Index = () => {
             <Card className="border-0 bg-gradient-to-br from-white to-neutral-50 shadow-sm hover:shadow-lg transition-all duration-300 rounded-2xl md:col-span-2 lg:col-span-1">
               <CardContent className="p-8 space-y-6">
                 <div className="flex text-amber-400 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-current" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
                 </div>
                 <p className="text-neutral-700 italic leading-relaxed font-light text-lg">
                   "Mejor decisión de inversión en años. Combina rentabilidad 
@@ -352,8 +336,6 @@ const Index = () => {
 
       <Footer />
       <WhatsAppButton />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
