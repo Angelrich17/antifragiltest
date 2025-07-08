@@ -164,20 +164,20 @@ const PorQueArgentina = () => {
                 </div>
                 <div className="text-center space-y-2">
                   <div className="text-2xl font-bold text-slate-800">$3,800</div>
-                  <div className="text-sm text-slate-600">Ciudad de México</div>
+                  <div className="text-sm text-slate-600">Montevideo</div>
                   <div className="w-full h-2 bg-blue-200 rounded-full">
                     <div className="w-3/4 h-2 bg-blue-600 rounded-full"></div>
                   </div>
                 </div>
                 <div className="text-center space-y-2">
                   <div className="text-2xl font-bold text-slate-800">$4,200</div>
-                  <div className="text-sm text-slate-600">São Paulo</div>
+                  <div className="text-sm text-slate-600">Madrid</div>
                   <div className="w-full h-2 bg-amber-200 rounded-full">
                     <div className="w-4/5 h-2 bg-amber-600 rounded-full"></div>
                   </div>
                 </div>
                 <div className="text-center space-y-2">
-                  <div className="text-2xl font-bold text-slate-800">$8,500</div>
+                  <div className="text-2xl font-bold text-slate-800">$10,000</div>
                   <div className="text-sm text-slate-600">Miami</div>
                   <div className="w-full h-2 bg-red-200 rounded-full">
                     <div className="w-full h-2 bg-red-600 rounded-full"></div>
