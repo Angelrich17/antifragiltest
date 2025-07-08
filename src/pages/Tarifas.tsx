@@ -29,8 +29,8 @@ const Tarifas = () => {
           {/* Services Grid */}
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {/* Personal Shopper Inmobiliario */}
-            <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/70 backdrop-blur-sm">
-              <CardContent className="p-8">
+            <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/70 backdrop-blur-sm flex flex-col h-full">
+              <CardContent className="p-8 flex flex-col h-full">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mr-4">
                     <span className="text-2xl">👤</span>
@@ -42,7 +42,7 @@ const Tarifas = () => {
                   Nos especializamos en encontrar la propiedad ideal para ti, basada en tus gustos, objetivos de inversión y presupuesto.
                 </p>
                 
-                <div className="space-y-3 mb-8">
+                <div className="space-y-3 mb-8 flex-grow">
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-neutral-600">Análisis de zonas con mayor potencial de revalorización</span>
@@ -65,7 +65,7 @@ const Tarifas = () => {
                   </div>
                 </div>
                 
-                <div className="border-t border-neutral-200 pt-6">
+                <div className="border-t border-neutral-200 pt-6 mt-auto">
                   <div className="flex items-center justify-between">
                     <span className="text-neutral-600">Comisión:</span>
                     <span className="text-3xl font-bold text-amber-600">2%</span>
@@ -76,8 +76,8 @@ const Tarifas = () => {
             </Card>
 
             {/* Ingreso de divisas vía crypto */}
-            <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/70 backdrop-blur-sm">
-              <CardContent className="p-8">
+            <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/70 backdrop-blur-sm flex flex-col h-full">
+              <CardContent className="p-8 flex flex-col h-full">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
                     <span className="text-2xl">💱</span>
@@ -89,7 +89,7 @@ const Tarifas = () => {
                   Ofrecemos un servicio ágil y seguro para traer tus dólares al país mediante criptomonedas, con tarifas ultra competitivas.
                 </p>
                 
-                <div className="space-y-3 mb-8">
+                <div className="space-y-3 mb-8 flex-grow">
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-neutral-600">Proceso ágil y seguro</span>
@@ -108,9 +108,9 @@ const Tarifas = () => {
                   </div>
                 </div>
                 
-                <div className="border-t border-neutral-200 pt-6">
+                <div className="border-t border-neutral-200 pt-6 mt-auto">
                   <div className="flex items-center justify-between">
-                    <span className="text-neutral-600">Tarifa desde:</span>
+                    <span className="text-neutral-600">Comisión:</span>
                     <span className="text-3xl font-bold text-blue-600">0%</span>
                   </div>
                   <p className="text-sm text-neutral-500 mt-1">según condiciones de mercado</p>
@@ -119,8 +119,8 @@ const Tarifas = () => {
             </Card>
 
             {/* Gestión Airbnb */}
-            <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/70 backdrop-blur-sm">
-              <CardContent className="p-8">
+            <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/70 backdrop-blur-sm flex flex-col h-full">
+              <CardContent className="p-8 flex flex-col h-full">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mr-4">
                     <span className="text-2xl">🏨</span>
@@ -136,7 +136,7 @@ const Tarifas = () => {
                   ¿Compraste para alquilar? Nos ocupamos de todo el proceso de gestión de tu propiedad.
                 </p>
                 
-                <div className="space-y-3 mb-8">
+                <div className="space-y-3 mb-8 flex-grow">
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-neutral-600">Publicación profesional del anuncio</span>
@@ -159,7 +159,7 @@ const Tarifas = () => {
                   </div>
                 </div>
                 
-                <div className="border-t border-neutral-200 pt-6">
+                <div className="border-t border-neutral-200 pt-6 mt-auto">
                   <div className="flex items-center justify-between">
                     <span className="text-neutral-600">Comisión:</span>
                     <span className="text-3xl font-bold text-red-600">15%</span>
