@@ -100,51 +100,6 @@ const PorQueArgentina = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card className="border-0 shadow-lg">
-              <CardHeader>
-                <CardTitle className="flex items-center text-xl">
-                  <DollarSign className="mr-3 h-6 w-6 text-green-600" />
-                  Precio por m² (USD)
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="h-48 bg-gradient-to-t from-green-100 to-green-50 rounded-lg flex items-end justify-center p-4">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-2">$1,200</div>
-                    <div className="text-sm text-slate-600">Precio actual promedio</div>
-                    <div className="text-xs text-slate-500 mt-1">vs. $3,200 en 2017</div>
-                  </div>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-slate-600">Pico histórico (2017)</span>
-                  <span className="font-semibold text-red-600">-62%</span>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-0 shadow-lg">
-              <CardHeader>
-                <CardTitle className="flex items-center text-xl">
-                  <TrendingUp className="mr-3 h-6 w-6 text-blue-600" />
-                  ROI vs. Inflación
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="h-48 bg-gradient-to-t from-blue-100 to-blue-50 rounded-lg flex items-end justify-center p-4">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">+180%</div>
-                    <div className="text-sm text-slate-600">Ventaja vs. inflación USD</div>
-                    <div className="text-xs text-slate-500 mt-1">Últimos 5 años</div>
-                  </div>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-slate-600">Alquiler anual en USD</span>
-                  <span className="font-semibold text-blue-600">8-12%</span>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
           
           <Card className="border-0 shadow-lg">
             <CardHeader>
