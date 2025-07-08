@@ -11,30 +11,44 @@ const Index = () => {
   const openCalendly = () => {
     console.log('Botón clickeado');
     
-    // Check if Calendly script is loaded, if not load it
-    if (!(window as any).Calendly) {
-      console.log('Cargando script de Calendly...');
+    // Try to use Calendly popup, fallback to direct URL
+    if ((window as any).Calendly) {
+      console.log('Calendly disponible, intentando abrir popup...');
+      try {
+        (window as any).Calendly.initPopupWidget({
+          url: 'https://calendly.com/anruizzzi/30min'
+        });
+        console.log('Popup iniciado exitosamente');
+      } catch (error) {
+        console.error('Error al abrir popup:', error);
+        window.open('https://calendly.com/anruizzzi/30min', '_blank');
+      }
+    } else {
+      console.log('Calendly no disponible, cargando script...');
+      // Load script and try again
       const script = document.createElement('script');
       script.src = 'https://assets.calendly.com/assets/external/widget.js';
       script.async = true;
       script.onload = () => {
-        console.log('Script de Calendly cargado');
+        console.log('Script cargado, intentando popup...');
         if ((window as any).Calendly) {
-          (window as any).Calendly.initPopupWidget({
-            url: 'https://calendly.com/anruizzzi/30min'
-          });
-          console.log('Popup de Calendly iniciado');
+          try {
+            (window as any).Calendly.initPopupWidget({
+              url: 'https://calendly.com/anruizzzi/30min'
+            });
+          } catch (error) {
+            console.error('Error después de cargar script:', error);
+            window.open('https://calendly.com/anruizzzi/30min', '_blank');
+          }
+        } else {
+          window.open('https://calendly.com/anruizzzi/30min', '_blank');
         }
       };
       script.onerror = () => {
-        console.error('Error cargando script de Calendly');
+        console.error('Error cargando script, abriendo URL directa');
+        window.open('https://calendly.com/anruizzzi/30min', '_blank');
       };
       document.head.appendChild(script);
-    } else {
-      console.log('Calendly ya está cargado, abriendo popup...');
-      (window as any).Calendly.initPopupWidget({
-        url: 'https://calendly.com/anruizzzi/30min'
-      });
     }
   };
 
