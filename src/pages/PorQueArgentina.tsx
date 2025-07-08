@@ -13,7 +13,7 @@ const PorQueArgentina = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-slate-800 mb-6">
-              ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-600">Argentina</span> ahora?
+              ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">Argentina</span> ahora?
             </h1>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
               Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica 
