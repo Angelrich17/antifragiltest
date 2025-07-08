@@ -9,47 +9,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   const openCalendly = () => {
-    console.log('Botón clickeado');
-    
-    // Try to use Calendly popup, fallback to direct URL
-    if ((window as any).Calendly) {
-      console.log('Calendly disponible, intentando abrir popup...');
-      try {
-        (window as any).Calendly.initPopupWidget({
-          url: 'https://calendly.com/anruizzzi/30min'
-        });
-        console.log('Popup iniciado exitosamente');
-      } catch (error) {
-        console.error('Error al abrir popup:', error);
-        window.open('https://calendly.com/anruizzzi/30min', '_blank');
-      }
-    } else {
-      console.log('Calendly no disponible, cargando script...');
-      // Load script and try again
-      const script = document.createElement('script');
-      script.src = 'https://assets.calendly.com/assets/external/widget.js';
-      script.async = true;
-      script.onload = () => {
-        console.log('Script cargado, intentando popup...');
-        if ((window as any).Calendly) {
-          try {
-            (window as any).Calendly.initPopupWidget({
-              url: 'https://calendly.com/anruizzzi/30min'
-            });
-          } catch (error) {
-            console.error('Error después de cargar script:', error);
-            window.open('https://calendly.com/anruizzzi/30min', '_blank');
-          }
-        } else {
-          window.open('https://calendly.com/anruizzzi/30min', '_blank');
-        }
-      };
-      script.onerror = () => {
-        console.error('Error cargando script, abriendo URL directa');
-        window.open('https://calendly.com/anruizzzi/30min', '_blank');
-      };
-      document.head.appendChild(script);
-    }
+    // Simple direct approach - open Calendly in new tab
+    window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600');
   };
 
   return (
