@@ -9,8 +9,15 @@ const PorQueArgentina = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section className="relative pt-24 pb-16 px-4 overflow-hidden">
+        <div className="absolute inset-0">
+          {/* Background image with transparency */}
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
+            backgroundImage: "url('/lovable-uploads/8e194d38-6015-40a9-ae62-3263f4341d3a.png')"
+          }}></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/5 to-blue-900/5"></div>
+        </div>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-slate-800 mb-6">
               ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-sky-600">Argentina</span> ahora?
