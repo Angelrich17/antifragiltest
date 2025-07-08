@@ -8,33 +8,23 @@ const PorQueArgentina = () => {
   return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
       
-      {/* Hero Section with extended background */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          {/* Background image with transparency */}
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
-            backgroundImage: "url('/lovable-uploads/8e194d38-6015-40a9-ae62-3263f4341d3a.png')"
-          }}></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/5 to-blue-900/5"></div>
-        </div>
-
-        {/* Hero Content */}
-        <section className="relative pt-16 pb-8 px-4 z-10">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-16 pt-8">
-              <h1 className="text-5xl font-bold text-slate-800 mb-6">
-                ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-sky-600">Argentina</span> ahora?
-              </h1>
-              <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-                Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica 
-                de comprar activos de calidad mundial a precios de mercados emergentes.
-              </p>
-            </div>
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 px-4 py-[56px]">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-slate-800 mb-6">
+              ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-600">Argentina</span> ahora?
+            </h1>
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+              Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica 
+              de comprar activos de calidad mundial a precios de mercados emergentes.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Tesis de Inversión */}
-        <section className="relative py-16 px-4 z-10">
+      {/* Tesis de Inversión */}
+      <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -94,11 +84,10 @@ const PorQueArgentina = () => {
             </div>
           </div>
         </div>
-        </section>
-      </div>
+      </section>
 
       {/* Datos Duros */}
-      <section className="py-8 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+      <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">
