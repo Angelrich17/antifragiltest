@@ -5,27 +5,22 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { useEffect } from "react";
+
 
 const Index = () => {
-  useEffect(() => {
-    // Load Calendly widget script
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
-      if (existingScript) {
-        document.body.removeChild(existingScript);
-      }
-    };
-  }, []);
-
   const openCalendly = () => {
-    if ((window as any).Calendly) {
+    // Check if Calendly script is loaded, if not load it
+    if (!(window as any).Calendly) {
+      const script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      script.onload = () => {
+        (window as any).Calendly.initPopupWidget({
+          url: 'https://calendly.com/anruizzzi/30min'
+        });
+      };
+      document.head.appendChild(script);
+    } else {
       (window as any).Calendly.initPopupWidget({
         url: 'https://calendly.com/anruizzzi/30min'
       });
