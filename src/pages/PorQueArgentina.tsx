@@ -8,8 +8,8 @@ const PorQueArgentina = () => {
   return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-16 px-4 overflow-hidden">
+      {/* Hero Section with extended background */}
+      <div className="relative overflow-hidden">
         <div className="absolute inset-0">
           {/* Background image with transparency */}
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
@@ -17,21 +17,24 @@ const PorQueArgentina = () => {
           }}></div>
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/5 to-blue-900/5"></div>
         </div>
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-slate-800 mb-6">
-              ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-sky-600">Argentina</span> ahora?
-            </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-              Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica 
-              de comprar activos de calidad mundial a precios de mercados emergentes.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      {/* Tesis de Inversión */}
-      <section className="py-16 px-4 bg-white">
+        {/* Hero Content */}
+        <section className="relative pt-24 pb-16 px-4 z-10">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl font-bold text-slate-800 mb-6">
+                ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-sky-600">Argentina</span> ahora?
+              </h1>
+              <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+                Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica 
+                de comprar activos de calidad mundial a precios de mercados emergentes.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Tesis de Inversión */}
+        <section className="relative py-16 px-4 z-10">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -91,7 +94,8 @@ const PorQueArgentina = () => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
+      </div>
 
       {/* Datos Duros */}
       <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
