@@ -9,18 +9,29 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   const openCalendly = () => {
+    console.log('Botón clickeado');
+    
     // Check if Calendly script is loaded, if not load it
     if (!(window as any).Calendly) {
+      console.log('Cargando script de Calendly...');
       const script = document.createElement('script');
       script.src = 'https://assets.calendly.com/assets/external/widget.js';
       script.async = true;
       script.onload = () => {
-        (window as any).Calendly.initPopupWidget({
-          url: 'https://calendly.com/anruizzzi/30min'
-        });
+        console.log('Script de Calendly cargado');
+        if ((window as any).Calendly) {
+          (window as any).Calendly.initPopupWidget({
+            url: 'https://calendly.com/anruizzzi/30min'
+          });
+          console.log('Popup de Calendly iniciado');
+        }
+      };
+      script.onerror = () => {
+        console.error('Error cargando script de Calendly');
       };
       document.head.appendChild(script);
     } else {
+      console.log('Calendly ya está cargado, abriendo popup...');
       (window as any).Calendly.initPopupWidget({
         url: 'https://calendly.com/anruizzzi/30min'
       });
