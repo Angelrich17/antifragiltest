@@ -5,11 +5,21 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 const PorQueArgentina = () => {
-  return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+  return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 relative">
       <Header />
       
+      {/* Background Image with Transparency */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 z-0"
+        style={{
+          backgroundImage: `url('/lovable-uploads/2800bcd7-a602-4571-9144-efe8613f3a87.png')`,
+          top: '80px',
+          height: 'calc(100vh - 80px)'
+        }}
+      />
+      
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 py-[56px]">
+      <section className="pt-24 pb-16 px-4 py-[56px] relative z-10">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-slate-800 mb-6">
@@ -24,7 +34,7 @@ const PorQueArgentina = () => {
       </section>
 
       {/* Tesis de Inversión */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white/80 backdrop-blur-sm relative z-10">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
