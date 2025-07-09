@@ -34,11 +34,11 @@ const PorQueArgentina = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start justify-center sm:justify-center lg:justify-start w-full">
-                <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-lg px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                   <Play className="mr-2 h-5 w-5" />
                   Ver análisis completo
                 </Button>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-10 py-6 rounded-xl border-2 border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50 transition-all duration-300">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-xl border-2 border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50 transition-all duration-300">
                   <Download className="mr-2 h-5 w-5" />
                   Descargar PDF gratuito
                 </Button>
