@@ -19,16 +19,49 @@ const PorQueArgentina = () => {
         <div className="absolute inset-0 bg-white/50 z-0"></div>
 
         {/* Hero Section */}
-        <section className="relative z-10 pt-24 pb-16 px-4 py-[56px]">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl font-bold text-slate-800 mb-6 drop-shadow-lg">
-                ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-600">Argentina</span> ahora?
-              </h1>
-              <p className="text-xl text-slate-700 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-                Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica 
-                de comprar activos de calidad mundial a precios de mercados emergentes.
-              </p>
+        <section className="relative pt-32 pb-24 px-8 sm:px-8 lg:px-4 overflow-hidden">
+          <div className="absolute inset-0">
+            {/* Imagen de fondo + opacidad */}
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+              style={{
+                backgroundImage: "url('/lovable-uploads/2800bcd7-a602-4571-9144-efe8613f3a87.png')"
+              }}
+            ></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
+          </div>
+
+          <div className="container mx-auto max-w-7xl relative z-10">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-10 text-center lg:text-left px-2 sm:px-0">
+                <div className="space-y-6">
+                  <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-neutral-900 leading-tight tracking-tight">
+                    ¿Por qué
+                    <span className="block font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent">
+                      Argentina
+                    </span>
+                    ahora?
+                  </h1>
+                  <p className="text-lg sm:text-xl text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
+                    Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica de
+                    comprar activos de calidad mundial a precios de mercados emergentes.
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative lg:ml-8 mx-auto lg:mx-0 max-w-lg lg:max-w-none px-2 sm:px-0">
+                <div className="relative aspect-[4/3] bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 rounded-3xl shadow-2xl overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Button size="lg" className="bg-white/90 hover:bg-white text-neutral-900 rounded-2xl px-8 py-4">
+                      <Play className="mr-3 h-6 w-6 fill-current" />
+                      <span className="font-medium">Reproducir teaser</span>
+                    </Button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
