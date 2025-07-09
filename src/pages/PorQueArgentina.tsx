@@ -16,7 +16,7 @@ const PorQueArgentina = () => {
           top: '80px',
           left: 0,
           right: 0,
-          height: '120vh'
+          height: 'calc(100vh + 200px)'
         }}
       />
       
