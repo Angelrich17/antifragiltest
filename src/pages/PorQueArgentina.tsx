@@ -10,11 +10,13 @@ const PorQueArgentina = () => {
       
       {/* Background Image with Transparency */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 z-0"
+        className="absolute bg-cover bg-center bg-no-repeat opacity-10 z-0"
         style={{
           backgroundImage: `url('/lovable-uploads/2800bcd7-a602-4571-9144-efe8613f3a87.png')`,
           top: '80px',
-          height: 'calc(100vh - 80px)'
+          left: 0,
+          right: 0,
+          height: '120vh'
         }}
       />
       
