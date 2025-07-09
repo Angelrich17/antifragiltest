@@ -105,69 +105,6 @@ const PorQueArgentina = () => {
         </div>
       </section>
 
-      {/* Tesis de Inversión */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h2 className="text-4xl font-bold text-slate-800">
-                  Tesis de inversión completa
-                </h2>
-                <p className="text-lg text-slate-600 leading-relaxed">
-                  Análisis profundo del mercado inmobiliario argentino: desde fundamentos macroeconómicos 
-                  hasta oportunidades específicas por barrio y tipo de propiedad.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-6">
-                <Card className="border-0 shadow-lg">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Play className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="font-semibold text-slate-800">Versión video</h3>
-                    <p className="text-sm text-slate-600 mt-2">Análisis completo (5-7 min)</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-0 shadow-lg">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Download className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="font-semibold text-slate-800">PDF ejecutivo</h3>
-                    <p className="text-sm text-slate-600 mt-2">Descarga gratuita</p>
-                  </CardContent>
-                </Card>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
-                  <Play className="mr-2 h-5 w-5" />
-                  Ver análisis completo
-                </Button>
-                <Button size="lg" variant="outline" className="border-2">
-                  <Download className="mr-2 h-5 w-5" />
-                  Descargar PDF gratuito
-                </Button>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-2xl overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Button size="lg" variant="secondary" className="bg-white/90 hover:bg-white text-slate-800">
-                    <Play className="mr-2 h-6 w-6 fill-current" />
-                    Reproducir análisis
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Datos Duros */}
       <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto max-w-6xl">
