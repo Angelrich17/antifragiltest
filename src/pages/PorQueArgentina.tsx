@@ -8,51 +8,45 @@ const PorQueArgentina = () => {
   return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
       
-      {/* Hero Section with Background */}
-      <section 
-        className="pt-24 pb-16 px-4 py-[56px] relative bg-cover bg-center bg-no-repeat"
+      {/* Container with Background Image for both Hero and Tesis sections */}
+      <div 
+        className="relative bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/lovable-uploads/2800bcd7-a602-4571-9144-efe8613f3a87.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundImage: `url('/lovable-uploads/2800bcd7-a602-4571-9144-efe8613f3a87.png')`
         }}
       >
-        <div className="absolute inset-0 bg-white/30 z-0"></div>
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-slate-800 mb-6 drop-shadow-lg">
-              ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-600">Argentina</span> ahora?
-            </h1>
-            <p className="text-xl text-slate-700 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-              Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica 
-              de comprar activos de calidad mundial a precios de mercados emergentes.
-            </p>
-          </div>
-        </div>
-      </section>
+        {/* Overlay opcional */}
+        <div className="absolute inset-0 bg-white/50 z-0"></div>
 
-      {/* Tesis de Inversión with Background */}
-      <section 
-        className="py-16 px-4 relative bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/lovable-uploads/2800bcd7-a602-4571-9144-efe8613f3a87.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      >
-        <div className="absolute inset-0 bg-white/40 z-0"></div>
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h2 className="text-4xl font-bold text-slate-800 drop-shadow-lg">
-                  Tesis de inversión completa
-                </h2>
-                <p className="text-lg text-slate-700 leading-relaxed drop-shadow-md">
-                  Análisis profundo del mercado inmobiliario argentino: desde fundamentos macroeconómicos 
-                  hasta oportunidades específicas por barrio y tipo de propiedad.
-                </p>
-              </div>
+        {/* Hero Section */}
+        <section className="relative z-10 pt-24 pb-16 px-4 py-[56px]">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl font-bold text-slate-800 mb-6 drop-shadow-lg">
+                ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-600">Argentina</span> ahora?
+              </h1>
+              <p className="text-xl text-slate-700 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
+                Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica 
+                de comprar activos de calidad mundial a precios de mercados emergentes.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Tesis de Inversión */}
+        <section className="relative z-10 py-16 px-4">
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div className="space-y-6">
+                  <h2 className="text-4xl font-bold text-slate-800 drop-shadow-lg">
+                    Tesis de inversión completa
+                  </h2>
+                  <p className="text-lg text-slate-700 leading-relaxed drop-shadow-md">
+                    Análisis profundo del mercado inmobiliario argentino: desde fundamentos macroeconómicos 
+                    hasta oportunidades específicas por barrio y tipo de propiedad.
+                  </p>
+                </div>
               
               <div className="grid grid-cols-2 gap-6">
                 <Card className="border-0 shadow-lg">
@@ -98,9 +92,10 @@ const PorQueArgentina = () => {
                 </div>
               </div>
             </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Datos Duros */}
       <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
