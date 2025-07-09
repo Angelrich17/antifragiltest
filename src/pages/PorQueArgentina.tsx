@@ -18,15 +18,12 @@ const PorQueArgentina = () => {
         {/* Overlay opcional */}
         <div className="absolute inset-0 bg-white/50 z-0"></div>
 
-        {/* Hero Section */}
         <section className="relative pt-32 pb-24 px-8 sm:px-8 lg:px-4 overflow-hidden">
           <div className="absolute inset-0">
-            {/* Imagen de fondo + opacidad */}
+            {/* Imagen de fondo con baja opacidad */}
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-              style={{
-                backgroundImage: "url('/lovable-uploads/2800bcd7-a602-4571-9144-efe8613f3a87.png')"
-              }}
+              style={{ backgroundImage: "url('/lovable-uploads/2800bcd7-a602-4571-9144-efe8613f3a87.png')" }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
             <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
@@ -35,6 +32,7 @@ const PorQueArgentina = () => {
 
           <div className="container mx-auto max-w-7xl relative z-10">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Texto a la izquierda */}
               <div className="space-y-10 text-center lg:text-left px-2 sm:px-0">
                 <div className="space-y-6">
                   <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-neutral-900 leading-tight tracking-tight">
@@ -45,12 +43,13 @@ const PorQueArgentina = () => {
                     ahora?
                   </h1>
                   <p className="text-lg sm:text-xl text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
-                    Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica de
-                    comprar activos de calidad mundial a precios de mercados emergentes.
+                    Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica
+                    de comprar activos de calidad mundial a precios de mercados emergentes.
                   </p>
                 </div>
               </div>
 
+              {/* Botón teaser a la derecha */}
               <div className="relative lg:ml-8 mx-auto lg:mx-0 max-w-lg lg:max-w-none px-2 sm:px-0">
                 <div className="relative aspect-[4/3] bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 rounded-3xl shadow-2xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
