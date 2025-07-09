@@ -20,11 +20,7 @@ const PorQueArgentina = () => {
 
         <section className="relative pt-32 pb-24 px-8 sm:px-8 lg:px-4 overflow-hidden">
           <div className="absolute inset-0">
-            {/* Imagen de fondo con baja opacidad */}
-            <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-              style={{ backgroundImage: "url('/lovable-uploads/2800bcd7-a602-4571-9144-efe8613f3a87.png')" }}
-            ></div>
+            {/* Efectos visuales sin imagen duplicada */}
             <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
             <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
@@ -67,7 +63,7 @@ const PorQueArgentina = () => {
 
         {/* Tesis de Inversión */}
         <section className="relative z-10 py-16 px-4">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-7xl">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
                 <div className="space-y-6">
