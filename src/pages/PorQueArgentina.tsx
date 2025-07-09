@@ -11,8 +11,8 @@ const PorQueArgentina = () => {
       backgroundImage: `url('/lovable-uploads/b499d954-153b-4ff6-8f76-fb7776c58a03.png')`
     }}
   >
-    <div className="absolute inset-0 bg-white/50 z-0"></div>
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 relative z-10">
+    <div className="absolute inset-0 bg-white/20 z-0"></div>
+    <div className="min-h-screen relative z-10">
       <Header />
       
       {/* Hero Section */}
