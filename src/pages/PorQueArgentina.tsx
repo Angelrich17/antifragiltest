@@ -9,7 +9,7 @@ const PorQueArgentina = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 px-8 sm:px-8 lg:px-4 overflow-hidden">
+      <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-4 overflow-hidden">
         <div className="absolute inset-0">
           {/* Background image with transparency */}
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
