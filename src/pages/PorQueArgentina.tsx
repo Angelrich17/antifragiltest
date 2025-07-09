@@ -8,73 +8,42 @@ const PorQueArgentina = () => {
   return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
       
-      {/* Container with Background Image for both Hero and Tesis sections */}
-      <div 
-        className="relative bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/lovable-uploads/2800bcd7-a602-4571-9144-efe8613f3a87.png')`
-        }}
-      >
-        {/* Overlay opcional */}
-        <div className="absolute inset-0 bg-white/50 z-0"></div>
-
-        <section className="relative pt-32 pb-24 px-8 sm:px-8 lg:px-4 overflow-hidden">
-          <div className="absolute inset-0">
-            {/* Efectos visuales sin imagen duplicada */}
-            <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
-            <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
+      {/* Hero Section */}
+      <section className="relative pt-24 pb-16 px-4 overflow-hidden">
+        <div className="absolute inset-0">
+          {/* Background image with transparency */}
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
+            backgroundImage: "url('/lovable-uploads/8e194d38-6015-40a9-ae62-3263f4341d3a.png')"
+          }}></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/5 to-blue-900/5"></div>
+        </div>
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-slate-800 mb-6">
+              ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-sky-600">Argentina</span> ahora?
+            </h1>
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+              Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica 
+              de comprar activos de calidad mundial a precios de mercados emergentes.
+            </p>
           </div>
+        </div>
+      </section>
 
-          <div className="container mx-auto max-w-7xl relative z-10">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Texto a la izquierda */}
-              <div className="space-y-10 text-center lg:text-left px-2 sm:px-0">
-                <div className="space-y-6">
-                  <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-neutral-900 leading-tight tracking-tight">
-                    ¿Por qué
-                    <span className="block font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent">
-                      Argentina
-                    </span>
-                    ahora?
-                  </h1>
-                  <p className="text-lg sm:text-xl text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
-                    Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica
-                    de comprar activos de calidad mundial a precios de mercados emergentes.
-                  </p>
-                </div>
+      {/* Tesis de Inversión */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h2 className="text-4xl font-bold text-slate-800">
+                  Tesis de inversión completa
+                </h2>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  Análisis profundo del mercado inmobiliario argentino: desde fundamentos macroeconómicos 
+                  hasta oportunidades específicas por barrio y tipo de propiedad.
+                </p>
               </div>
-
-              {/* Botón teaser a la derecha */}
-              <div className="relative lg:ml-8 mx-auto lg:mx-0 max-w-lg lg:max-w-none px-2 sm:px-0">
-                <div className="relative aspect-[4/3] bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 rounded-3xl shadow-2xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Button size="lg" className="bg-white/90 hover:bg-white text-neutral-900 rounded-2xl px-8 py-4">
-                      <Play className="mr-3 h-6 w-6 fill-current" />
-                      <span className="font-medium">Reproducir teaser</span>
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Tesis de Inversión */}
-        <section className="relative z-10 py-16 px-4">
-          <div className="container mx-auto max-w-7xl">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
-                <div className="space-y-6">
-                  <h2 className="text-4xl font-bold text-slate-800 drop-shadow-lg">
-                    Tesis de inversión completa
-                  </h2>
-                  <p className="text-lg text-slate-700 leading-relaxed drop-shadow-md">
-                    Análisis profundo del mercado inmobiliario argentino: desde fundamentos macroeconómicos 
-                    hasta oportunidades específicas por barrio y tipo de propiedad.
-                  </p>
-                </div>
               
               <div className="grid grid-cols-2 gap-6">
                 <Card className="border-0 shadow-lg">
@@ -120,10 +89,9 @@ const PorQueArgentina = () => {
                 </div>
               </div>
             </div>
-            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       {/* Datos Duros */}
       <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
