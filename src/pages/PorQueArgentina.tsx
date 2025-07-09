@@ -5,18 +5,20 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 const PorQueArgentina = () => {
-  return <div 
-    className="relative bg-cover bg-center bg-no-repeat"
-    style={{
-      backgroundImage: `url('/lovable-uploads/b499d954-153b-4ff6-8f76-fb7776c58a03.png')`
-    }}
-  >
-    <div className="absolute inset-0 bg-white/20 z-0"></div>
-    <div className="min-h-screen relative z-10">
+  return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 px-8 sm:px-8 lg:px-4 overflow-hidden">
+        <div className="absolute inset-0">
+          {/* Background image with transparency */}
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
+            backgroundImage: "url('/lovable-uploads/b499d954-153b-4ff6-8f76-fb7776c58a03.png')"
+          }}></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
+        </div>
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             
@@ -355,7 +357,6 @@ const PorQueArgentina = () => {
 
       <Footer />
       <WhatsAppButton />
-    </div>
-  </div>;
+    </div>;
 };
 export default PorQueArgentina;
