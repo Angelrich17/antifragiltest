@@ -1,4 +1,4 @@
-import whatsappLogo from "@/assets/whatsapp-logo.png";
+
 
 const WhatsAppButton = () => {
   const phoneNumber = "+447909317995";
@@ -12,13 +12,13 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-8 right-8 z-50 w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+      className="fixed bottom-8 right-8 z-50 shadow-lg hover:shadow-xl transition-all duration-300 group"
       aria-label="Contactar por WhatsApp"
     >
       <img 
-        src={whatsappLogo} 
+        src="/lovable-uploads/e355cc0f-59a3-456f-8360-e64ba6394c00.png" 
         alt="WhatsApp" 
-        className="h-10 w-10" 
+        className="h-16 w-16 hover:scale-110 transition-transform duration-300" 
       />
       <div className="absolute right-full mr-4 bg-neutral-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
         Contactar por WhatsApp
