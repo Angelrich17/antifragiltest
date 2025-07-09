@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 const PorQueArgentina = () => {
-  return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+  return <div className="min-h-screen overflow-x-hidden bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
       
       {/* Hero Section */}
@@ -16,8 +16,8 @@ const PorQueArgentina = () => {
             backgroundImage: "url('/lovable-uploads/b499d954-153b-4ff6-8f76-fb7776c58a03.png')"
           }}></div>
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-2 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-2 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
         </div>
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
