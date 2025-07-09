@@ -1,11 +1,8 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, ArrowRight, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Footer = () => {
-  return (
-    <footer className="bg-neutral-900 text-white">
+  return <footer className="bg-neutral-900 text-white">
       <div className="container mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
           {/* Company Info */}
@@ -26,11 +23,11 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-neutral-500" />
-                <span className="text-neutral-300 font-light">hello@antifragile-advisors.com</span>
+                <span className="text-neutral-300 font-light">info@antifragileadvisors.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-neutral-500" />
-                <span className="text-neutral-300 font-light">+54 11 xxxx-xxxx</span>
+                <span className="text-neutral-300 font-light">+447832775774</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-neutral-500" />
@@ -81,11 +78,7 @@ const Footer = () => {
               y actualizaciones regulatorias.
             </p>
             <div className="space-y-4">
-              <input
-                type="email"
-                placeholder="Tu email"
-                className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-neutral-500 font-light"
-              />
+              <input type="email" placeholder="Tu email" className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-neutral-500 font-light" />
               <Button className="w-full bg-gradient-to-r from-white to-neutral-100 hover:from-neutral-100 hover:to-neutral-200 text-neutral-900 rounded-xl font-light">
                 Suscribirse
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -110,8 +103,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
