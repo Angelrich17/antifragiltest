@@ -23,7 +23,7 @@ const PorQueArgentina = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             
             {/* Columna izquierda: Texto y botones */}
-            <div className="space-y-10 text-center lg:text-left px-2 sm:px-0">
+            <div className="space-y-10 text-center sm:text-center lg:text-left px-4 sm:px-6 lg:px-0">
               <div className="space-y-6">
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-slate-900 leading-tight tracking-tight">
                   ¿Por qué <span className="font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent">Argentina</span> ahora?
@@ -33,12 +33,12 @@ const PorQueArgentina = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-lg px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start justify-center sm:justify-center lg:justify-start w-full">
+                <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-lg px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                   <Play className="mr-2 h-5 w-5" />
                   Ver análisis completo
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-10 py-6 rounded-xl border-2 border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50 transition-all duration-300">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-10 py-6 rounded-xl border-2 border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50 transition-all duration-300">
                   <Download className="mr-2 h-5 w-5" />
                   Descargar PDF gratuito
                 </Button>
