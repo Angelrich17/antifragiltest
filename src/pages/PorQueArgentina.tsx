@@ -1,4 +1,4 @@
-import { Play, Download, TrendingUp, DollarSign, BarChart3, Shield, ArrowRight } from "lucide-react";
+import { Play, Download, TrendingUp, DollarSign, BarChart3, Shield, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
@@ -9,23 +9,89 @@ const PorQueArgentina = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 px-4 overflow-hidden">
-        <div className="absolute inset-0">
-          {/* Background image with transparency */}
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
-            backgroundImage: "url('/lovable-uploads/8e194d38-6015-40a9-ae62-3263f4341d3a.png')"
-          }}></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/5 to-blue-900/5"></div>
-        </div>
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-slate-800 mb-6">
-              ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-sky-600">Argentina</span> ahora?
-            </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-              Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica 
-              de comprar activos de calidad mundial a precios de mercados emergentes.
-            </p>
+      <section className="relative pt-32 pb-24 px-8 sm:px-8 lg:px-4 overflow-hidden">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Columna izquierda: Texto y botones */}
+            <div className="space-y-10 text-center lg:text-left px-2 sm:px-0">
+              <div className="space-y-6">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-slate-900 leading-tight tracking-tight">
+                  ¿Por qué <span className="font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent">Argentina</span> ahora?
+                </h1>
+                <p className="text-lg sm:text-xl text-slate-700 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
+                  Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica de comprar activos de calidad mundial a precios de mercados emergentes.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-lg px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Play className="mr-2 h-5 w-5" />
+                  Ver análisis completo
+                </Button>
+                <Button size="lg" variant="outline" className="text-lg px-10 py-6 rounded-xl border-2 border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50 transition-all duration-300">
+                  <Download className="mr-2 h-5 w-5" />
+                  Descargar PDF gratuito
+                </Button>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-8 text-sm text-neutral-500">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-4 w-4 text-emerald-500" />
+                  <span>Datos macroeconómicos</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-4 w-4 text-emerald-500" />
+                  <span>Comparativa internacional</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-4 w-4 text-emerald-500" />
+                  <span>Oportunidad histórica</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Columna derecha: video + cards */}
+            <div className="relative lg:ml-8 mx-auto lg:mx-0 max-w-lg lg:max-w-none px-2 sm:px-0">
+              <div className="relative aspect-[4/3] bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl shadow-2xl overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Button size="lg" className="bg-white/90 hover:bg-white text-slate-800 rounded-2xl px-8 py-4">
+                    <Play className="mr-3 h-6 w-6 fill-current" />
+                    <span className="font-medium">Reproducir análisis</span>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Opcional: elementos flotantes si quieres reforzar info clave */}
+              <div className="hidden lg:block absolute -top-4 -right-4 bg-white/90 backdrop-blur-sm p-3 rounded-2xl shadow-lg border border-neutral-200">
+                <div className="text-2xl font-bold text-blue-600">8x</div>
+                <div className="text-xs text-neutral-500">Multiplicador potencial</div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4 mt-6">
+                <Card className="border-0 shadow-lg">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Play className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="font-semibold text-slate-800">Versión video</h3>
+                    <p className="text-sm text-slate-600 mt-2">Análisis completo (5-7 min)</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-0 shadow-lg">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Download className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="font-semibold text-slate-800">PDF ejecutivo</h3>
+                    <p className="text-sm text-slate-600 mt-2">Descarga gratuita</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
