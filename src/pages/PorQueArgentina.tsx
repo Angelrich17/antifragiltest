@@ -5,7 +5,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 const PorQueArgentina = () => {
-  return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+  return <div 
+    className="relative bg-cover bg-center bg-no-repeat"
+    style={{
+      backgroundImage: `url('/lovable-uploads/b499d954-153b-4ff6-8f76-fb7776c58a03.png')`
+    }}
+  >
+    <div className="absolute inset-0 bg-white/50 z-0"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 relative z-10">
       <Header />
       
       {/* Hero Section */}
@@ -348,6 +355,7 @@ const PorQueArgentina = () => {
 
       <Footer />
       <WhatsAppButton />
-    </div>;
+    </div>
+  </div>;
 };
 export default PorQueArgentina;
