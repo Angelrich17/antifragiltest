@@ -5,24 +5,20 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 const PorQueArgentina = () => {
-  return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 relative">
+  return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
       
-      {/* Background Image with Transparency */}
-      <div 
-        className="absolute bg-cover bg-center bg-no-repeat opacity-10 z-0"
+      {/* Hero Section with Background */}
+      <section 
+        className="pt-24 pb-16 px-4 py-[56px] relative bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('/lovable-uploads/2800bcd7-a602-4571-9144-efe8613f3a87.png')`,
-          top: '80px',
-          left: 0,
-          right: 0,
-          height: 'calc(100vh + 200px)'
+          backgroundBlendMode: 'overlay',
+          backgroundColor: 'rgba(248, 250, 252, 0.9)'
         }}
-      />
-      
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 py-[56px] relative z-10">
-        <div className="container mx-auto max-w-6xl">
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/90 to-blue-50/90"></div>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-slate-800 mb-6">
               ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-600">Argentina</span> ahora?
@@ -35,9 +31,17 @@ const PorQueArgentina = () => {
         </div>
       </section>
 
-      {/* Tesis de Inversión */}
-      <section className="py-16 px-4 bg-white/80 backdrop-blur-sm relative z-10">
-        <div className="container mx-auto max-w-6xl">
+      {/* Tesis de Inversión with Background */}
+      <section 
+        className="py-16 px-4 relative bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/2800bcd7-a602-4571-9144-efe8613f3a87.png')`,
+          backgroundBlendMode: 'overlay',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)'
+        }}
+      >
+        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
