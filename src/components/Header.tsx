@@ -56,12 +56,13 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/contacto">
-              <Button className="bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl px-6 py-2 font-light shadow-sm">
-                Agenda consulta
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
+            <Button 
+              className="bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl px-6 py-2 font-light shadow-sm"
+              onClick={() => window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600')}
+            >
+              Agenda consulta
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -92,12 +93,16 @@ const Header = () => {
                 </Link>
               ))}
               <div className="pt-4 border-t border-neutral-200">
-                <Link to="/contacto" onClick={() => setIsMenuOpen(false)}>
-                  <Button className="w-full bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl font-light">
-                    Agenda consulta
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
+                <Button 
+                  className="w-full bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl font-light"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600');
+                  }}
+                >
+                  Agenda consulta
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
               </div>
             </nav>
           </div>
