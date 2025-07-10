@@ -287,7 +287,7 @@ const PorQueArgentina = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
-              onClick={() => window.open('https://calendly.com/antifragileadvisors', '_blank')}
+              onClick={() => window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600')}
             >
               Agenda una consulta personalizada
               <ArrowRight className="ml-2 h-5 w-5" />
