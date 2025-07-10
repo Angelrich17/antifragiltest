@@ -195,7 +195,7 @@ const Proceso = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+      <section className="hidden sm:block py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">
