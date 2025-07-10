@@ -9,7 +9,7 @@ const PorQueArgentina = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-4 overflow-hidden">
+      <section className="relative pt-32 pb-24 px-6 sm:px-6 lg:px-4 overflow-hidden">
         <div className="absolute inset-0">
           {/* Background image with transparency */}
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
@@ -23,7 +23,7 @@ const PorQueArgentina = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             
             {/* Columna izquierda: Texto y botones */}
-            <div className="space-y-10 text-center sm:text-center lg:text-left">
+            <div className="space-y-10 text-center sm:text-center lg:text-left px-2 sm:px-0">
               <div className="space-y-6">
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-slate-900 leading-tight tracking-tight">
                   ¿Por qué <span className="font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent">Argentina</span> ahora?
