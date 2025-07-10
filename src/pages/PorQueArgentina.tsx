@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 const PorQueArgentina = () => {
-  return <div className="min-h-screen overflow-x-hidden bg-gradient-to-br from-slate-50 to-blue-50">
+  return <div className="min-h-screen max-w-screen overflow-x-hidden bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
       
       {/* Hero Section */}
@@ -19,11 +19,11 @@ const PorQueArgentina = () => {
           <div className="hidden sm:block absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
           <div className="hidden sm:block absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
         </div>
-        <div className="container mx-auto max-w-7xl">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             
             {/* Columna izquierda: Texto y botones */}
-            <div className="space-y-10 text-center sm:text-center lg:text-left px-4 sm:px-6 lg:px-0">
+            <div className="space-y-10 text-center sm:text-center lg:text-left">
               <div className="space-y-6">
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-slate-900 leading-tight tracking-tight">
                   ¿Por qué <span className="font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent">Argentina</span> ahora?
