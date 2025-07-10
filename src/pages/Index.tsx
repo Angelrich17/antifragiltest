@@ -14,7 +14,7 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 px-6 sm:px-6 lg:px-4 overflow-hidden">
+      <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           {/* Background image with transparency */}
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
@@ -25,7 +25,7 @@ const Index = () => {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="container mx-auto max-w-7xl relative z-10">
+        <div className="container mx-auto max-w-7xl relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-10 text-center lg:text-left px-2 sm:px-0">
               <div className="space-y-6">
