@@ -72,15 +72,19 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div className="space-y-8">
-            <h3 className="text-lg font-light">Intelligence Report</h3>
+            <h3 className="text-lg font-light">Newsletter</h3>
             <p className="text-neutral-400 font-light">
-              Análisis exclusivo del mercado argentino, oportunidades de inversión 
-              y actualizaciones regulatorias.
+              Recibe artículos exclusivos sobre la actualidad del mundo inmobiliario 
+              y económico de Argentina directamente en tu inbox.
             </p>
             <div className="space-y-4">
-              <input type="email" placeholder="Tu email" className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-neutral-500 font-light" />
+              <input 
+                type="email" 
+                placeholder="Tu email" 
+                className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-neutral-500 font-light" 
+              />
               <Button className="w-full bg-gradient-to-r from-white to-neutral-100 hover:from-neutral-100 hover:to-neutral-200 text-neutral-900 rounded-xl font-light">
-                Suscribirse
+                Suscribirse al Newsletter
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
