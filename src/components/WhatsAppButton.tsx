@@ -12,7 +12,7 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-4 z-40 sm:right-6 transition-all duration-300 group"
+      className="hidden sm:block fixed bottom-6 right-4 z-40 sm:right-6 transition-all duration-300 group"
       aria-label="Contactar por WhatsApp"
     >
       <img 
