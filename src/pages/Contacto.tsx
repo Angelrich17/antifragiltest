@@ -58,6 +58,71 @@ const Contacto = () => {
             </div>
           </div>
 
+          {/* Formulario de Contacto */}
+          <div className="max-w-2xl mx-auto mb-16">
+            <div className="bg-white/50 backdrop-blur-sm rounded-2xl border border-neutral-200 p-8">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-light text-neutral-900 mb-4">Formulario de Contacto</h3>
+                <p className="text-neutral-600 font-light">
+                  Envíanos tu consulta y te responderemos a la brevedad
+                </p>
+              </div>
+              
+              <form className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
+                    Nombre completo
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-200 bg-white/70 backdrop-blur-sm"
+                    placeholder="Tu nombre completo"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
+                    Correo electrónico
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-200 bg-white/70 backdrop-blur-sm"
+                    placeholder="tu@email.com"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-2">
+                    Mensaje
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-200 bg-white/70 backdrop-blur-sm resize-none"
+                    placeholder="Cuéntanos sobre tu consulta o interés en inversiones inmobiliarias..."
+                    required
+                  ></textarea>
+                </div>
+                
+                <div className="text-center">
+                  <button
+                    type="submit"
+                    className="bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl px-8 py-4 font-light transition-all duration-300 hover:shadow-lg"
+                  >
+                    Enviar mensaje
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
           <div className="text-center">
             <Link to="/">
               <Button size="lg" className="bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl px-8 py-4 font-light">
