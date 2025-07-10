@@ -38,14 +38,22 @@ const Contacto = () => {
               </p>
             </div>
 
-            <div className="text-center space-y-6 p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-neutral-200">
+            <div 
+              className="text-center space-y-6 p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-neutral-200 cursor-pointer hover:bg-white/70 transition-all duration-300"
+              onClick={() => {
+                const phoneNumber = "+447909317995";
+                const message = "Hola, me interesa conocer más sobre las oportunidades de inversión en Buenos Aires.";
+                const whatsappUrl = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+              }}
+            >
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl flex items-center justify-center mx-auto">
                 <MessageCircle className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-2xl font-light text-neutral-900">Contacto Directo</h3>
               <p className="text-neutral-600 font-light leading-relaxed">
                 Para consultas específicas o información adicional. 
-                WhatsApp Business próximamente disponible.
+                Click aquí para contactar por WhatsApp.
               </p>
             </div>
           </div>
