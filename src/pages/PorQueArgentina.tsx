@@ -118,7 +118,7 @@ const PorQueArgentina = () => {
           
           <Card className="border-0 shadow-lg">
             <CardHeader>
-              <CardTitle className="flex items-center text-2xl">
+              <CardTitle className="flex items-center justify-center text-2xl">
                 <BarChart3 className="mr-3 h-7 w-7 text-amber-600" />
                 Comparativa internacional (USD/m²)
               </CardTitle>
