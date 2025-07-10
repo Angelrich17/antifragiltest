@@ -284,7 +284,11 @@ const PorQueArgentina = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+              onClick={() => window.open('https://calendly.com/antifragileadvisors', '_blank')}
+            >
               Agenda una consulta personalizada
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
