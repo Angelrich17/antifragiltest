@@ -68,7 +68,7 @@ const Contacto = () => {
                 </p>
               </div>
               
-              <form className="space-y-6">
+              <form action="https://formsubmit.co/info@antifragileadvisors.com" method="POST" className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
                     Nombre completo
