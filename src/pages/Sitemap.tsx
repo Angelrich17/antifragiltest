@@ -52,19 +52,19 @@ const Sitemap = () => {
     <loc>https://antifragileadvisors.com/nosotros</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://antifragileadvisors.com/blog</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://antifragileadvisors.com/contacto</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.4</priority>
   </url>
 </urlset>`;
 
