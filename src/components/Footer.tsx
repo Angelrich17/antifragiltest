@@ -1,7 +1,48 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, ArrowRight, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubscribe = async () => {
+    if (!email || !email.includes('@')) {
+      toast({
+        title: "Email inválido",
+        description: "Por favor ingresa un email válido",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const { error } = await supabase.functions.invoke('newsletter-subscribe', {
+        body: { email }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "¡Suscripción exitosa!",
+        description: "Te has suscrito al newsletter correctamente",
+      });
+      setEmail("");
+    } catch (error: any) {
+      toast({
+        title: "Error en la suscripción",
+        description: error.message || "Hubo un problema al suscribirte",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return <footer className="bg-neutral-900 text-white">
       <div className="container mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
@@ -81,10 +122,16 @@ const Footer = () => {
               <input 
                 type="email" 
                 placeholder="Tu email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-neutral-500 font-light" 
               />
-              <Button className="w-full bg-gradient-to-r from-white to-neutral-100 hover:from-neutral-100 hover:to-neutral-200 text-neutral-900 rounded-xl font-light">
-                Suscribirse al Newsletter
+              <Button 
+                onClick={handleSubscribe}
+                disabled={isLoading}
+                className="w-full bg-gradient-to-r from-white to-neutral-100 hover:from-neutral-100 hover:to-neutral-200 text-neutral-900 rounded-xl font-light disabled:opacity-50"
+              >
+                {isLoading ? "Suscribiendo..." : "Suscribirse al Newsletter"}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
