@@ -3,6 +3,8 @@ import Plot from 'react-plotly.js';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Badge } from '@/components/ui/badge';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { RotateCcw } from 'lucide-react';
 
 interface DatosPorBarrio {
   [barrio: string]: {
@@ -152,6 +154,16 @@ const PreciosHistoricos = () => {
                 </label>
               </div>
             ))}
+          </div>
+          
+          {/* Aviso para móviles */}
+          <div className="md:hidden mb-4">
+            <Alert>
+              <RotateCcw className="h-4 w-4" />
+              <AlertDescription>
+                Para una mejor visualización en móvil, gira tu dispositivo horizontalmente
+              </AlertDescription>
+            </Alert>
           </div>
           
           <div className="w-full h-96 border rounded-lg bg-white">
