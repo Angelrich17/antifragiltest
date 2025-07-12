@@ -13,8 +13,8 @@ const PorQueArgentina = () => {
         <div className="absolute inset-0">
           {/* Background image with transparency */}
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
-            backgroundImage: "url('/lovable-uploads/b499d954-153b-4ff6-8f76-fb7776c58a03.png')"
-          }}></div>
+          backgroundImage: "url('/lovable-uploads/b499d954-153b-4ff6-8f76-fb7776c58a03.png')"
+        }}></div>
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
           <div className="hidden sm:block absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
           <div className="hidden sm:block absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
@@ -238,7 +238,7 @@ const PorQueArgentina = () => {
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-slate-800">Riesgo: Inestabilidad política/económica</h3>
+                    <h3 className="text-xl font-bold text-slate-800">Riesgo: Inestabilidad política / económica</h3>
                     <p className="text-slate-600 leading-relaxed">
                       <strong>Mitigación:</strong> Inversión en activos físicos (ladrillo) denominados en USD. 
                       Diversificación por barrios y tipos de propiedad. Contratos de alquiler en moneda dura.
@@ -284,11 +284,7 @@ const PorQueArgentina = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base"
-              onClick={() => window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600')}
-            >
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base" onClick={() => window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600')}>
               Agenda una consulta personalizada
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
