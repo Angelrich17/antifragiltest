@@ -162,7 +162,7 @@ const Index = () => {
       {/* Philosophy Section */}
       <section className="py-24 px-6 sm:px-8 lg:px-4 bg-white border-y border-neutral-100">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 sm:mb-20">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-neutral-50 rounded-full border border-neutral-200 mb-8">
               <span className="text-sm font-medium text-neutral-600">Filosofía Antifragile</span>
             </div>
