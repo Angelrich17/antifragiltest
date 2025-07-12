@@ -14,6 +14,7 @@ import Tarifas from "./pages/Tarifas";
 import Nosotros from "./pages/Nosotros";
 import Contacto from "./pages/Contacto";
 import Blog from "./pages/Blog";
+import Sitemap from "./pages/Sitemap";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/sitemap.xml" element={<Sitemap />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
