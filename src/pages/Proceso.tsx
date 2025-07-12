@@ -259,7 +259,8 @@ const Proceso = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contacto">
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-lg px-8 py-6">
-                  Agenda tu consulta gratuita
+                  <span className="sm:hidden">Agenda tu consulta</span>
+                  <span className="hidden sm:inline">Agenda tu consulta gratuita</span>
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
