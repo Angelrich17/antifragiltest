@@ -166,7 +166,7 @@ const Index = () => {
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-neutral-50 rounded-full border border-neutral-200 mb-8">
               <span className="text-sm font-medium text-neutral-600">Filosofía Antifragile</span>
             </div>
-            <h2 className="text-5xl font-light text-neutral-900 mb-6 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-neutral-900 mb-6 tracking-tight">
               Prosperamos en la
               <span className="font-medium text-amber-600"> incertidumbre</span>
             </h2>
