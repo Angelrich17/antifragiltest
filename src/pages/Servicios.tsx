@@ -218,7 +218,8 @@ const Servicios = () => {
             </p>
             <Link to="/contacto">
               <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800">
-                Consulta personalizada gratuita
+                <span className="sm:hidden">Consulta personalizada</span>
+                <span className="hidden sm:inline">Consulta personalizada gratuita</span>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
