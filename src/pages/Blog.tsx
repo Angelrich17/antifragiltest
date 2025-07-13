@@ -155,58 +155,6 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Featured Article */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center">Artículo destacado</h2>
-          
-          {featuredArticles.filter(article => article.featured).map((article) => (
-            <Card key={article.id} className="border-0 shadow-2xl overflow-hidden">
-              <div className="grid lg:grid-cols-2 gap-0">
-                <div className="aspect-[4/3] lg:aspect-auto">
-                  <img 
-                    src={article.image} 
-                    alt={article.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-8 lg:p-12 flex flex-col justify-center space-y-6">
-                  <div className="space-y-4">
-                    <Badge className="w-fit">{article.category}</Badge>
-                    <h3 className="text-3xl font-bold text-slate-800 leading-tight">
-                      {article.title}
-                    </h3>
-                    <p className="text-lg text-slate-600 leading-relaxed">
-                      {article.excerpt}
-                    </p>
-                  </div>
-                  
-                  <div className="flex items-center justify-between pt-4 border-t border-slate-200">
-                    <div className="flex items-center space-x-4 text-sm text-slate-500">
-                      <div className="flex items-center space-x-1">
-                        <User className="h-4 w-4" />
-                        <span>{article.author}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Calendar className="h-4 w-4" />
-                        <span>{article.date}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Clock className="h-4 w-4" />
-                        <span>{article.readTime} lectura</span>
-                      </div>
-                    </div>
-                    <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
-                      Leer artículo
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </section>
 
       {/* Articles Grid */}
       <section className="py-16 px-4 bg-white">
