@@ -23,7 +23,7 @@ const ArticleDetail = () => {
       date: "13 Julio 2025",
       readTime: "12 min",
       category: "Análisis",
-      image: "/lovable-uploads/8e194d38-6015-40a9-ae62-3263f4341d3a.png",
+      image: "/lovable-uploads/4e8673e3-ad6b-447f-8b19-3a5983846972.png",
       content: `
         <div class="space-y-8">
           <!-- Intro destacado -->
