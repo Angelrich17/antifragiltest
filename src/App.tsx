@@ -14,6 +14,7 @@ import Tarifas from "./pages/Tarifas";
 import Nosotros from "./pages/Nosotros";
 import Contacto from "./pages/Contacto";
 import Blog from "./pages/Blog";
+import ArticleDetail from "./pages/ArticleDetail";
 import Sitemap from "./pages/Sitemap";
 import Robots from "./pages/Robots";
 import NotFound from "./pages/NotFound";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/tarifas" element={<Tarifas />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<ArticleDetail />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/sitemap.xml" element={<Sitemap />} />
           <Route path="/robots.txt" element={<Robots />} />

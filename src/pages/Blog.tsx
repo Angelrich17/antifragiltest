@@ -170,35 +170,37 @@ const Blog = () => {
           <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">Artículos recientes</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredArticles.filter(article => !article.featured).map((article) => (
-              <Card key={article.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={article.image} 
-                    alt={article.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardContent className="p-6 space-y-4">
-                  <div className="space-y-3">
-                    <Badge variant="outline" className="w-fit">{article.category}</Badge>
-                    <h3 className="text-xl font-bold text-slate-800 leading-tight group-hover:text-blue-600 transition-colors">
-                      {article.title}
-                    </h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">
-                      {article.excerpt}
-                    </p>
+            {featuredArticles.map((article) => (
+              <Link key={article.id} to={`/blog/${article.id}`}>
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={article.image} 
+                      alt={article.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                  
-                  <div className="flex items-center justify-between pt-4 border-t border-slate-200">
-                    <div className="flex items-center space-x-3 text-xs text-slate-500">
-                      <span>{article.date}</span>
-                      <span>•</span>
-                      <span>{article.readTime}</span>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="space-y-3">
+                      <Badge variant="outline" className="w-fit">{article.category}</Badge>
+                      <h3 className="text-xl font-bold text-slate-800 leading-tight group-hover:text-blue-600 transition-colors">
+                        {article.title}
+                      </h3>
+                      <p className="text-slate-600 text-sm leading-relaxed">
+                        {article.excerpt}
+                      </p>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                    
+                    <div className="flex items-center justify-between pt-4 border-t border-slate-200">
+                      <div className="flex items-center space-x-3 text-xs text-slate-500">
+                        <span>{article.date}</span>
+                        <span>•</span>
+                        <span>{article.readTime}</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
@@ -211,33 +213,35 @@ const Blog = () => {
           
           <div className="space-y-6">
             {recentArticles.map((article) => (
-              <Card key={article.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
-                <CardContent className="p-6">
-                  <div className="flex items-start justify-between">
-                    <div className="space-y-3 flex-1">
-                      <div className="flex items-center space-x-3">
-                        <Badge variant="outline" className="w-fit">{article.category}</Badge>
-                        <div className="flex items-center space-x-3 text-xs text-slate-500">
-                          <span>{article.date}</span>
-                          <span>•</span>
-                          <span>{article.readTime} lectura</span>
+              <Link key={article.id} to={`/blog/${article.id}`}>
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
+                  <CardContent className="p-6">
+                    <div className="flex items-start justify-between">
+                      <div className="space-y-3 flex-1">
+                        <div className="flex items-center space-x-3">
+                          <Badge variant="outline" className="w-fit">{article.category}</Badge>
+                          <div className="flex items-center space-x-3 text-xs text-slate-500">
+                            <span>{article.date}</span>
+                            <span>•</span>
+                            <span>{article.readTime} lectura</span>
+                          </div>
                         </div>
+                        <h3 className="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
+                          {article.title}
+                        </h3>
+                        <p className="text-slate-600 leading-relaxed">
+                          {article.excerpt}
+                        </p>
                       </div>
-                      <h3 className="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
-                        {article.title}
-                      </h3>
-                      <p className="text-slate-600 leading-relaxed">
-                        {article.excerpt}
-                      </p>
+                      <div className="ml-6">
+                        <Button variant="ghost" size="sm" className="group-hover:bg-blue-50 group-hover:text-blue-600">
+                          <ArrowRight className="h-4 w-4" />
+                        </Button>
+                      </div>
                     </div>
-                    <div className="ml-6">
-                      <Button variant="ghost" size="sm" className="group-hover:bg-blue-50 group-hover:text-blue-600">
-                        <ArrowRight className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
