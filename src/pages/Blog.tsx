@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import bitcoinBuenosAires from "@/assets/bitcoin-buenos-aires.jpg";
 
 const Blog = () => {
   const [email, setEmail] = useState("");
@@ -54,20 +55,28 @@ const Blog = () => {
   const featuredArticles = [
     {
       id: 1,
+      title: "Comprar una vivienda en Buenos Aires con Bitcoin sin venderlo",
+      excerpt: "Cómo apalancar tu BTC al 5 % en DeFi, comprar metros a USD 1 000/m² y conservar el potencial alcista de la criptomoneda.",
+      date: "10 Julio 2025",
+      readTime: "8 min",
+      category: "Guías",
+      image: bitcoinBuenosAires,
+      featured: false
+    },
+    {
+      id: 2,
       title: "El momento perfecto para invertir en Buenos Aires",
       excerpt: "Análisis del contexto macroeconómico actual y por qué ahora es una oportunidad histórica para invertir en real estate porteño.",
-      author: "Equipo Antifragile",
       date: "15 Enero 2025",
       readTime: "8 min",
       category: "Análisis",
       image: "/lovable-uploads/b499d954-153b-4ff6-8f76-fb7776c58a03.png",
-      featured: true
+      featured: false
     },
     {
-      id: 2,
+      id: 3,
       title: "Guía completa: Cómo funciona la inversión inmobiliaria en Argentina",
       excerpt: "Todo lo que necesitas saber sobre el proceso de compra, documentación legal y aspectos fiscales para inversores extranjeros.",
-      author: "María González",
       date: "12 Enero 2025",
       readTime: "12 min",
       category: "Guías",
@@ -75,10 +84,9 @@ const Blog = () => {
       featured: false
     },
     {
-      id: 3,
+      id: 4,
       title: "Barrios emergentes: Dónde encontrar las mejores oportunidades",
       excerpt: "Análisis detallado de los barrios con mayor potencial de revalorización en Buenos Aires para los próximos 5 años.",
-      author: "Carlos Mendez",
       date: "8 Enero 2025",
       readTime: "6 min",
       category: "Mercados",
