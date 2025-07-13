@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import bitcoinBuenosAires from "@/assets/bitcoin-buenos-aires.jpg";
+import casaRosada from "@/assets/casa-rosada-buenos-aires.jpg";
 
 const ArticleDetail = () => {
   const { slug } = useParams();
@@ -30,8 +31,17 @@ const ArticleDetail = () => {
             <p class="text-sm text-blue-700 font-medium mb-2">🏢 Actualizado: 13 de enero de 2025 | Nuevo ciclo económico argentino</p>
           </div>
 
+          <!-- Imagen Casa Rosada -->
+          <div class="w-full h-64 md:h-80 mb-8 rounded-xl overflow-hidden shadow-lg">
+            <img 
+              src={casaRosada} 
+              alt="Casa Rosada Buenos Aires" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+
           <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-8 mb-4">
-            🇦🇷 El punto de partida: nuevo ciclo argentino
+            El punto de partida: nuevo ciclo argentino
           </h2>
           <p class="text-lg leading-relaxed text-slate-700 mb-6">
             Desde la llegada de Javier Milei en diciembre 2023, Argentina recortó de raíz el déficit fiscal primario y estabilizó el tipo de cambio. <strong>El resultado es doble: el salario real en dólares casi se triplicó y los bancos volvieron a ofrecer crédito hipotecario en moneda dura</strong>. En paralelo, la oferta publicada de propiedades en venta viene cayendo desde 2020, mientras las escrituras suben trimestre a trimestre, creando un mercado en clara fase de absorción.
@@ -339,9 +349,14 @@ const ArticleDetail = () => {
               </li>
             </ol>
             
-            <div class="mt-8 p-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg text-white text-center">
-              <h4 class="text-xl font-bold mb-2">¿Listo para invertir?</h4>
-              <p class="text-blue-100">Contáctanos y recibe tu scouting personalizado en 48 h.</p>
+            <div class="mt-8">
+              <button 
+                onclick="window.location.href='/contacto'"
+                class="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white font-bold py-4 px-6 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg text-lg"
+              >
+                💼 Listo para invertir
+              </button>
+              <p class="text-center text-slate-600 mt-3 text-sm">Contáctanos y recibe tu scouting personalizado en 48 h.</p>
             </div>
           </div>
         </div>
