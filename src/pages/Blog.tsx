@@ -55,6 +55,7 @@ const Blog = () => {
   const featuredArticles = [
     {
       id: 1,
+      slug: "comprar-vivienda-buenos-aires-bitcoin",
       title: "Comprar una vivienda en Buenos Aires con Bitcoin sin venderlo",
       excerpt: "Cómo apalancar tu BTC al 5 % en DeFi, comprar metros a USD 1 000/m² y conservar el potencial alcista de la criptomoneda.",
       date: "10 Julio 2025",
@@ -65,6 +66,7 @@ const Blog = () => {
     },
     {
       id: 2,
+      slug: "momento-perfecto-invertir-buenos-aires",
       title: "El momento perfecto para invertir en Buenos Aires",
       excerpt: "Análisis del contexto macroeconómico actual y por qué ahora es una oportunidad histórica para invertir en real estate porteño.",
       date: "15 Enero 2025",
@@ -75,6 +77,7 @@ const Blog = () => {
     },
     {
       id: 3,
+      slug: "guia-completa-inversion-inmobiliaria-argentina",
       title: "Guía completa: Cómo funciona la inversión inmobiliaria en Argentina",
       excerpt: "Todo lo que necesitas saber sobre el proceso de compra, documentación legal y aspectos fiscales para inversores extranjeros.",
       date: "12 Enero 2025",
@@ -85,6 +88,7 @@ const Blog = () => {
     },
     {
       id: 4,
+      slug: "barrios-emergentes-mejores-oportunidades",
       title: "Barrios emergentes: Dónde encontrar las mejores oportunidades",
       excerpt: "Análisis detallado de los barrios con mayor potencial de revalorización en Buenos Aires para los próximos 5 años.",
       date: "8 Enero 2025",
@@ -98,6 +102,7 @@ const Blog = () => {
   const recentArticles = [
     {
       id: 4,
+      slug: "vaca-muerta-impacto-sector-inmobiliario",
       title: "Vaca Muerta: El impacto en el sector inmobiliario",
       excerpt: "Cómo el desarrollo del yacimiento de Vaca Muerta está transformando el mercado inmobiliario argentino.",
       author: "Lucía Fernández",
@@ -107,6 +112,7 @@ const Blog = () => {
     },
     {
       id: 5,
+      slug: "rentabilidades-record-alquileres-temporarios",
       title: "Rentabilidades récord en alquileres temporarios",
       excerpt: "Estadísticas actualizadas sobre el rendimiento de propiedades destinadas a Airbnb en Buenos Aires.",
       author: "Diego Ruiz",
@@ -116,6 +122,7 @@ const Blog = () => {
     },
     {
       id: 6,
+      slug: "aspectos-legales-compra-extranjeros",
       title: "Aspectos legales: Todo sobre la compra para extranjeros",
       excerpt: "Marco legal actualizado para inversores internacionales que quieren comprar propiedades en Argentina.",
       author: "Ana Martínez",
@@ -171,7 +178,7 @@ const Blog = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredArticles.map((article) => (
-              <Link key={article.id} to={`/blog/${article.id}`}>
+              <Link key={article.id} to={`/blog/${article.slug}`}>
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
                   <div className="aspect-[4/3] overflow-hidden">
                     <img 
@@ -213,7 +220,7 @@ const Blog = () => {
           
           <div className="space-y-6">
             {recentArticles.map((article) => (
-              <Link key={article.id} to={`/blog/${article.id}`}>
+              <Link key={article.id} to={`/blog/${article.slug}`}>
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between">

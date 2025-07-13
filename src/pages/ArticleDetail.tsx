@@ -9,13 +9,13 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import bitcoinBuenosAires from "@/assets/bitcoin-buenos-aires.jpg";
 
 const ArticleDetail = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
   const isMobile = useIsMobile();
 
   // Datos de artículos (en una app real, esto vendría de una API o base de datos)
   const articles = {
-    "1": {
+    "comprar-vivienda-buenos-aires-bitcoin": {
       id: 1,
       title: "Comprar una vivienda en Buenos Aires con Bitcoin sin venderlo",
       excerpt: "Cómo apalancar tu BTC al 5 % en DeFi, comprar metros a USD 1 000/m² y conservar el potencial alcista de la criptomoneda.",
@@ -466,7 +466,7 @@ const ArticleDetail = () => {
     }
   };
 
-  const article = articles[id as keyof typeof articles];
+  const article = articles[slug as keyof typeof articles];
 
   if (!article) {
     return (
