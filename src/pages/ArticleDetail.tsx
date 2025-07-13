@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useIsMobile } from "@/hooks/use-mobile";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -10,6 +11,7 @@ import bitcoinBuenosAires from "@/assets/bitcoin-buenos-aires.jpg";
 const ArticleDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
 
   // Datos de artículos (en una app real, esto vendría de una API o base de datos)
   const articles = {
@@ -41,6 +43,63 @@ const ArticleDetail = () => {
           <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
             📊 Opciones de financiación comparadas
           </h2>
+          ${isMobile ? `
+          <div class="space-y-4 mb-8">
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3">Vender BTC y pagar al contado</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-600">Tasa anual en USD:</span>
+                  <span class="text-green-600 font-bold">0%</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-600">¿Mantiene exposición a BTC?:</span>
+                  <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-sm">❌ No</span>
+                </div>
+                <div class="pt-2 border-t border-slate-100">
+                  <span class="text-slate-600 text-sm">Requisitos:</span>
+                  <p class="text-slate-700 text-sm mt-1">KYC e impuestos por plusvalías</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3">Hipoteca bancaria argentina</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-600">Tasa anual en USD:</span>
+                  <span class="text-red-600 font-bold">9%-10%</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-600">¿Mantiene exposición a BTC?:</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">✅ Sí</span>
+                </div>
+                <div class="pt-2 border-t border-slate-100">
+                  <span class="text-slate-600 text-sm">Requisitos:</span>
+                  <p class="text-slate-700 text-sm mt-1">Residencia fiscal, historial crediticio local</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 shadow-md">
+              <h3 class="font-bold text-blue-800 mb-3">🌟 Préstamo DeFi con BTC (Aave v3)</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-700">Tasa anual en USD:</span>
+                  <span class="text-blue-600 font-bold text-lg">≈ 5%</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-700">¿Mantiene exposición a BTC?:</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">✅ Sí</span>
+                </div>
+                <div class="pt-2 border-t border-blue-200">
+                  <span class="text-blue-700 text-sm">Requisitos:</span>
+                  <p class="text-blue-800 font-medium text-sm mt-1">Solo BTC como garantía on‑chain</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          ` : `
           <div class="overflow-x-auto shadow-lg rounded-lg mb-8">
             <table class="w-full bg-white">
               <thead class="bg-gradient-to-r from-slate-700 to-slate-800 text-white">
@@ -73,6 +132,7 @@ const ArticleDetail = () => {
               </tbody>
             </table>
           </div>
+          `}
 
           <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
             🏦 Panorama de financiación inmobiliaria 2025
@@ -103,6 +163,89 @@ const ArticleDetail = () => {
           <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
             ⚡ Banco tradicional vs. DeFi
           </h2>
+          ${isMobile ? `
+          <div class="space-y-4 mb-8">
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                <span>📊</span> Tasa nominal
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-3 bg-red-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">🏛️ Banco AR</span>
+                  <span class="text-red-600 font-bold text-lg">9%</span>
+                </div>
+                <div class="text-center p-3 bg-green-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">⚡ Aave / DeFi</span>
+                  <span class="text-green-600 font-bold text-lg">≈ 5%</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                <span>⏰</span> Plazo
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-3 bg-red-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">🏛️ Banco AR</span>
+                  <span class="text-slate-700 font-medium">15‑20 años</span>
+                </div>
+                <div class="text-center p-3 bg-green-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">⚡ Aave / DeFi</span>
+                  <span class="text-green-600 font-medium">Abierto</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                <span>💰</span> Comisión apertura
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-3 bg-red-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">🏛️ Banco AR</span>
+                  <span class="text-red-600 font-bold">1%-2%</span>
+                </div>
+                <div class="text-center p-3 bg-green-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">⚡ Aave / DeFi</span>
+                  <span class="text-green-600 font-bold">0,09%</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                <span>📋</span> Requisitos personales
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-3 bg-red-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">🏛️ Banco AR</span>
+                  <span class="text-slate-700 text-sm">Residencia + ingresos</span>
+                </div>
+                <div class="text-center p-3 bg-blue-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">⚡ Aave / DeFi</span>
+                  <span class="text-blue-600 font-medium text-sm">Solo BTC</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                <span>⚡</span> Velocidad de aprobación
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-3 bg-red-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">🏛️ Banco AR</span>
+                  <span class="text-red-600 font-bold">4‑8 semanas</span>
+                </div>
+                <div class="text-center p-3 bg-green-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">⚡ Aave / DeFi</span>
+                  <span class="text-green-600 font-bold">15 minutos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          ` : `
           <div class="overflow-x-auto shadow-lg rounded-lg mb-8">
             <table class="w-full bg-white">
               <thead class="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
@@ -141,6 +284,7 @@ const ArticleDetail = () => {
               </tbody>
             </table>
           </div>
+          `}
 
           <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
             🏢 Ejemplo: oficina‑loft en el Microcentro a USD 1 000/m²
