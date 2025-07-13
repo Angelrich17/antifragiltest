@@ -824,25 +824,25 @@ const ArticleDetail = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
       
-      <div className="pt-32 pb-16 px-4 sm:px-6">
-        <div className="container mx-auto max-w-4xl">
+      <div className={`pt-32 pb-16 ${isMobile ? 'px-0' : 'px-4 sm:px-6'}`}>
+        <div className={`${isMobile ? 'w-full' : 'container mx-auto max-w-4xl'}`}>
           {/* Back Button */}
           <Button 
             variant="ghost" 
             onClick={() => navigate('/blog')}
-            className="mb-8 hover:bg-white/80"
+            className={`${isMobile ? 'mx-4 mb-6' : 'mb-8'} hover:bg-white/80`}
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Volver al blog
           </Button>
 
           {/* Article Header */}
-          <div className="mb-8">
+          <div className={`${isMobile ? 'px-4 mb-6' : 'mb-8'}`}>
             <Badge variant="default" className="mb-4">{article.category}</Badge>
-            <h1 className="text-4xl sm:text-5xl font-bold text-slate-800 leading-tight mb-4">
+            <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl sm:text-5xl'} font-bold text-slate-800 leading-tight mb-4`}>
               {article.title}
             </h1>
-            <p className="text-xl text-slate-600 mb-6">
+            <p className={`${isMobile ? 'text-lg' : 'text-xl'} text-slate-600 mb-6`}>
               {article.excerpt}
             </p>
             
@@ -859,7 +859,7 @@ const ArticleDetail = () => {
           </div>
 
           {/* Featured Image */}
-          <div className="aspect-[16/9] overflow-hidden rounded-xl mb-8">
+          <div className={`aspect-[16/9] overflow-hidden ${isMobile ? 'mb-6' : 'rounded-xl mb-8'}`}>
             <img 
               src={article.image} 
               alt={article.title}
@@ -868,7 +868,7 @@ const ArticleDetail = () => {
           </div>
 
           {/* Article Content */}
-          <div className="bg-white rounded-xl shadow-lg p-8 sm:p-12">
+          <div className={`bg-white ${isMobile ? 'shadow-none p-4' : 'rounded-xl shadow-lg p-8 sm:p-12'}`}>
             <div 
               className="prose prose-slate max-w-none prose-headings:text-slate-800 prose-p:text-slate-600 prose-li:text-slate-600"
               dangerouslySetInnerHTML={{ __html: article.content }}
