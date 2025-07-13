@@ -54,6 +54,17 @@ const Blog = () => {
 
   const featuredArticles = [
     {
+      id: 5,
+      slug: "microcentro-porteno-mejor-oportunidad-inmobiliaria-2025",
+      title: "Por qué el Microcentro porteño es la mejor oportunidad inmobiliaria (2025)",
+      excerpt: "Análisis completo del ciclo argentino, comparativas con Madrid y Barcelona, y cómo invertir en oficinas a reciclar con yields del 8-10%.",
+      date: "13 Julio 2025",
+      readTime: "12 min",
+      category: "Análisis",
+      image: "/lovable-uploads/8e194d38-6015-40a9-ae62-3263f4341d3a.png",
+      featured: true
+    },
+    {
       id: 1,
       slug: "comprar-vivienda-buenos-aires-bitcoin",
       title: "Comprar una vivienda en Buenos Aires con Bitcoin sin venderlo",

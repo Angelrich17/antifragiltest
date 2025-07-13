@@ -15,6 +15,338 @@ const ArticleDetail = () => {
 
   // Datos de artículos (en una app real, esto vendría de una API o base de datos)
   const articles = {
+    "microcentro-porteno-mejor-oportunidad-inmobiliaria-2025": {
+      id: 5,
+      title: "Por qué el Microcentro porteño es la mejor oportunidad inmobiliaria (2025)",
+      excerpt: "Análisis completo del ciclo argentino, comparativas con Madrid y Barcelona, y cómo invertir en oficinas a reciclar con yields del 8-10%.",
+      date: "13 Julio 2025",
+      readTime: "12 min",
+      category: "Análisis",
+      image: "/lovable-uploads/8e194d38-6015-40a9-ae62-3263f4341d3a.png",
+      content: `
+        <div class="space-y-8">
+          <!-- Intro destacado -->
+          <div class="bg-gradient-to-r from-blue-50 to-green-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+            <p class="text-sm text-blue-700 font-medium mb-2">🏢 Actualizado: 13 de enero de 2025 | Nuevo ciclo económico argentino</p>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-8 mb-4">
+            🇦🇷 El punto de partida: nuevo ciclo argentino
+          </h2>
+          <p class="text-lg leading-relaxed text-slate-700 mb-6">
+            Desde la llegada de Javier Milei en diciembre 2023, Argentina recortó de raíz el déficit fiscal primario y estabilizó el tipo de cambio. <strong>El resultado es doble: el salario real en dólares casi se triplicó y los bancos volvieron a ofrecer crédito hipotecario en moneda dura</strong>. En paralelo, la oferta publicada de propiedades en venta viene cayendo desde 2020, mientras las escrituras suben trimestre a trimestre, creando un mercado en clara fase de absorción.
+          </p>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            🏙️ Zonas prime versus zonas de valor
+          </h2>
+          ${isMobile ? `
+          <div class="space-y-4 mb-8">
+            <div class="bg-gradient-to-r from-purple-50 to-purple-100 border border-purple-200 rounded-lg p-4">
+              <h3 class="font-bold text-purple-800 mb-2">Puerto Madero</h3>
+              <p class="text-purple-700 font-bold text-lg">~US$6.000/m²</p>
+              <p class="text-purple-600 text-sm">Waterfront ultramoderno con torres de obra nueva y vistas al Río.</p>
+            </div>
+            
+            <div class="bg-gradient-to-r from-indigo-50 to-indigo-100 border border-indigo-200 rounded-lg p-4">
+              <h3 class="font-bold text-indigo-800 mb-2">Palermo Chico</h3>
+              <p class="text-indigo-700 font-bold text-lg">~US$4.000/m²</p>
+              <p class="text-indigo-600 text-sm">Barrio de las Embajadas, palacetes y parques.</p>
+            </div>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-lg p-4">
+              <h3 class="font-bold text-blue-800 mb-2">Palermo Soho/Hollywood y Núñez</h3>
+              <p class="text-blue-700 font-bold text-lg">~US$3.000/m²</p>
+              <p class="text-blue-600 text-sm">Polo gastronómico (Don Julio, La Carnicería) y vida nocturna.</p>
+            </div>
+            
+            <div class="bg-gradient-to-r from-green-50 to-green-100 border border-green-200 rounded-lg p-4">
+              <h3 class="font-bold text-green-800 mb-2">Recoleta</h3>
+              <p class="text-green-700 font-bold text-lg">~US$2.700/m²</p>
+              <p class="text-green-600 text-sm">Arquitectura clásica y turismo cultural.</p>
+            </div>
+            
+            <div class="bg-gradient-to-r from-amber-50 to-yellow-100 border-2 border-amber-300 rounded-lg p-4 shadow-md">
+              <h3 class="font-bold text-amber-800 mb-2">🌟 Microcentro (San Nicolás/Monserrat)</h3>
+              <p class="text-amber-700 font-bold text-xl">US$1.000-1.500/m²</p>
+              <p class="text-amber-600 font-medium">Inventario masivo de plantas con techos altos, hoy a precio de remate.</p>
+            </div>
+          </div>
+          ` : `
+          <div class="overflow-x-auto shadow-lg rounded-lg mb-8">
+            <table class="w-full bg-white">
+              <thead class="bg-gradient-to-r from-slate-700 to-slate-800 text-white">
+                <tr>
+                  <th class="px-6 py-4 text-left font-semibold">Zona</th>
+                  <th class="px-6 py-4 text-left font-semibold">Precio/m²</th>
+                  <th class="px-6 py-4 text-left font-semibold">Características</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-purple-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-purple-800">Puerto Madero</td>
+                  <td class="px-6 py-4 text-purple-700 font-bold">~US$6.000/m²</td>
+                  <td class="px-6 py-4 text-slate-600">Waterfront ultramoderno con torres de obra nueva y vistas al Río</td>
+                </tr>
+                <tr class="hover:bg-indigo-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-indigo-800">Palermo Chico</td>
+                  <td class="px-6 py-4 text-indigo-700 font-bold">~US$4.000/m²</td>
+                  <td class="px-6 py-4 text-slate-600">Barrio de las Embajadas, palacetes y parques</td>
+                </tr>
+                <tr class="hover:bg-blue-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-blue-800">Palermo Soho/Hollywood y Núñez</td>
+                  <td class="px-6 py-4 text-blue-700 font-bold">~US$3.000/m²</td>
+                  <td class="px-6 py-4 text-slate-600">Polo gastronómico (Don Julio, La Carnicería) y vida nocturna</td>
+                </tr>
+                <tr class="hover:bg-green-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-green-800">Recoleta</td>
+                  <td class="px-6 py-4 text-green-700 font-bold">~US$2.700/m²</td>
+                  <td class="px-6 py-4 text-slate-600">Arquitectura clásica y turismo cultural</td>
+                </tr>
+                <tr class="hover:bg-amber-50 transition-colors bg-amber-25 border-l-4 border-amber-500">
+                  <td class="px-6 py-4 font-bold text-amber-800">🌟 Microcentro (San Nicolás/Monserrat)</td>
+                  <td class="px-6 py-4 text-amber-700 font-bold text-lg">US$1.000-1.500/m²</td>
+                  <td class="px-6 py-4 text-amber-700 font-medium">Inventario masivo de plantas con techos altos, hoy a precio de remate</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          `}
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            📊 Radiografía del Microcentro porteño
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-blue-800 mb-4">💰 Precios 2025</h3>
+              <ul class="space-y-2 text-slate-700">
+                <li>📈 <strong>San Nicolás (publicación):</strong> US$1.785/m²</li>
+                <li>📈 <strong>Monserrat (publicación):</strong> US$2.121/m²</li>
+                <li>🔥 <strong>Oficinas a reciclar:</strong> US$900-1.200/m²</li>
+              </ul>
+            </div>
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-amber-800 mb-4">🎯 Motivos del descuento</h3>
+              <ul class="space-y-2 text-slate-700">
+                <li>📉 Sobre-oferta de oficinas tras la pandemia</li>
+                <li>🏛️ Incentivos fiscales del plan municipal 'Microcentro 21'</li>
+                <li>🏢 Propietarios corporativos urgidos por liquidar metros ociosos</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            🌍 Madrid y Barcelona: comparativa de precios y yields
+          </h2>
+          ${isMobile ? `
+          <div class="space-y-4 mb-8">
+            <div class="bg-gradient-to-r from-green-50 to-emerald-100 border-2 border-green-300 rounded-lg p-4 shadow-md">
+              <h3 class="font-bold text-green-800 mb-3">🇦🇷 Microcentro BA</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-green-700">Precio:</span>
+                  <span class="font-bold text-green-600">~US$1.200/m²</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-green-700">Renta (40m²):</span>
+                  <span class="font-bold text-green-600">US$800-1.000/mes</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-green-700">Yield bruto:</span>
+                  <span class="font-bold text-green-600 text-lg">8-10%</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+              <h3 class="font-bold text-red-800 mb-3">🇪🇸 Madrid Centro</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-red-700">Precio:</span>
+                  <span class="font-bold text-red-600">~US$7.900/m²</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-red-700">Renta (40m²):</span>
+                  <span class="font-bold text-red-600">EUR1.040/mes</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-red-700">Yield bruto:</span>
+                  <span class="font-bold text-red-600">3,9%</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+              <h3 class="font-bold text-orange-800 mb-3">🇪🇸 Barcelona Ciutat Vella</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-orange-700">Precio:</span>
+                  <span class="font-bold text-orange-600">~US$5.350/m²</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-orange-700">Renta (40m²):</span>
+                  <span class="font-bold text-orange-600">EUR1.010/mes</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-orange-700">Yield bruto:</span>
+                  <span class="font-bold text-orange-600">4,8%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          ` : `
+          <div class="overflow-x-auto shadow-lg rounded-lg mb-8">
+            <table class="w-full bg-white">
+              <thead class="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                <tr>
+                  <th class="px-6 py-4 text-left font-semibold">Ciudad</th>
+                  <th class="px-6 py-4 text-left font-semibold">Precio/m²</th>
+                  <th class="px-6 py-4 text-left font-semibold">Renta mensual (40m²)</th>
+                  <th class="px-6 py-4 text-left font-semibold">Yield bruto</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-green-50 transition-colors bg-green-25 border-l-4 border-green-500">
+                  <td class="px-6 py-4 font-bold text-green-800">🇦🇷 Microcentro BA</td>
+                  <td class="px-6 py-4 text-green-600 font-bold">~US$1.200/m²</td>
+                  <td class="px-6 py-4 text-green-600 font-bold">US$800-1.000</td>
+                  <td class="px-6 py-4 text-green-600 font-bold text-lg">8-10%</td>
+                </tr>
+                <tr class="hover:bg-red-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-red-800">🇪🇸 Madrid Centro</td>
+                  <td class="px-6 py-4 text-red-600">~US$7.900/m²</td>
+                  <td class="px-6 py-4 text-red-600">EUR1.040</td>
+                  <td class="px-6 py-4 text-red-600">3,9%</td>
+                </tr>
+                <tr class="hover:bg-orange-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-orange-800">🇪🇸 Barcelona Ciutat Vella</td>
+                  <td class="px-6 py-4 text-orange-600">~US$5.350/m²</td>
+                  <td class="px-6 py-4 text-orange-600">EUR1.010</td>
+                  <td class="px-6 py-4 text-orange-600">4,8%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          `}
+          
+          <div class="bg-gradient-to-r from-blue-50 to-green-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-8">
+            <h4 class="font-bold text-blue-800 mb-2">📈 Conclusión</h4>
+            <p class="text-blue-700 text-lg">
+              <strong>Cada dólar invertido en Microcentro brinda el doble de renta y cuatro veces más upside de apreciación frente a sus pares europeos.</strong>
+            </p>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            🏢 Caso práctico Antifragile Advisors
+          </h2>
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-8">
+            <h3 class="text-xl font-bold text-blue-800 mb-6">Compra oficina 120 m² sobre Av. Corrientes</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-bold text-slate-800 mb-4">💰 Inversión inicial</h4>
+                <ul class="space-y-2 text-slate-700">
+                  <li>🏢 <strong>Compra:</strong> US$135.000 (US$1.125/m²)</li>
+                  <li>🔨 <strong>Reforma (2 studios + 1 loft):</strong> US$35.000</li>
+                  <li>📊 <strong>Capital total:</strong> US$170.000</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold text-green-800 mb-4">📈 Rentabilidad</h4>
+                <ul class="space-y-2 text-slate-700">
+                  <li>🏨 <strong>Ingreso Airbnb:</strong> US$11.520/año</li>
+                  <li>📊 <strong>Yield bruto primer año:</strong> 6,8%</li>
+                  <li>🚀 <strong>Con ajuste tarifa 10%:</strong> 8%</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            ⚠️ Riesgos y mitigación
+          </h2>
+          <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <h4 class="font-bold text-yellow-800 mb-2">💱 Volatilidad cambiaria</h4>
+              <p class="text-yellow-700 text-sm">Escrituras en USD y flujo en USD vía turismo</p>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+              <h4 class="font-bold text-orange-800 mb-2">🏨 Vacancia</h4>
+              <p class="text-orange-700 text-sm">Ubicación 200 m de Av. 9 de Julio y perfil 'bleisure'</p>
+            </div>
+            <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+              <h4 class="font-bold text-red-800 mb-2">🔨 Obra</h4>
+              <p class="text-red-700 text-sm">Contratos llave en mano a precio cerrado; seguimiento 100% propio</p>
+            </div>
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <h4 class="font-bold text-blue-800 mb-2">📋 Marco legal Airbnb</h4>
+              <p class="text-blue-700 text-sm">Zonas habilitadas y gestión de licencias</p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            🏆 Veredicto: gran ganador 2025
+          </h2>
+          <div class="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 rounded-xl p-8 mb-8">
+            <h3 class="text-xl font-bold text-green-800 mb-4">🌟 Ganador absoluto: Reconversión de oficinas del Microcentro porteño</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <ul class="space-y-3 text-slate-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 text-lg">💸</span>
+                  <span><strong>Barreras de entrada bajas:</strong> US$1.200/m²</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 text-lg">📈</span>
+                  <span><strong>Yield líder del mercado:</strong> 8-10% bruta</span>
+                </li>
+              </ul>
+              <ul class="space-y-3 text-slate-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 text-lg">🚀</span>
+                  <span><strong>Potencial de apreciación:</strong> >100% al converger con valores de Recoleta</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 text-lg">🛡️</span>
+                  <span><strong>Protección antiinflación:</strong> alquiler indexado en USD</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            🚀 Próximos pasos con Antifragile Advisors
+          </h2>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-8">
+            <ol class="space-y-4 text-slate-700">
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</span>
+                <span><strong>Selección de lotes candidatos</strong> y layout (studios vs loft)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</span>
+                <span><strong>Negociación a cash-a-puerta</strong> (<US$1.200/m²)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</span>
+                <span><strong>Gestión de CDI,</strong> poder notarial y escritura</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">4</span>
+                <span><strong>Coordinación de obra</strong> y diseño apart-hotel</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">5</span>
+                <span><strong>Publicación en Airbnb/Booking</strong> en 90 días</span>
+              </li>
+            </ol>
+            
+            <div class="mt-8 p-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg text-white text-center">
+              <h4 class="text-xl font-bold mb-2">¿Listo para invertir?</h4>
+              <p class="text-blue-100">Contáctanos y recibe tu scouting personalizado en 48 h.</p>
+            </div>
+          </div>
+        </div>
+      `
+    },
     "comprar-vivienda-buenos-aires-bitcoin": {
       id: 1,
       title: "Comprar una vivienda en Buenos Aires con Bitcoin sin venderlo",
