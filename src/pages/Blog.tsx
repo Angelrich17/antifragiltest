@@ -61,7 +61,7 @@ const Blog = () => {
       date: "13 Julio 2025",
       readTime: "12 min",
       category: "Análisis",
-      image: "/lovable-uploads/8e194d38-6015-40a9-ae62-3263f4341d3a.png",
+      image: "/lovable-uploads/846e6bbf-2781-4efa-b645-bc978009aa4e.png",
       featured: true
     },
     {
