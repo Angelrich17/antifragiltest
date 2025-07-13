@@ -184,8 +184,6 @@ const Blog = () => {
                   
                   <div className="flex items-center justify-between pt-4 border-t border-slate-200">
                     <div className="flex items-center space-x-3 text-xs text-slate-500">
-                      <span>{article.author}</span>
-                      <span>•</span>
                       <span>{article.date}</span>
                       <span>•</span>
                       <span>{article.readTime}</span>
@@ -223,10 +221,6 @@ const Blog = () => {
                       <p className="text-slate-600 leading-relaxed">
                         {article.excerpt}
                       </p>
-                      <div className="flex items-center space-x-2 text-sm text-slate-500">
-                        <User className="h-4 w-4" />
-                        <span>{article.author}</span>
-                      </div>
                     </div>
                     <div className="ml-6">
                       <Button variant="ghost" size="sm" className="group-hover:bg-blue-50 group-hover:text-blue-600">
