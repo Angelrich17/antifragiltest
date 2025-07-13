@@ -31,15 +31,6 @@ const ArticleDetail = () => {
             <p class="text-sm text-blue-700 font-medium mb-2">🏢 Actualizado: 13 de enero de 2025 | Nuevo ciclo económico argentino</p>
           </div>
 
-          <!-- Imagen Casa Rosada -->
-          <div class="w-full h-64 md:h-80 mb-8 rounded-xl overflow-hidden shadow-lg">
-            <img 
-              src={casaRosada} 
-              alt="Casa Rosada Buenos Aires" 
-              class="w-full h-full object-cover"
-            />
-          </div>
-
           <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-8 mb-4">
             El punto de partida: nuevo ciclo argentino
           </h2>
