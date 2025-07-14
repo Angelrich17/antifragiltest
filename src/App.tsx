@@ -30,42 +30,38 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          {/* Redirect routes without language to /es */}
-          <Route path="/" element={<LanguageRedirect />} />
-          <Route path="/por-que-argentina" element={<LanguageRedirect />} />
-          <Route path="/servicios" element={<LanguageRedirect />} />
-          <Route path="/proceso" element={<LanguageRedirect />} />
-          <Route path="/casos-reales" element={<LanguageRedirect />} />
-          <Route path="/recursos" element={<LanguageRedirect />} />
-          <Route path="/tarifas" element={<LanguageRedirect />} />
-          <Route path="/nosotros" element={<LanguageRedirect />} />
-          <Route path="/blog" element={<LanguageRedirect />} />
-          <Route path="/blog/:slug" element={<LanguageRedirect />} />
-          <Route path="/contacto" element={<LanguageRedirect />} />
-          
-          {/* Localized routes */}
-          <Route path="/:lang/*" element={
-            <LanguageProvider>
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/por-que-argentina" element={<PorQueArgentina />} />
-                <Route path="/servicios" element={<Servicios />} />
-                <Route path="/proceso" element={<Proceso />} />
-                <Route path="/casos-reales" element={<CasosReales />} />
-                <Route path="/recursos" element={<Recursos />} />
-                <Route path="/tarifas" element={<Tarifas />} />
-                <Route path="/nosotros" element={<Nosotros />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<ArticleDetail />} />
-                <Route path="/contacto" element={<Contacto />} />
-                <Route path="/sitemap.xml" element={<Sitemap />} />
-                <Route path="/robots.txt" element={<Robots />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </LanguageProvider>
-          } />
-        </Routes>
+        <LanguageProvider>
+          <Routes>
+            {/* Redirect routes without language */}
+            <Route path="/" element={<LanguageRedirect />} />
+            <Route path="/por-que-argentina" element={<LanguageRedirect />} />
+            <Route path="/servicios" element={<LanguageRedirect />} />
+            <Route path="/proceso" element={<LanguageRedirect />} />
+            <Route path="/casos-reales" element={<LanguageRedirect />} />
+            <Route path="/recursos" element={<LanguageRedirect />} />
+            <Route path="/tarifas" element={<LanguageRedirect />} />
+            <Route path="/nosotros" element={<LanguageRedirect />} />
+            <Route path="/blog" element={<LanguageRedirect />} />
+            <Route path="/blog/:slug" element={<LanguageRedirect />} />
+            <Route path="/contacto" element={<LanguageRedirect />} />
+            
+            {/* Localized routes */}
+            <Route path="/:lang/" element={<Index />} />
+            <Route path="/:lang/por-que-argentina" element={<PorQueArgentina />} />
+            <Route path="/:lang/servicios" element={<Servicios />} />
+            <Route path="/:lang/proceso" element={<Proceso />} />
+            <Route path="/:lang/casos-reales" element={<CasosReales />} />
+            <Route path="/:lang/recursos" element={<Recursos />} />
+            <Route path="/:lang/tarifas" element={<Tarifas />} />
+            <Route path="/:lang/nosotros" element={<Nosotros />} />
+            <Route path="/:lang/blog" element={<Blog />} />
+            <Route path="/:lang/blog/:slug" element={<ArticleDetail />} />
+            <Route path="/:lang/contacto" element={<Contacto />} />
+            <Route path="/:lang/sitemap.xml" element={<Sitemap />} />
+            <Route path="/:lang/robots.txt" element={<Robots />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </LanguageProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
