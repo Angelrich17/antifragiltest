@@ -30,6 +30,10 @@ const App = () => (
       <BrowserRouter>
         <LanguageProvider>
           <Routes>
+            {/* Static files - let the server handle these */}
+            <Route path="/sitemap.xml" element={null} />
+            <Route path="/robots.txt" element={null} />
+            
             {/* Redirect routes without language */}
             <Route path="/" element={<LanguageRedirect />} />
             <Route path="/por-que-argentina" element={<LanguageRedirect />} />
