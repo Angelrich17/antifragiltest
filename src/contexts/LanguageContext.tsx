@@ -483,6 +483,10 @@ Para inversores con horizonte de 3-5 años y tolerancia al riesgo moderada, esta
           <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg mb-8">
             <p class="text-green-800">💡 <strong>La solución:</strong> Con un préstamo DeFi garantizado con BTC (por ejemplo en Aave v3) se puede obtener liquidez al 5%, manteniendo la exposición a la criptomoneda y cerrando la compra en efectivo en Buenos Aires.</p>
           </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            🔢 Ejemplo numérico: apartamento de 90 m² en Recoleta
+          </h2>
         </div>`,
 
     // Common
@@ -969,6 +973,10 @@ For investors with a 3-5 year horizon and moderate risk tolerance, this opportun
           <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg mb-8">
             <p class="text-green-800">💡 <strong>The solution:</strong> With a DeFi loan secured with BTC (for example on Aave v3) you can obtain liquidity at 5%, maintaining exposure to cryptocurrency and closing the purchase in cash in Buenos Aires.</p>
           </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            🔢 Numerical example: 90 m² apartment in Recoleta
+          </h2>
         </div>`,
 
     // Common
