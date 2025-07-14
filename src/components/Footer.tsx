@@ -4,10 +4,13 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const handleSubscribe = async () => {
     if (!email || !email.includes('@')) {
@@ -58,8 +61,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-neutral-400 leading-relaxed font-light">
-              Transformamos la incertidumbre del mercado argentino en oportunidades 
-              de inversión excepcionales. Expertise boutique para inversionistas sofisticados.
+              {t('footer.company-description')}
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -87,41 +89,40 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-8">
-            <h3 className="text-lg font-light">Servicios</h3>
+            <h3 className="text-lg font-light">{t('footer.services')}</h3>
             <ul className="space-y-3">
-              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">Consultoría Estratégica</Link></li>
-              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">Curación de Inmuebles</Link></li>
-              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">Estructuración Financiera</Link></li>
-              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">Due Diligence Legal</Link></li>
-              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">Optimización de Activos</Link></li>
-              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">Gestión Integral</Link></li>
+              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.strategic-consulting')}</Link></li>
+              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.property-curation')}</Link></li>
+              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.financial-structuring')}</Link></li>
+              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.legal-due-diligence')}</Link></li>
+              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.asset-optimization')}</Link></li>
+              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.integral-management')}</Link></li>
             </ul>
           </div>
 
           {/* Resources */}
           <div className="space-y-8">
-            <h3 className="text-lg font-light">Recursos</h3>
+            <h3 className="text-lg font-light">{t('footer.resources')}</h3>
             <ul className="space-y-3">
-              <li><Link to="/por-que-argentina" className="text-neutral-400 hover:text-white transition-colors font-light">Tesis de Inversión</Link></li>
-              <li><Link to="/recursos" className="text-neutral-400 hover:text-white transition-colors font-light">Research & Análisis</Link></li>
-              <li><Link to="/recursos" className="text-neutral-400 hover:text-white transition-colors font-light">Market Intelligence</Link></li>
-              <li><Link to="/recursos" className="text-neutral-400 hover:text-white transition-colors font-light">Calculadora ROI</Link></li>
-              <li><Link to="/casos-reales" className="text-neutral-400 hover:text-white transition-colors font-light">Casos de Éxito</Link></li>
-              <li><Link to="/nosotros" className="text-neutral-400 hover:text-white transition-colors font-light">Equipo</Link></li>
+              <li><Link to="/por-que-argentina" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.investment-thesis')}</Link></li>
+              <li><Link to="/recursos" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.research-analysis')}</Link></li>
+              <li><Link to="/recursos" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.market-intelligence')}</Link></li>
+              <li><Link to="/recursos" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.roi-calculator')}</Link></li>
+              <li><Link to="/casos-reales" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.success-cases')}</Link></li>
+              <li><Link to="/nosotros" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.team')}</Link></li>
             </ul>
           </div>
 
           {/* Newsletter */}
           <div className="space-y-8">
-            <h3 className="text-lg font-light">Newsletter</h3>
+            <h3 className="text-lg font-light">{t('footer.newsletter')}</h3>
             <p className="text-neutral-400 font-light">
-              Recibe artículos exclusivos sobre la actualidad del mundo inmobiliario 
-              y económico de Argentina directamente en tu inbox.
+              {t('footer.newsletter-subtitle')}
             </p>
             <div className="space-y-4">
               <input 
                 type="email" 
-                placeholder="Tu email" 
+                placeholder={t('footer.email-placeholder')} 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-neutral-500 font-light" 
@@ -131,7 +132,7 @@ const Footer = () => {
                 disabled={isLoading}
                 className="w-full bg-gradient-to-r from-white to-neutral-100 hover:from-neutral-100 hover:to-neutral-200 text-neutral-900 rounded-xl font-light disabled:opacity-50"
               >
-                {isLoading ? "Suscribiendo..." : "Suscribirse al Newsletter"}
+                {isLoading ? t('common.loading') : t('footer.subscribe')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
