@@ -289,7 +289,7 @@ const Index = () => {
           
           <div className="text-center mt-16">
             <Link to="/proceso">
-              <Button size="lg" variant="outline" className="border-2 border-neutral-300 text-neutral-700 hover:bg-neutral-50 hover:border-neutral-400 rounded-xl px-4 py-2 sm:px-8 sm:py-4 font-light">
+              <Button size="lg" variant="outline" className="rounded-xl px-4 py-2 sm:px-8 sm:py-4 font-light">
                 {t('process.explore-methodology')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

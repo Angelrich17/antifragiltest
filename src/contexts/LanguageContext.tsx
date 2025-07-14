@@ -300,6 +300,7 @@ const translations = {
     'process.cta-benefit1': 'Sin compromiso inicial',
     'process.cta-benefit2': 'Consulta 100% gratuita',
     'process.cta-benefit3': 'Respuesta en 24h',
+    'process.explore-methodology': 'Explorar metodología completa',
 
     // Case Studies Page
     'case-studies.badge': 'Portfolio de Éxito',
@@ -793,6 +794,7 @@ Para inversores con horizonte de 3-5 años y tolerancia al riesgo moderada, esta
     'process.cta-benefit1': 'No initial commitment',
     'process.cta-benefit2': '100% free consultation',
     'process.cta-benefit3': 'Response within 24h',
+    'process.explore-methodology': 'Explore complete methodology',
 
     // Case Studies Page
     'case-studies.badge': 'Success Portfolio',
