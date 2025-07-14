@@ -3,7 +3,6 @@ import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { useLanguage } from "@/contexts/LanguageContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -14,19 +13,18 @@ const ArticleDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const isMobile = useIsMobile();
-  const { t, language } = useLanguage();
 
   // Datos de artículos (en una app real, esto vendría de una API o base de datos)
   const articles = {
     "microcentro-porteno-mejor-oportunidad-inmobiliaria-2025": {
       id: 5,
-      title: language === 'es' ? t('articles.microcentro.title') : t('articles.microcentro.title'),
-      excerpt: language === 'es' ? t('articles.microcentro.excerpt') : t('articles.microcentro.excerpt'),
-      date: language === 'es' ? "13 Julio 2025" : "July 13, 2025",
+      title: "Por qué el Microcentro porteño es la mejor oportunidad inmobiliaria (2025)",
+      excerpt: "Análisis completo del ciclo argentino, comparativas con Madrid y Barcelona, y cómo invertir en oficinas a reciclar con yields del 8-10%.",
+      date: "13 Julio 2025",
       readTime: "12 min",
-      category: language === 'es' ? "Análisis" : "Analysis",
+      category: "Análisis",
       image: "/lovable-uploads/4e8673e3-ad6b-447f-8b19-3a5983846972.png",
-      content: language === 'es' ? `
+      content: `
         <div class="space-y-8">
           <!-- Intro destacado -->
           <div class="bg-gradient-to-r from-blue-50 to-green-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
@@ -353,17 +351,17 @@ const ArticleDetail = () => {
             </div>
           </div>
         </div>
-      ` : t('articles.microcentro.content')
+      `
     },
     "comprar-vivienda-buenos-aires-bitcoin": {
       id: 1,
-      title: language === 'es' ? t('articles.bitcoin.title') : t('articles.bitcoin.title'),
-      excerpt: language === 'es' ? t('articles.bitcoin.excerpt') : t('articles.bitcoin.excerpt'),
-      date: language === 'es' ? "10 Julio 2025" : "July 10, 2025",
+      title: "Comprar una vivienda en Buenos Aires con Bitcoin sin venderlo",
+      excerpt: "Cómo apalancar tu BTC al 5 % en DeFi, comprar metros a USD 1 000/m² y conservar el potencial alcista de la criptomoneda.",
+      date: "10 Julio 2025",
       readTime: "8 min",
-      category: language === 'es' ? "Guías" : "Guides",
+      category: "Guías",
       image: bitcoinBuenosAires,
-      content: language === 'es' ? `
+      content: `
         <div class="space-y-8">
           <!-- Intro destacado -->
           <div class="bg-gradient-to-r from-blue-50 to-amber-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
@@ -772,7 +770,7 @@ const ArticleDetail = () => {
             </div>
           </div>
         </div>
-      ` : t('articles.bitcoin.content')
+      `
     },
     "2": {
       id: 2,
@@ -812,10 +810,10 @@ const ArticleDetail = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-slate-800 mb-4">{language === 'es' ? 'Artículo no encontrado' : 'Article not found'}</h1>
+          <h1 className="text-2xl font-bold text-slate-800 mb-4">Artículo no encontrado</h1>
           <Button onClick={() => navigate('/blog')}>
             <ArrowLeft className="mr-2 h-4 w-4" />
-            {t('blog.back-to-blog')}
+            Volver al blog
           </Button>
         </div>
       </div>
@@ -835,7 +833,7 @@ const ArticleDetail = () => {
             className={`${isMobile ? 'mx-4 mb-6' : 'mb-8'} hover:bg-white/80`}
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
-            {t('blog.back-to-blog')}
+            Volver al blog
           </Button>
 
           {/* Article Header */}
@@ -855,7 +853,7 @@ const ArticleDetail = () => {
               </div>
               <div className="flex items-center space-x-1">
                 <Clock className="h-4 w-4" />
-                <span>{article.readTime} {language === 'es' ? 'lectura' : 'read'}</span>
+                <span>{article.readTime} lectura</span>
               </div>
             </div>
           </div>
@@ -863,7 +861,7 @@ const ArticleDetail = () => {
           {/* Featured Image */}
           <div className={`aspect-[16/9] overflow-hidden ${isMobile ? 'mb-6' : 'rounded-xl mb-8'}`}>
             <img 
-              src="/lovable-uploads/c3fd08a1-3820-4862-ba17-78694bcc2cab.png" 
+              src={article.image} 
               alt={article.title}
               className="w-full h-full object-cover"
             />

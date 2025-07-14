@@ -9,20 +9,18 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-import { useLanguage } from "@/contexts/LanguageContext";
 import bitcoinBuenosAires from "@/assets/bitcoin-buenos-aires.jpg";
 
 const Blog = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
-  const { t } = useLanguage();
 
   const handleSubscribe = async () => {
     if (!email || !email.includes('@')) {
       toast({
-        title: t('blog.newsletter.error'),
-        description: t('blog.newsletter.error.invalid'),
+        title: "Error",
+        description: "Por favor ingresa un email válido",
         variant: "destructive",
       });
       return;
@@ -39,14 +37,14 @@ const Blog = () => {
       }
 
       toast({
-        title: t('blog.newsletter.success'),
-        description: t('blog.newsletter.success.description'),
+        title: "¡Suscripción exitosa!",
+        description: "Te has suscrito correctamente a nuestro newsletter",
       });
       setEmail("");
     } catch (error: any) {
       toast({
-        title: t('blog.newsletter.error'),
-        description: error.message || t('blog.newsletter.error.general'),
+        title: "Error",
+        description: error.message || "Hubo un error al suscribirse. Inténtalo nuevamente.",
         variant: "destructive",
       });
     } finally {
@@ -54,61 +52,59 @@ const Blog = () => {
     }
   };
 
-  const { language } = useLanguage();
-  
   const featuredArticles = [
     {
       id: 5,
       slug: "microcentro-porteno-mejor-oportunidad-inmobiliaria-2025",
-      title: language === 'es' ? "Por qué el Microcentro porteño es la mejor oportunidad inmobiliaria (2025)" : "Why Buenos Aires Microcentro is the Best Real Estate Opportunity (2025)",
-      excerpt: language === 'es' ? "Análisis completo del ciclo argentino, comparativas con Madrid y Barcelona, y cómo invertir en oficinas a reciclar con yields del 8-10%." : "Complete analysis of the Argentine cycle, comparisons with Madrid and Barcelona, and how to invest in offices to be recycled with yields of 8-10%.",
-      date: language === 'es' ? "13 Julio 2025" : "July 13, 2025",
+      title: "Por qué el Microcentro porteño es la mejor oportunidad inmobiliaria (2025)",
+      excerpt: "Análisis completo del ciclo argentino, comparativas con Madrid y Barcelona, y cómo invertir en oficinas a reciclar con yields del 8-10%.",
+      date: "13 Julio 2025",
       readTime: "12 min",
-      category: language === 'es' ? "Análisis" : "Analysis",
+      category: "Análisis",
       image: "/lovable-uploads/c3fd08a1-3820-4862-ba17-78694bcc2cab.png",
       featured: true
     },
     {
       id: 1,
       slug: "comprar-vivienda-buenos-aires-bitcoin",
-      title: language === 'es' ? "Comprar una vivienda en Buenos Aires con Bitcoin sin venderlo" : "Buying a Home in Buenos Aires with Bitcoin Without Selling It",
-      excerpt: language === 'es' ? "Cómo apalancar tu BTC al 5 % en DeFi, comprar metros a USD 1 000/m² y conservar el potencial alcista de la criptomoneda." : "How to leverage your BTC at 5% in DeFi, buy square meters at USD 1,000/m² and preserve the upside potential of cryptocurrency.",
-      date: language === 'es' ? "10 Julio 2025" : "July 10, 2025",
+      title: "Comprar una vivienda en Buenos Aires con Bitcoin sin venderlo",
+      excerpt: "Cómo apalancar tu BTC al 5 % en DeFi, comprar metros a USD 1 000/m² y conservar el potencial alcista de la criptomoneda.",
+      date: "10 Julio 2025",
       readTime: "8 min",
-      category: language === 'es' ? "Guías" : "Guides",
+      category: "Guías",
       image: bitcoinBuenosAires,
       featured: false
     },
     {
       id: 2,
       slug: "momento-perfecto-invertir-buenos-aires",
-      title: language === 'es' ? "El momento perfecto para invertir en Buenos Aires" : "The Perfect Time to Invest in Buenos Aires",
-      excerpt: language === 'es' ? "Análisis del contexto macroeconómico actual y por qué ahora es una oportunidad histórica para invertir en real estate porteño." : "Analysis of the current macroeconomic context and why now is a historic opportunity to invest in Buenos Aires real estate.",
-      date: language === 'es' ? "15 Enero 2025" : "January 15, 2025",
+      title: "El momento perfecto para invertir en Buenos Aires",
+      excerpt: "Análisis del contexto macroeconómico actual y por qué ahora es una oportunidad histórica para invertir en real estate porteño.",
+      date: "15 Enero 2025",
       readTime: "8 min",
-      category: language === 'es' ? "Análisis" : "Analysis",
+      category: "Análisis",
       image: "/lovable-uploads/b499d954-153b-4ff6-8f76-fb7776c58a03.png",
       featured: false
     },
     {
       id: 3,
       slug: "guia-completa-inversion-inmobiliaria-argentina",
-      title: language === 'es' ? "Guía completa: Cómo funciona la inversión inmobiliaria en Argentina" : "Complete Guide: How Real Estate Investment Works in Argentina",
-      excerpt: language === 'es' ? "Todo lo que necesitas saber sobre el proceso de compra, documentación legal y aspectos fiscales para inversores extranjeros." : "Everything you need to know about the buying process, legal documentation and tax aspects for foreign investors.",
-      date: language === 'es' ? "12 Enero 2025" : "January 12, 2025",
+      title: "Guía completa: Cómo funciona la inversión inmobiliaria en Argentina",
+      excerpt: "Todo lo que necesitas saber sobre el proceso de compra, documentación legal y aspectos fiscales para inversores extranjeros.",
+      date: "12 Enero 2025",
       readTime: "12 min",
-      category: language === 'es' ? "Guías" : "Guides",
+      category: "Guías",
       image: "/lovable-uploads/e355cc0f-59a3-456f-8360-e64ba6394c00.png",
       featured: false
     },
     {
       id: 4,
       slug: "barrios-emergentes-mejores-oportunidades",
-      title: language === 'es' ? "Barrios emergentes: Dónde encontrar las mejores oportunidades" : "Emerging Neighborhoods: Where to Find the Best Opportunities",
-      excerpt: language === 'es' ? "Análisis detallado de los barrios con mayor potencial de revalorización en Buenos Aires para los próximos 5 años." : "Detailed analysis of neighborhoods with the highest revaluation potential in Buenos Aires for the next 5 years.",
-      date: language === 'es' ? "8 Enero 2025" : "January 8, 2025",
+      title: "Barrios emergentes: Dónde encontrar las mejores oportunidades",
+      excerpt: "Análisis detallado de los barrios con mayor potencial de revalorización en Buenos Aires para los próximos 5 años.",
+      date: "8 Enero 2025",
       readTime: "6 min",
-      category: language === 'es' ? "Mercados" : "Markets",
+      category: "Mercados",
       image: "/lovable-uploads/21e4c240-bc54-4cdd-97b6-0f61ba0c6be5.png",
       featured: false
     }
@@ -118,38 +114,36 @@ const Blog = () => {
     {
       id: 4,
       slug: "vaca-muerta-impacto-sector-inmobiliario",
-      title: language === 'es' ? "Vaca Muerta: El impacto en el sector inmobiliario" : "Vaca Muerta: Impact on the Real Estate Sector",
-      excerpt: language === 'es' ? "Cómo el desarrollo del yacimiento de Vaca Muerta está transformando el mercado inmobiliario argentino." : "How the development of the Vaca Muerta field is transforming the Argentine real estate market.",
-      author: language === 'es' ? "Lucía Fernández" : "Lucia Fernandez",
-      date: language === 'es' ? "5 Enero 2025" : "January 5, 2025",
+      title: "Vaca Muerta: El impacto en el sector inmobiliario",
+      excerpt: "Cómo el desarrollo del yacimiento de Vaca Muerta está transformando el mercado inmobiliario argentino.",
+      author: "Lucía Fernández",
+      date: "5 Enero 2025",
       readTime: "10 min",
-      category: language === 'es' ? "Análisis" : "Analysis"
+      category: "Análisis"
     },
     {
       id: 5,
       slug: "rentabilidades-record-alquileres-temporarios",
-      title: language === 'es' ? "Rentabilidades récord en alquileres temporarios" : "Record Returns on Short-term Rentals",
-      excerpt: language === 'es' ? "Estadísticas actualizadas sobre el rendimiento de propiedades destinadas a Airbnb en Buenos Aires." : "Updated statistics on the performance of Airbnb properties in Buenos Aires.",
-      author: language === 'es' ? "Diego Ruiz" : "Diego Ruiz",
-      date: language === 'es' ? "2 Enero 2025" : "January 2, 2025",
+      title: "Rentabilidades récord en alquileres temporarios",
+      excerpt: "Estadísticas actualizadas sobre el rendimiento de propiedades destinadas a Airbnb en Buenos Aires.",
+      author: "Diego Ruiz",
+      date: "2 Enero 2025",
       readTime: "5 min",
-      category: language === 'es' ? "Rentabilidad" : "Returns"
+      category: "Rentabilidad"
     },
     {
       id: 6,
       slug: "aspectos-legales-compra-extranjeros",
-      title: language === 'es' ? "Aspectos legales: Todo sobre la compra para extranjeros" : "Legal Aspects: Everything About Purchasing for Foreigners",
-      excerpt: language === 'es' ? "Marco legal actualizado para inversores internacionales que quieren comprar propiedades en Argentina." : "Updated legal framework for international investors wanting to buy properties in Argentina.",
-      author: language === 'es' ? "Ana Martínez" : "Ana Martinez",
-      date: language === 'es' ? "28 Diciembre 2024" : "December 28, 2024",
+      title: "Aspectos legales: Todo sobre la compra para extranjeros",
+      excerpt: "Marco legal actualizado para inversores internacionales que quieren comprar propiedades en Argentina.",
+      author: "Ana Martínez",
+      date: "28 Diciembre 2024",
       readTime: "7 min",
-      category: language === 'es' ? "Legal" : "Legal"
+      category: "Legal"
     }
   ];
 
-  const categories = language === 'es' 
-    ? ["Todos", "Análisis", "Guías", "Mercados", "Rentabilidad", "Legal"]
-    : ["All", "Analysis", "Guides", "Markets", "Returns", "Legal"];
+  const categories = ["Todos", "Análisis", "Guías", "Mercados", "Rentabilidad", "Legal"];
 
   return (
     <div className="min-h-screen max-w-screen overflow-x-hidden bg-gradient-to-br from-slate-50 to-blue-50">
@@ -160,10 +154,11 @@ const Blog = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center space-y-6">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-slate-900 leading-tight">
-              {t('blog.title')} <span className="font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent"></span>
+              Blog de <span className="font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent">inversiones</span>
             </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              {t('blog.subtitle')}
+              Insights, análisis y guías prácticas sobre inversión inmobiliaria en Argentina. 
+              Mantente actualizado con las últimas tendencias del mercado.
             </p>
           </div>
         </div>
@@ -190,7 +185,7 @@ const Blog = () => {
       {/* Articles Grid */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">{t('blog.featured-articles')}</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">Artículos recientes</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredArticles.map((article) => (
@@ -232,7 +227,7 @@ const Blog = () => {
       {/* Recent Articles List */}
       <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">{t('blog.all-articles')}</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">Más artículos</h2>
           
           <div className="space-y-6">
             {recentArticles.map((article) => (
@@ -246,7 +241,7 @@ const Blog = () => {
                           <div className="flex items-center space-x-3 text-xs text-slate-500">
                             <span>{article.date}</span>
                             <span>•</span>
-                            <span>{article.readTime} {t('blog.reading-time')}</span>
+                            <span>{article.readTime} lectura</span>
                           </div>
                         </div>
                         <h3 className="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
@@ -275,15 +270,15 @@ const Blog = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-slate-800">
-              {t('blog.newsletter.title')}
+              Suscríbete a nuestro newsletter
             </h2>
             <p className="text-xl text-slate-600">
-              {t('blog.newsletter.subtitle')}
+              Recibe los mejores insights sobre inversión inmobiliaria directamente en tu email
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input 
                 type="email" 
-                placeholder={t('blog.newsletter.placeholder')} 
+                placeholder="Tu email" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -293,7 +288,7 @@ const Blog = () => {
                 disabled={isLoading}
                 className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8"
               >
-                {isLoading ? t('common.loading') : t('blog.newsletter.subscribe')}
+                {isLoading ? "Suscribiendo..." : "Suscribirse"}
               </Button>
             </div>
           </div>

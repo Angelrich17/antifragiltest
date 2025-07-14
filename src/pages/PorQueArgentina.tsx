@@ -4,10 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { useLanguage } from "@/contexts/LanguageContext";
 const PorQueArgentina = () => {
-  const { t } = useLanguage();
-  
   return <div className="min-h-screen max-w-screen overflow-x-hidden bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
       
@@ -29,21 +26,21 @@ const PorQueArgentina = () => {
             <div className="space-y-10 text-center sm:text-center lg:text-left px-2 sm:px-0">
               <div className="space-y-6">
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-slate-900 leading-tight tracking-tight">
-                  {t('why-argentina.title')}
+                  ¿Por qué <span className="font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent">Argentina</span> ahora?
                 </h1>
                 <p className="text-lg sm:text-xl text-slate-700 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
-                  {t('why-argentina.subtitle')}
+                  Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica de comprar activos de calidad mundial a precios de mercados emergentes.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start justify-center sm:justify-center lg:justify-start w-full">
                 <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                   <Play className="mr-2 h-5 w-5" />
-                  {t('why-argentina.watch-analysis')}
+                  Ver análisis completo
                 </Button>
                 <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-xl border-2 border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50 transition-all duration-300">
                   <Download className="mr-2 h-5 w-5" />
-                  {t('why-argentina.download-pdf')}
+                  Descargar PDF gratuito
                 </Button>
               </div>
 
@@ -58,7 +55,7 @@ const PorQueArgentina = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="h-4 w-4 text-emerald-500" />
-                  <span>{t('why-argentina.historic-opportunity')}</span>
+                  <span>Oportunidad histórica</span>
                 </div>
               </div>
             </div>
@@ -70,7 +67,7 @@ const PorQueArgentina = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Button size="lg" className="bg-white/90 hover:bg-white text-slate-800 rounded-2xl px-8 py-4">
                     <Play className="mr-3 h-6 w-6 fill-current" />
-                    <span className="font-medium">{t('why-argentina.play-analysis')}</span>
+                    <span className="font-medium">Reproducir análisis</span>
                   </Button>
                 </div>
               </div>
@@ -78,7 +75,7 @@ const PorQueArgentina = () => {
               {/* Opcional: elementos flotantes si quieres reforzar info clave */}
               <div className="hidden lg:block absolute -top-4 -right-4 bg-white/90 backdrop-blur-sm p-3 rounded-2xl shadow-lg border border-neutral-200">
                 <div className="text-2xl font-bold text-blue-600">8x</div>
-                <div className="text-xs text-neutral-500">{t('why-argentina.potential-multiplier')}</div>
+                <div className="text-xs text-neutral-500">Multiplicador potencial</div>
               </div>
 
               <div className="grid grid-cols-2 gap-4 mt-6">
@@ -87,8 +84,8 @@ const PorQueArgentina = () => {
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <Play className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="font-semibold text-slate-800">{t('why-argentina.video-version')}</h3>
-                    <p className="text-sm text-slate-600 mt-2">{t('why-argentina.complete-analysis')}</p>
+                    <h3 className="font-semibold text-slate-800">Versión video</h3>
+                    <p className="text-sm text-slate-600 mt-2">Análisis completo (5-7 min)</p>
                   </CardContent>
                 </Card>
 
@@ -97,8 +94,8 @@ const PorQueArgentina = () => {
                     <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <Download className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="font-semibold text-slate-800">{t('why-argentina.executive-pdf')}</h3>
-                    <p className="text-sm text-slate-600 mt-2">{t('why-argentina.free-download')}</p>
+                    <h3 className="font-semibold text-slate-800">PDF ejecutivo</h3>
+                    <p className="text-sm text-slate-600 mt-2">Descarga gratuita</p>
                   </CardContent>
                 </Card>
               </div>
@@ -113,9 +110,9 @@ const PorQueArgentina = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">
-              {t('data.title')}
+              Los números no mienten
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">{t('data.subtitle')}</p>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">Datos comparativos que demuestran el momento excepcional para invertir en Buenos Aires</p>
           </div>
           
           
@@ -123,7 +120,7 @@ const PorQueArgentina = () => {
             <CardHeader>
               <CardTitle className="flex items-center justify-center text-2xl">
                 <BarChart3 className="mr-3 h-7 w-7 text-amber-600" />
-                {t('data.international-comparison')}
+                Comparativa internacional (USD/m²)
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -174,10 +171,10 @@ const PorQueArgentina = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">
-              {t('why-argentina.catalysts-title')}
+              Catalizadores de crecimiento
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              {t('why-argentina.catalysts-subtitle')}
+              Factores macro que impulsan la revalorización inmobiliaria en el mediano plazo
             </p>
           </div>
           
@@ -187,9 +184,9 @@ const PorQueArgentina = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto">
                   <TrendingUp className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-800">{t('why-argentina.political-cycle')}</h3>
+                <h3 className="text-xl font-bold text-slate-800">Ciclo Político</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  {t('why-argentina.political-cycle.description')}
+                  Nuevo gobierno pro-mercado. Políticas de apertura económica y normalización del tipo de cambio.
                 </p>
               </CardContent>
             </Card>
@@ -199,9 +196,9 @@ const PorQueArgentina = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mx-auto">
                   <BarChart3 className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-800">{t('why-argentina.vaca-muerta')}</h3>
+                <h3 className="text-xl font-bold text-slate-800">Vaca Muerta</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  {t('why-argentina.vaca-muerta.description')}
+                  Segundo yacimiento de gas no convencional del mundo. Potencial de ingresos por $200B+ en 20 años.
                 </p>
               </CardContent>
             </Card>
@@ -211,9 +208,9 @@ const PorQueArgentina = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto">
                   <DollarSign className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-800">{t('why-argentina.exchange-rate')}</h3>
+                <h3 className="text-xl font-bold text-slate-800">Tipo de Cambio</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  {t('why-argentina.exchange-rate.description')}
+                  Unificación cambiaria inminente. Corrección hacia equilibrio de largo plazo favorece activos locales.
                 </p>
               </CardContent>
             </Card>
@@ -226,10 +223,10 @@ const PorQueArgentina = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">
-              {t('why-argentina.risks-title')}
+              ¿Riesgos y cómo los mitigamos?
             </h2>
             <p className="text-xl text-slate-600">
-              {t('why-argentina.risks-subtitle')}
+              Transparencia total sobre los desafíos y nuestras estrategias de mitigación
             </p>
           </div>
           
@@ -241,9 +238,10 @@ const PorQueArgentina = () => {
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-slate-800">{t('why-argentina.risk1.title')}</h3>
+                    <h3 className="text-xl font-bold text-slate-800">Riesgo: Inestabilidad política / económica</h3>
                     <p className="text-slate-600 leading-relaxed">
-                      <strong>Mitigación:</strong> {t('why-argentina.risk1.mitigation')}
+                      <strong>Mitigación:</strong> Inversión en activos físicos (ladrillo) denominados en USD. 
+                      Diversificación por barrios y tipos de propiedad. Contratos de alquiler en moneda dura.
                     </p>
                   </div>
                 </div>
@@ -257,9 +255,10 @@ const PorQueArgentina = () => {
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-slate-800">{t('why-argentina.risk2.title')}</h3>
+                    <h3 className="text-xl font-bold text-slate-800">Riesgo: Regulaciones de alquiler</h3>
                     <p className="text-slate-600 leading-relaxed">
-                      <strong>Mitigación:</strong> {t('why-argentina.risk2.mitigation')}
+                      <strong>Mitigación:</strong> Estructuras legales robustas. Monitoreo regulatorio constante. 
+                      Flexibilidad entre alquiler tradicional y temporario (Airbnb) según cambios normativos.
                     </p>
                   </div>
                 </div>
@@ -273,9 +272,10 @@ const PorQueArgentina = () => {
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-slate-800">{t('why-argentina.risk3.title')}</h3>
+                    <h3 className="text-xl font-bold text-slate-800">Riesgo: Liquidez y salida</h3>
                     <p className="text-slate-600 leading-relaxed">
-                      <strong>Mitigación:</strong> {t('why-argentina.risk3.mitigation')}
+                      <strong>Mitigación:</strong> Selección de propiedades en zonas prime con alta demanda. 
+                      Red de compradores locales e internacionales. Estrategia de salida planificada desde el día 1.
                     </p>
                   </div>
                 </div>
@@ -285,7 +285,7 @@ const PorQueArgentina = () => {
           
           <div className="text-center mt-12">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base" onClick={() => window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600')}>
-              {t('why-argentina.schedule-consultation')}
+              Agenda una consulta
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
           </div>
