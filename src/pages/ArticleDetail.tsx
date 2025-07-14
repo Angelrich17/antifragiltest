@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOLanguageLinks from "@/components/SEOLanguageLinks";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import bitcoinBuenosAires from "@/assets/bitcoin-buenos-aires.jpg";
 import casaRosada from "@/assets/casa-rosada-buenos-aires.jpg";
@@ -15,6 +17,7 @@ const ArticleDetail = () => {
   const navigate = useNavigate();
   const isMobile = useIsMobile();
   const { t, language } = useLanguage();
+  const { getLocalizedPath } = useLocalizedPath();
 
   // Datos de artículos (en una app real, esto vendría de una API o base de datos)
   const articles = {
@@ -813,7 +816,7 @@ const ArticleDetail = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-slate-800 mb-4">{language === 'es' ? 'Artículo no encontrado' : 'Article not found'}</h1>
-          <Button onClick={() => navigate('/blog')}>
+          <Button onClick={() => navigate(getLocalizedPath('/blog'))}>
             <ArrowLeft className="mr-2 h-4 w-4" />
             {t('blog.back-to-blog')}
           </Button>
@@ -824,6 +827,7 @@ const ArticleDetail = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <SEOLanguageLinks />
       <Header />
       
       <div className={`pt-32 pb-16 ${isMobile ? 'px-0' : 'px-4 sm:px-6'}`}>
@@ -831,7 +835,7 @@ const ArticleDetail = () => {
           {/* Back Button */}
           <Button 
             variant="ghost" 
-            onClick={() => navigate('/blog')}
+            onClick={() => navigate(getLocalizedPath('/blog'))}
             className={`${isMobile ? 'mx-4 mb-6' : 'mb-8'} hover:bg-white/80`}
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
