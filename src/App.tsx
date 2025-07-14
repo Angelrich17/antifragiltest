@@ -18,8 +18,6 @@ import Nosotros from "./pages/Nosotros";
 import Contacto from "./pages/Contacto";
 import Blog from "./pages/Blog";
 import ArticleDetail from "./pages/ArticleDetail";
-import Sitemap from "./pages/Sitemap";
-import Robots from "./pages/Robots";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -57,8 +55,6 @@ const App = () => (
             <Route path="/:lang/blog" element={<Blog />} />
             <Route path="/:lang/blog/:slug" element={<ArticleDetail />} />
             <Route path="/:lang/contacto" element={<Contacto />} />
-            <Route path="/:lang/sitemap.xml" element={<Sitemap />} />
-            <Route path="/:lang/robots.txt" element={<Robots />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </LanguageProvider>
