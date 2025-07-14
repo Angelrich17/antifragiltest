@@ -10,24 +10,29 @@ import type { IncomingMessage, ServerResponse } from 'http';
 const staticFilePlugin = () => ({
   name: 'static-file-plugin',
   configureServer(server: ViteDevServer) {
-    server.middlewares.use('/sitemap.xml', (req: IncomingMessage, res: ServerResponse, next: () => void) => {
-      const filePath = path.join(__dirname, 'public', 'sitemap.xml');
-      if (fs.existsSync(filePath)) {
-        res.setHeader('Content-Type', 'application/xml');
-        res.end(fs.readFileSync(filePath, 'utf8'));
-      } else {
-        next();
+    // Intercept requests for static files before they reach the SPA fallback
+    server.middlewares.use((req: IncomingMessage, res: ServerResponse, next: () => void) => {
+      if (req.url === '/sitemap.xml') {
+        const filePath = path.join(__dirname, 'public', 'sitemap.xml');
+        if (fs.existsSync(filePath)) {
+          res.setHeader('Content-Type', 'application/xml');
+          res.setHeader('Cache-Control', 'public, max-age=3600');
+          res.end(fs.readFileSync(filePath, 'utf8'));
+          return;
+        }
       }
-    });
-    
-    server.middlewares.use('/robots.txt', (req: IncomingMessage, res: ServerResponse, next: () => void) => {
-      const filePath = path.join(__dirname, 'public', 'robots.txt');
-      if (fs.existsSync(filePath)) {
-        res.setHeader('Content-Type', 'text/plain');
-        res.end(fs.readFileSync(filePath, 'utf8'));
-      } else {
-        next();
+      
+      if (req.url === '/robots.txt') {
+        const filePath = path.join(__dirname, 'public', 'robots.txt');
+        if (fs.existsSync(filePath)) {
+          res.setHeader('Content-Type', 'text/plain');
+          res.setHeader('Cache-Control', 'public, max-age=86400');
+          res.end(fs.readFileSync(filePath, 'utf8'));
+          return;
+        }
       }
+      
+      next();
     });
   }
 });
@@ -41,6 +46,21 @@ export default defineConfig(({ mode }) => ({
     middlewareMode: false,
     fs: {
       strict: false
+    }
+  },
+  build: {
+    // Ensure static files are copied to dist
+    rollupOptions: {
+      external: [],
+      output: {
+        // Don't process sitemap.xml and robots.txt as JS modules
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'sitemap.xml' || assetInfo.name === 'robots.txt') {
+            return '[name][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        }
+      }
     }
   },
   plugins: [
