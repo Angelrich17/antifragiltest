@@ -298,6 +298,12 @@ const translations = {
     'process.cta-benefit2': 'Consulta 100% gratuita',
     'process.cta-benefit3': 'Respuesta en 24h',
 
+    // Case Studies Page
+    'case-studies.badge': 'Portfolio de Éxito',
+    'case-studies.title': 'Casos Reales',
+    'case-studies.subtitle': 'Análisis detallado de operaciones exitosas. Casos de estudio con métricas reales, ROI obtenido y lecciones aprendidas de inversionistas que confiaron en nuestra expertise.',
+    'case-studies.back-home': 'Volver al inicio',
+
     // Common
     'common.loading': 'Cargando...',
     'common.error': 'Error',
@@ -596,6 +602,12 @@ const translations = {
     'process.cta-benefit1': 'No initial commitment',
     'process.cta-benefit2': '100% free consultation',
     'process.cta-benefit3': 'Response within 24h',
+
+    // Case Studies Page
+    'case-studies.badge': 'Success Portfolio',
+    'case-studies.title': 'Case Studies',
+    'case-studies.subtitle': 'Detailed analysis of successful operations. Case studies with real metrics, ROI obtained and lessons learned from investors who trusted our expertise.',
+    'case-studies.back-home': 'Back to home',
 
     // Common
     'common.loading': 'Loading...',
