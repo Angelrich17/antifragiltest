@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOLanguageLinks from "@/components/SEOLanguageLinks";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -155,6 +156,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen max-w-screen overflow-x-hidden bg-gradient-to-br from-slate-50 to-blue-50">
+      <SEOLanguageLinks />
       <Header />
       
       {/* Hero Section */}

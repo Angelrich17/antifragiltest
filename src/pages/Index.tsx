@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOLanguageLinks from "@/components/SEOLanguageLinks";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -16,6 +17,7 @@ const Index = () => {
     window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600');
   };
   return <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-neutral-100">
+      <SEOLanguageLinks />
       <Header />
       
       {/* Hero Section */}
