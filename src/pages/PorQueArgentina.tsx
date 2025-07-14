@@ -58,7 +58,7 @@ const PorQueArgentina = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="h-4 w-4 text-emerald-500" />
-                  <span>Oportunidad histórica</span>
+                  <span>{t('why-argentina.historic-opportunity')}</span>
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@ const PorQueArgentina = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Button size="lg" className="bg-white/90 hover:bg-white text-slate-800 rounded-2xl px-8 py-4">
                     <Play className="mr-3 h-6 w-6 fill-current" />
-                    <span className="font-medium">Reproducir análisis</span>
+                    <span className="font-medium">{t('why-argentina.play-analysis')}</span>
                   </Button>
                 </div>
               </div>
@@ -78,7 +78,7 @@ const PorQueArgentina = () => {
               {/* Opcional: elementos flotantes si quieres reforzar info clave */}
               <div className="hidden lg:block absolute -top-4 -right-4 bg-white/90 backdrop-blur-sm p-3 rounded-2xl shadow-lg border border-neutral-200">
                 <div className="text-2xl font-bold text-blue-600">8x</div>
-                <div className="text-xs text-neutral-500">Multiplicador potencial</div>
+                <div className="text-xs text-neutral-500">{t('why-argentina.potential-multiplier')}</div>
               </div>
 
               <div className="grid grid-cols-2 gap-4 mt-6">
@@ -87,8 +87,8 @@ const PorQueArgentina = () => {
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <Play className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="font-semibold text-slate-800">Versión video</h3>
-                    <p className="text-sm text-slate-600 mt-2">Análisis completo (5-7 min)</p>
+                    <h3 className="font-semibold text-slate-800">{t('why-argentina.video-version')}</h3>
+                    <p className="text-sm text-slate-600 mt-2">{t('why-argentina.complete-analysis')}</p>
                   </CardContent>
                 </Card>
 
@@ -97,8 +97,8 @@ const PorQueArgentina = () => {
                     <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <Download className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="font-semibold text-slate-800">PDF ejecutivo</h3>
-                    <p className="text-sm text-slate-600 mt-2">Descarga gratuita</p>
+                    <h3 className="font-semibold text-slate-800">{t('why-argentina.executive-pdf')}</h3>
+                    <p className="text-sm text-slate-600 mt-2">{t('why-argentina.free-download')}</p>
                   </CardContent>
                 </Card>
               </div>
@@ -113,9 +113,9 @@ const PorQueArgentina = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">
-              Los números no mienten
+              {t('data.title')}
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">Datos comparativos que demuestran el momento excepcional para invertir en Buenos Aires</p>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">{t('data.subtitle')}</p>
           </div>
           
           
@@ -123,7 +123,7 @@ const PorQueArgentina = () => {
             <CardHeader>
               <CardTitle className="flex items-center justify-center text-2xl">
                 <BarChart3 className="mr-3 h-7 w-7 text-amber-600" />
-                Comparativa internacional (USD/m²)
+                {t('data.international-comparison')}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -174,10 +174,10 @@ const PorQueArgentina = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">
-              Catalizadores de crecimiento
+              {t('why-argentina.catalysts-title')}
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Factores macro que impulsan la revalorización inmobiliaria en el mediano plazo
+              {t('why-argentina.catalysts-subtitle')}
             </p>
           </div>
           
@@ -187,9 +187,9 @@ const PorQueArgentina = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto">
                   <TrendingUp className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-800">Ciclo Político</h3>
+                <h3 className="text-xl font-bold text-slate-800">{t('why-argentina.political-cycle')}</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Nuevo gobierno pro-mercado. Políticas de apertura económica y normalización del tipo de cambio.
+                  {t('why-argentina.political-cycle.description')}
                 </p>
               </CardContent>
             </Card>
@@ -199,9 +199,9 @@ const PorQueArgentina = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mx-auto">
                   <BarChart3 className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-800">Vaca Muerta</h3>
+                <h3 className="text-xl font-bold text-slate-800">{t('why-argentina.vaca-muerta')}</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Segundo yacimiento de gas no convencional del mundo. Potencial de ingresos por $200B+ en 20 años.
+                  {t('why-argentina.vaca-muerta.description')}
                 </p>
               </CardContent>
             </Card>
@@ -211,9 +211,9 @@ const PorQueArgentina = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto">
                   <DollarSign className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-800">Tipo de Cambio</h3>
+                <h3 className="text-xl font-bold text-slate-800">{t('why-argentina.exchange-rate')}</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Unificación cambiaria inminente. Corrección hacia equilibrio de largo plazo favorece activos locales.
+                  {t('why-argentina.exchange-rate.description')}
                 </p>
               </CardContent>
             </Card>
@@ -226,10 +226,10 @@ const PorQueArgentina = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">
-              ¿Riesgos y cómo los mitigamos?
+              {t('why-argentina.risks-title')}
             </h2>
             <p className="text-xl text-slate-600">
-              Transparencia total sobre los desafíos y nuestras estrategias de mitigación
+              {t('why-argentina.risks-subtitle')}
             </p>
           </div>
           
