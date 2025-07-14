@@ -9,12 +9,21 @@ const SEOLanguageLinks = ({ baseUrl = 'https://antifragileadvisors.com' }: SEOLa
   const location = useLocation();
 
   useEffect(() => {
-    // Remove existing hreflang links
-    const existingLinks = document.querySelectorAll('link[rel="alternate"][hreflang]');
-    existingLinks.forEach(link => link.remove());
+    // Remove existing hreflang and canonical links
+    const existingHreflangLinks = document.querySelectorAll('link[rel="alternate"][hreflang]');
+    const existingCanonicalLinks = document.querySelectorAll('link[rel="canonical"]');
+    existingHreflangLinks.forEach(link => link.remove());
+    existingCanonicalLinks.forEach(link => link.remove());
 
-    // Get current path without language prefix
+    // Get current language and path
+    const currentLang = location.pathname.match(/^\/(es|en)/)?.[1] || 'es';
     const currentPath = location.pathname.replace(/^\/(es|en)/, '') || '/';
+    
+    // Create canonical link for current language version
+    const canonicalLink = document.createElement('link');
+    canonicalLink.rel = 'canonical';
+    canonicalLink.href = `${baseUrl}/${currentLang}${currentPath}`;
+    document.head.appendChild(canonicalLink);
     
     // Create hreflang links for both languages
     const languages = [
@@ -37,9 +46,11 @@ const SEOLanguageLinks = ({ baseUrl = 'https://antifragileadvisors.com' }: SEOLa
     defaultLink.href = `${baseUrl}/es${currentPath}`; // Default to Spanish
     document.head.appendChild(defaultLink);
 
+    console.log(`SEO tags added - Canonical: ${baseUrl}/${currentLang}${currentPath}, Hreflang: es/en`);
+
     // Cleanup function
     return () => {
-      const links = document.querySelectorAll('link[rel="alternate"][hreflang]');
+      const links = document.querySelectorAll('link[rel="alternate"][hreflang], link[rel="canonical"]');
       links.forEach(link => link.remove());
     };
   }, [location.pathname, baseUrl]);
