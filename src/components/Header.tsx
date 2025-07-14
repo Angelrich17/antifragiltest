@@ -3,25 +3,22 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import LanguageSelector from "@/components/LanguageSelector";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const { t } = useLanguage();
 
   const navigation = [
-    { name: t('nav.home'), href: "/" },
-    { name: t('nav.why-argentina'), href: "/por-que-argentina" },
-    { name: t('nav.services'), href: "/servicios" },
-    { name: t('nav.process'), href: "/proceso" },
-    { name: t('nav.case-studies'), href: "/casos-reales" },
-    { name: t('nav.resources'), href: "/recursos" },
-    { name: t('nav.pricing'), href: "/tarifas" },
-    { name: t('nav.blog'), href: "/blog" },
-    { name: t('nav.about'), href: "/nosotros" },
-    { name: t('nav.contact'), href: "/contacto" },
+    { name: "Inicio", href: "/" },
+    { name: "Por qué Argentina", href: "/por-que-argentina" },
+    { name: "Servicios", href: "/servicios" },
+    { name: "Proceso", href: "/proceso" },
+    { name: "Casos Reales", href: "/casos-reales" },
+    { name: "Recursos", href: "/recursos" },
+    { name: "Tarifas", href: "/tarifas" },
+    { name: "Blog", href: "/blog" },
+    { name: "Nosotros", href: "/nosotros" },
+    { name: "Contacto", href: "/contacto" },
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -58,14 +55,13 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Language Selector & CTA Button */}
+          {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <LanguageSelector />
             <Button 
               className="bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl px-6 py-2 font-light shadow-sm"
               onClick={() => window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600')}
             >
-              {t('header.schedule-consultation')}
+              Agenda consulta
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
@@ -97,10 +93,7 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-neutral-200 space-y-3">
-                <div className="flex justify-center">
-                  <LanguageSelector />
-                </div>
+              <div className="pt-4 border-t border-neutral-200">
                 <Button 
                   className="w-full bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl font-light"
                   onClick={() => {
@@ -108,7 +101,7 @@ const Header = () => {
                     window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600');
                   }}
                 >
-                  {t('header.schedule-consultation')}
+                  Agenda consulta
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>

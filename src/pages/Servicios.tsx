@@ -6,19 +6,110 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 const Servicios = () => {
-  const { language, t } = useLanguage();
+  const services = [
+    {
+      icon: Users,
+      title: "Asesoría 1-a-1",
+      price: "300 USD/hora",
+      description: "Consultoría personalizada con expertos locales. Análisis de tu perfil de inversión y recomendaciones específicas.",
+      features: [
+        "Análisis de perfil de riesgo",
+        "Recomendaciones de barrios",
+        "Estrategia de financiamiento",
+        "Proyección de ROI personalizada"
+      ],
+      color: "from-blue-500 to-blue-600"
+    },
+    {
+      icon: Search,
+      title: "Zona & Búsqueda",
+      price: "Incluido en packs",
+      description: "Investigación profunda de barrios y búsqueda activa de propiedades que cumplan tus criterios específicos.",
+      features: [
+        "Análisis demográfico detallado",
+        "Proyección de crecimiento urbano",
+        "Búsqueda activa de propiedades",
+        "Due diligence completo"
+      ],
+      color: "from-amber-500 to-amber-600"
+    },
+    {
+      icon: DollarSign,
+      title: "Cambio de Divisas",
+      price: "Mejor rate del mercado",
+      description: "Conversión USDT/crypto a USD billete o ARS al mejor tipo de cambio. Proceso seguro y trazable.",
+      features: [
+        "USDT → USD billete",
+        "Crypto → ARS",
+        "Rate competitivo garantizado",
+        "Transferencias seguras y rápidas"
+      ],
+      color: "from-green-500 to-green-600"
+    },
+    {
+      icon: FileText,
+      title: "Documentación Legal",
+      price: "Pack integral",
+      description: "Gestión completa de CUIT/CDI, documentación fiscal y estructuras legales para inversores extranjeros.",
+      features: [
+        "Tramitación CUIT/CDI",
+        "Apertura cuenta bancaria",
+        "Estructuras fiscales óptimas",
+        "Documentación apostillada"
+      ],
+      color: "from-purple-500 to-purple-600"
+    },
+    {
+      icon: FileText,
+      title: "Escribano & Poder",
+      price: "Cierre remoto seguro",
+      description: "Escribano certificado y poder notarial para compra remota. Cierre 100% a distancia con garantías legales.",
+      features: [
+        "Escribano de confianza",
+        "Poder notarial internacional",
+        "Verificación de títulos",
+        "Cierre remoto certificado"
+      ],
+      color: "from-red-500 to-red-600"
+    },
+    {
+      icon: Hammer,
+      title: "Remodelación Turnkey",
+      price: "Proyecto integral",
+      description: "Diseño, remodelación e interiorismo completo. De la compra al alquiler sin que tengas que viajar.",
+      features: [
+        "Diseño arquitectónico",
+        "Gestión de obra completa",
+        "Interiorismo profesional",
+        "Entrega llave en mano"
+      ],
+      color: "from-indigo-500 to-indigo-600"
+    }
+  ];
 
-  const serviceIcons = [Users, Search, DollarSign, FileText, FileText, Hammer];
-  const serviceColors = [
-    "from-blue-500 to-blue-600",
-    "from-amber-500 to-amber-600", 
-    "from-green-500 to-green-600",
-    "from-purple-500 to-purple-600",
-    "from-red-500 to-red-600",
-    "from-indigo-500 to-indigo-600"
+  const rentalServices = [
+    {
+      title: "Alquiler Tradicional",
+      description: "Gestión de alquiler residencial de largo plazo. Máxima estabilidad y previsibilidad de ingresos.",
+      features: [
+        "Contratos 2-3 años",
+        "Inquilinos verificados",
+        "Garantías sólidas",
+        "Administración completa"
+      ]
+    },
+    {
+      title: "Airbnb / Estudiantes",
+      description: "Alquiler temporario y a estudiantes internacionales. Mayor rotación pero yields superiores.",
+      features: [
+        "Gestión Airbnb completa",
+        "Alquiler a estudiantes",
+        "Yields 15-25% superiores",
+        "Mantenimiento incluido"
+      ]
+    }
   ];
 
   return (
@@ -30,10 +121,11 @@ const Servicios = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-slate-800 mb-6">
-              {t('services.title')}
+              Servicios <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-600">360°</span>
             </h1>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-              {t('services.subtitle')}
+              Todo lo que necesitas para invertir exitosamente en Buenos Aires. 
+              Desde la primera consulta hasta la gestión de alquiler, nos encargamos de cada detalle.
             </p>
           </div>
         </div>
@@ -44,110 +136,40 @@ const Servicios = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">
-              {t('services.main-title')}
+              Servicios principales
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              {t('services.main-subtitle')}
+              Cada servicio está diseñado para eliminar fricciones y maximizar tu retorno de inversión
             </p>
           </div>
           
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-            {[
-              {
-                title: t('services.advisory.title'),
-                price: t('services.advisory.price'),
-                description: t('services.advisory.description'),
-                features: [
-                  t('services.advisory.feature1'),
-                  t('services.advisory.feature2'),
-                  t('services.advisory.feature3'),
-                  t('services.advisory.feature4')
-                ]
-              },
-              {
-                title: t('services.search.title'),
-                price: t('services.search.price'),
-                description: t('services.search.description'),
-                features: [
-                  t('services.search.feature1'),
-                  t('services.search.feature2'),
-                  t('services.search.feature3'),
-                  t('services.search.feature4')
-                ]
-              },
-              {
-                title: t('services.exchange.title'),
-                price: t('services.exchange.price'),
-                description: t('services.exchange.description'),
-                features: [
-                  t('services.exchange.feature1'),
-                  t('services.exchange.feature2'),
-                  t('services.exchange.feature3'),
-                  t('services.exchange.feature4')
-                ]
-              },
-              {
-                title: t('services.legal.title'),
-                price: t('services.legal.price'),
-                description: t('services.legal.description'),
-                features: [
-                  t('services.legal.feature1'),
-                  t('services.legal.feature2'),
-                  t('services.legal.feature3'),
-                  t('services.legal.feature4')
-                ]
-              },
-              {
-                title: t('services.notary.title'),
-                price: t('services.notary.price'),
-                description: t('services.notary.description'),
-                features: [
-                  t('services.notary.feature1'),
-                  t('services.notary.feature2'),
-                  t('services.notary.feature3'),
-                  t('services.notary.feature4')
-                ]
-              },
-              {
-                title: t('services.renovation.title'),
-                price: t('services.renovation.price'),
-                description: t('services.renovation.description'),
-                features: [
-                  t('services.renovation.feature1'),
-                  t('services.renovation.feature2'),
-                  t('services.renovation.feature3'),
-                  t('services.renovation.feature4')
-                ]
-              }
-            ].map((service, index) => {
-              const ServiceIcon = serviceIcons[index];
-              return (
-                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-                  <CardHeader>
-                    <div className={`w-16 h-16 bg-gradient-to-br ${serviceColors[index]} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      <ServiceIcon className="h-8 w-8 text-white" />
-                    </div>
-                    <CardTitle className="text-center text-2xl text-slate-800">{service.title}</CardTitle>
-                    <div className="text-center">
-                      <span className="text-lg font-semibold text-blue-600">{service.price}</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <p className="text-slate-600 leading-relaxed text-center">
-                      {service.description}
-                    </p>
-                    <ul className="space-y-3">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span className="text-slate-600">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              );
-            })}
+            {services.map((service, index) => (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <CardHeader>
+                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-center text-2xl text-slate-800">{service.title}</CardTitle>
+                  <div className="text-center">
+                    <span className="text-lg font-semibold text-blue-600">{service.price}</span>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <p className="text-slate-600 leading-relaxed text-center">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-3">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-slate-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -160,36 +182,15 @@ const Servicios = () => {
               <Home className="h-10 w-10 text-white" />
             </div>
             <h2 className="text-4xl font-bold text-slate-800 mb-4">
-              {t('services.rental-title')}
+              Gestión de Alquiler
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              {t('services.rental-subtitle')}
+              Dos modalidades de alquiler para maximizar tu retorno según tu perfil de riesgo y objetivos
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: t('services.traditional.title'),
-                description: t('services.traditional.description'),
-                features: [
-                  t('services.traditional.feature1'),
-                  t('services.traditional.feature2'),
-                  t('services.traditional.feature3'),
-                  t('services.traditional.feature4')
-                ]
-              },
-              {
-                title: t('services.airbnb.title'),
-                description: t('services.airbnb.description'),
-                features: [
-                  t('services.airbnb.feature1'),
-                  t('services.airbnb.feature2'),
-                  t('services.airbnb.feature3'),
-                  t('services.airbnb.feature4')
-                ]
-              }
-            ].map((rental, index) => (
+            {rentalServices.map((rental, index) => (
               <Card key={index} className="border-0 shadow-lg">
                 <CardContent className="p-8 space-y-6">
                   <div className="text-center space-y-4">
@@ -213,12 +214,12 @@ const Servicios = () => {
           
           <div className="text-center mt-12">
             <p className="text-lg text-slate-600 mb-6">
-              {t('services.rental-question')}
+              ¿No estás seguro cuál modalidad te conviene más?
             </p>
             <Link to="/contacto">
               <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800">
-                <span className="sm:hidden">{t('services.rental-button-mobile')}</span>
-                <span className="hidden sm:inline">{t('services.rental-button')}</span>
+                <span className="sm:hidden">Consulta personalizada</span>
+                <span className="hidden sm:inline">Consulta personalizada gratuita</span>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -236,26 +237,26 @@ const Servicios = () => {
               </div>
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold text-slate-800">
-                  {t('services.guarantee-title')}
+                  Garantía de satisfacción 100%
                 </h2>
                 <p className="text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
-                  {t('services.guarantee-subtitle')}
+                  Si no estás completamente satisfecho con nuestro servicio en los primeros 30 días, 
+                  te devolvemos el 100% de tu inversión. Sin preguntas.
                 </p>
               </div>
               <div className="grid md:grid-cols-3 gap-6 text-center">
-                {[
-                  { value: t('services.guarantee-stat1'), label: t('services.guarantee-label1') },
-                  { value: t('services.guarantee-stat2'), label: t('services.guarantee-label2') },
-                  { value: t('services.guarantee-stat3'), label: t('services.guarantee-label3') }
-                ].map((stat, index) => {
-                  const colors = ["text-blue-600", "text-amber-600", "text-green-600"];
-                  return (
-                    <div key={index} className="space-y-2">
-                      <div className={`text-2xl font-bold ${colors[index]}`}>{stat.value}</div>
-                      <div className="text-sm text-slate-600">{stat.label}</div>
-                    </div>
-                  );
-                })}
+                <div className="space-y-2">
+                  <div className="text-2xl font-bold text-blue-600">100%</div>
+                  <div className="text-sm text-slate-600">Operaciones exitosas</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-2xl font-bold text-amber-600">24/7</div>
+                  <div className="text-sm text-slate-600">Soporte disponible</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-2xl font-bold text-green-600">30 días</div>
+                  <div className="text-sm text-slate-600">Garantía de devolución</div>
+                </div>
               </div>
             </CardContent>
           </Card>
