@@ -379,6 +379,12 @@ const translations = {
     'contact.whatsapp-message': 'Hola, me interesa conocer más sobre las oportunidades de inversión en Buenos Aires.',
     'contact.back-home': 'Volver al inicio',
 
+    // Blog Articles 
+    'articles.microcentro.title': 'Por qué el Microcentro porteño es la mejor oportunidad inmobiliaria (2025)',
+    'articles.microcentro.excerpt': 'Análisis completo del ciclo argentino, comparativas con Madrid y Barcelona, y cómo invertir en oficinas a reciclar con yields del 8-10%.',
+    'articles.bitcoin.title': 'Comprar una vivienda en Buenos Aires con Bitcoin sin venderlo',
+    'articles.bitcoin.excerpt': 'Cómo apalancar tu BTC al 5% en DeFi, comprar metros a USD 1,000/m² y conservar el potencial alcista de la criptomoneda.',
+
     // Common
     'common.loading': 'Cargando...',
     'common.error': 'Error',
@@ -758,6 +764,12 @@ const translations = {
     'contact.form.submit': 'Send message',
     'contact.whatsapp-message': 'Hello, I am interested in learning more about investment opportunities in Buenos Aires.',
     'contact.back-home': 'Back to home',
+
+    // Blog Articles
+    'articles.microcentro.title': 'Why Buenos Aires Downtown is the best real estate opportunity (2025)',
+    'articles.microcentro.excerpt': 'Complete analysis of the Argentine cycle, comparisons with Madrid and Barcelona, and how to invest in offices to recycle with 8-10% yields.',
+    'articles.bitcoin.title': 'Buy a home in Buenos Aires with Bitcoin without selling it',
+    'articles.bitcoin.excerpt': 'How to leverage your BTC at 5% in DeFi, buy square meters at USD 1,000/m² and preserve the upside potential of cryptocurrency.',
 
     // Common
     'common.loading': 'Loading...',

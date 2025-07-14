@@ -812,10 +812,10 @@ const ArticleDetail = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-slate-800 mb-4">Artículo no encontrado</h1>
+          <h1 className="text-2xl font-bold text-slate-800 mb-4">{language === 'es' ? 'Artículo no encontrado' : 'Article not found'}</h1>
           <Button onClick={() => navigate('/blog')}>
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Volver al blog
+            {t('blog.back-to-blog')}
           </Button>
         </div>
       </div>
@@ -840,7 +840,7 @@ const ArticleDetail = () => {
 
           {/* Article Header */}
           <div className={`${isMobile ? 'px-4 mb-6' : 'mb-8'}`}>
-            <Badge variant="default" className="mb-4">{language === 'es' ? 'Análisis' : 'Analysis'}</Badge>
+            <Badge variant="default" className="mb-4">{article.category}</Badge>
             <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl sm:text-5xl'} font-bold text-slate-800 leading-tight mb-4`}>
               {article.title}
             </h1>
@@ -855,7 +855,7 @@ const ArticleDetail = () => {
               </div>
               <div className="flex items-center space-x-1">
                 <Clock className="h-4 w-4" />
-                <span>{article.readTime} lectura</span>
+                <span>{article.readTime} {language === 'es' ? 'lectura' : 'read'}</span>
               </div>
             </div>
           </div>
