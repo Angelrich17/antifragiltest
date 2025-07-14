@@ -872,90 +872,117 @@ Para inversores con horizonte de 3-5 años y tolerancia al riesgo moderada, esta
     // Blog Articles
     'articles.microcentro.title': 'Why Buenos Aires Downtown is the best real estate opportunity (2025)',
     'articles.microcentro.excerpt': 'Complete analysis of the Argentine cycle, comparisons with Madrid and Barcelona, and how to invest in offices to recycle with 8-10% yields.',
-    'articles.microcentro.content': `The Argentine real estate market is experiencing one of its most interesting moments of the last decade. While the country goes through a new phase of economic stabilization under the Milei administration, Buenos Aires Downtown emerges as the most attractive investment opportunity for 2025.
+    'articles.microcentro.content': `<div class="space-y-8">
+          <!-- Featured intro -->
+          <div class="bg-gradient-to-r from-blue-50 to-green-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+            <p class="text-sm text-blue-700 font-medium mb-2">🏢 Updated: January 13, 2025 | New Argentine economic cycle</p>
+          </div>
 
-## Current Macroeconomic Context
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-8 mb-4">
+            Starting point: new Argentine cycle
+          </h2>
+          <p class="text-lg leading-relaxed text-slate-700 mb-6">
+            Since Javier Milei's arrival in December 2023, Argentina cut the primary fiscal deficit at its root and stabilized the exchange rate. <strong>The result is double: real wages in dollars almost tripled and banks resumed offering mortgage credit in hard currency</strong>. In parallel, the published supply of properties for sale has been falling since 2020, while deeds rise quarter by quarter, creating a market in clear absorption phase.
+          </p>
 
-Argentina is in a crucial transition phase. Partial dollarization and stabilization policies have generated a unique scenario where dollar-denominated assets maintain their value while the peso gradually stabilizes. This dynamic creates an exceptional window of opportunity for long-term investors.
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            🏙️ Prime zones versus value zones
+          </h2>
+          \${isMobile ? \`
+          <div class="space-y-4 mb-8">
+            <div class="bg-gradient-to-r from-purple-50 to-purple-100 border border-purple-200 rounded-lg p-4">
+              <h3 class="font-bold text-purple-800 mb-2">Puerto Madero</h3>
+              <p class="text-purple-700 font-bold text-lg">~US$6,000/m²</p>
+              <p class="text-purple-600 text-sm">Ultra-modern waterfront with new construction towers and river views.</p>
+            </div>
+            
+            <div class="bg-gradient-to-r from-indigo-50 to-indigo-100 border border-indigo-200 rounded-lg p-4">
+              <h3 class="font-bold text-indigo-800 mb-2">Palermo Chico</h3>
+              <p class="text-indigo-700 font-bold text-lg">~US$4,000/m²</p>
+              <p class="text-indigo-600 text-sm">Embassy district, mansions and parks.</p>
+            </div>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-lg p-4">
+              <h3 class="font-bold text-blue-800 mb-2">Palermo Soho/Hollywood and Núñez</h3>
+              <p class="text-blue-700 font-bold text-lg">~US$3,000/m²</p>
+              <p class="text-blue-600 text-sm">Gastronomic hub (Don Julio, La Carnicería) and nightlife.</p>
+            </div>
+            
+            <div class="bg-gradient-to-r from-green-50 to-green-100 border border-green-200 rounded-lg p-4">
+              <h3 class="font-bold text-green-800 mb-2">Recoleta</h3>
+              <p class="text-green-700 font-bold text-lg">~US$2,700/m²</p>
+              <p class="text-green-600 text-sm">Classic architecture and cultural tourism.</p>
+            </div>
+            
+            <div class="bg-gradient-to-r from-amber-50 to-yellow-100 border-2 border-amber-300 rounded-lg p-4 shadow-md">
+              <h3 class="font-bold text-amber-800 mb-2">🌟 Downtown (San Nicolás/Monserrat)</h3>
+              <p class="text-amber-700 font-bold text-xl">US$1,000-1,500/m²</p>
+              <p class="text-amber-600 font-medium">Massive inventory of units with high ceilings, today at bargain prices.</p>
+            </div>
+          </div>
+          \` : \`
+          <div class="overflow-x-auto shadow-lg rounded-lg mb-8">
+            <table class="w-full bg-white">
+              <thead class="bg-gradient-to-r from-slate-700 to-slate-800 text-white">
+                <tr>
+                  <th class="px-6 py-4 text-left font-semibold">Zone</th>
+                  <th class="px-6 py-4 text-left font-semibold">Price/m²</th>
+                  <th class="px-6 py-4 text-left font-semibold">Characteristics</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-purple-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-purple-800">Puerto Madero</td>
+                  <td class="px-6 py-4 text-purple-700 font-bold">~US$6,000/m²</td>
+                  <td class="px-6 py-4 text-slate-600">Ultra-modern waterfront with new construction towers and river views</td>
+                </tr>
+                <tr class="hover:bg-indigo-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-indigo-800">Palermo Chico</td>
+                  <td class="px-6 py-4 text-indigo-700 font-bold">~US$4,000/m²</td>
+                  <td class="px-6 py-4 text-slate-600">Embassy district, mansions and parks</td>
+                </tr>
+                <tr class="hover:bg-blue-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-blue-800">Palermo Soho/Hollywood and Núñez</td>
+                  <td class="px-6 py-4 text-blue-700 font-bold">~US$3,000/m²</td>
+                  <td class="px-6 py-4 text-slate-600">Gastronomic hub (Don Julio, La Carnicería) and nightlife</td>
+                </tr>
+                <tr class="hover:bg-green-50 transition-colors">
+                  <td class="px-6 py-4 font-medium text-green-800">Recoleta</td>
+                  <td class="px-6 py-4 text-green-700 font-bold">~US$2,700/m²</td>
+                  <td class="px-6 py-4 text-slate-600">Classic architecture and cultural tourism</td>
+                </tr>
+                <tr class="hover:bg-amber-50 transition-colors bg-amber-25 border-l-4 border-amber-500">
+                  <td class="px-6 py-4 font-bold text-amber-800">🌟 Downtown (San Nicolás/Monserrat)</td>
+                  <td class="px-6 py-4 text-amber-700 font-bold text-lg">US$1,000-1,500/m²</td>
+                  <td class="px-6 py-4 text-amber-700 font-medium">Massive inventory of units with high ceilings, today at bargain prices</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          \`}
 
-## Downtown: The Diamond in the Rough
-
-### Strategic Location
-Buenos Aires Downtown concentrates:
-- **Connectivity**: Nerve center of public transportation
-- **Infrastructure**: Consolidated services and total access
-- **History**: Heritage architecture with recycling potential
-- **Future**: Urban revitalization plans underway
-
-### Recycling Opportunity
-Downtown offices present unique characteristics:
-- **Prices**: USD 800-1,200 per m² (vs USD 3,000+ in Palermo)
-- **Potential**: Conversion to luxury housing
-- **Yields**: 8-10% annually in dollars
-- **Appreciation**: 200-300% revaluation potential
-
-## International Comparison
-
-### Madrid - Centro District
-- **Price**: €4,000-6,000/m²
-- **Yield**: 3-4%
-- **Growth**: Limited by saturation
-
-### Barcelona - Ciutat Vella
-- **Price**: €3,500-5,500/m²
-- **Yield**: 3-5%
-- **Regulation**: Growing restrictions
-
-### Buenos Aires - Downtown
-- **Price**: USD 800-1,200/m²
-- **Yield**: 8-10%
-- **Potential**: Massive upside potential
-
-## Investment Strategy
-
-### Phase 1: Acquisition (2025)
-- Identify buildings with recycling potential
-- Negotiate prices at the cycle bottom
-- Secure peso financing at favorable rates
-
-### Phase 2: Development (2025-2026)
-- Recycling to international standards
-- Sustainable certifications
-- World-class amenities
-
-### Phase 3: Monetization (2027+)
-- Sale at corrected market prices
-- Rental at normalized yields
-- Flexible exit strategy
-
-## Risk Factors
-
-### Political
-- Changes in urban regulations
-- Tax modifications
-- Institutional instability
-
-### Economic
-- Exchange rate volatility
-- Residual inflation
-- Credit access
-
-### Market
-- Competition from other developers
-- Changes in location preferences
-- Segment saturation
-
-## Conclusion
-
-Buenos Aires Downtown represents a unique opportunity that combines:
-- **Perfect timing**: Real estate cycle bottom
-- **Solid fundamentals**: Location and connectivity
-- **Massive upside**: Exceptional revaluation potential
-- **Attractive yields**: Immediate dollar profitability
-
-For investors with a 3-5 year horizon and moderate risk tolerance, this opportunity can generate exceptional returns while contributing to the revitalization of a historic area of Buenos Aires.
-
-*The information contained in this analysis is educational in nature and does not constitute personalized financial advice.*`,
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            📊 Downtown Buenos Aires X-ray
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-blue-800 mb-4">💰 2025 Prices</h3>
+              <ul class="space-y-2 text-slate-700">
+                <li>📈 <strong>San Nicolás (listing):</strong> US$1,785/m²</li>
+                <li>📈 <strong>Monserrat (listing):</strong> US$2,121/m²</li>
+                <li>🔥 <strong>Offices to recycle:</strong> US$900-1,200/m²</li>
+              </ul>
+            </div>
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-amber-800 mb-4">🎯 Reasons for discount</h3>
+              <ul class="space-y-2 text-slate-700">
+                <li>📉 Office over-supply after pandemic</li>
+                <li>🏛️ Tax incentives from 'Downtown 21' municipal plan</li>
+                <li>🏢 Corporate owners urged to liquidate idle square meters</li>
+              </ul>
+            </div>
+          </div>
+        </div>`,
     'articles.bitcoin.title': 'Buy a home in Buenos Aires with Bitcoin without selling it',
     'articles.bitcoin.excerpt': 'How to leverage your BTC at 5% in DeFi, buy square meters at USD 1,000/m² and preserve the upside potential of cryptocurrency.',
     'articles.bitcoin.content': `<div class="space-y-8">
