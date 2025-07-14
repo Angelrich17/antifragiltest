@@ -1033,8 +1033,15 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     if (newLang !== language) {
       // Update URL with new language
       const currentPath = location.pathname;
-      const pathWithoutLang = currentPath.replace(/^\/(es|en)/, '');
-      const newPath = `/${newLang}${pathWithoutLang || '/'}`;
+      let pathWithoutLang = currentPath.replace(/^\/(es|en)/, '');
+      
+      // If path is empty after removing lang, add root slash
+      if (!pathWithoutLang) {
+        pathWithoutLang = '/';
+      }
+      
+      const newPath = `/${newLang}${pathWithoutLang}`;
+      console.log('Changing language from', language, 'to', newLang, 'path:', currentPath, '→', newPath);
       navigate(newPath, { replace: true });
     }
   };
