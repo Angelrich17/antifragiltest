@@ -19,6 +19,7 @@ import Contacto from "./pages/Contacto";
 import Blog from "./pages/Blog";
 import ArticleDetail from "./pages/ArticleDetail";
 import NotFound from "./pages/NotFound";
+import Sitemap from "./pages/Sitemap";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,9 @@ const App = () => (
       <BrowserRouter>
         <LanguageProvider>
           <Routes>
+            {/* Static files */}
+            <Route path="/sitemap.xml" element={<Sitemap />} />
+            
             {/* Redirect routes without language */}
             <Route path="/" element={<LanguageRedirect />} />
             <Route path="/por-que-argentina" element={<LanguageRedirect />} />
