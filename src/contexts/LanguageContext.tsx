@@ -1003,26 +1003,31 @@ For investors with a 3-5 year horizon and moderate risk tolerance, this opportun
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { lang } = useParams<{ lang: string }>();
   const navigate = useNavigate();
   const location = useLocation();
   
-  const [language, setLanguage] = useState<Language>(() => {
-    // First try to get from URL parameter
-    if (lang === 'es' || lang === 'en') {
-      return lang;
+  // Extract language from current path
+  const getCurrentLanguageFromPath = (): Language => {
+    const pathMatch = location.pathname.match(/^\/(es|en)($|\/)/);
+    if (pathMatch) {
+      return pathMatch[1] as Language;
     }
+    
     // Fallback to localStorage or default
     const saved = localStorage.getItem('language');
     return (saved as Language) || 'es';
-  });
+  };
+  
+  const [language, setLanguage] = useState<Language>(getCurrentLanguageFromPath);
 
-  // Update language when URL parameter changes
+  // Update language when URL changes
   useEffect(() => {
-    if (lang === 'es' || lang === 'en') {
-      setLanguage(lang);
+    const newLang = getCurrentLanguageFromPath();
+    if (newLang !== language) {
+      setLanguage(newLang);
+      console.log('Language updated from URL:', newLang, 'Path:', location.pathname);
     }
-  }, [lang]);
+  }, [location.pathname, language]);
 
   // Save to localStorage when language changes
   useEffect(() => {
