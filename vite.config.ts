@@ -3,8 +3,11 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import fs from 'fs';
+import { fileURLToPath } from 'url';
 import type { ViteDevServer } from 'vite';
 import type { IncomingMessage, ServerResponse } from 'http';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Custom plugin to serve static files before SPA fallback
 const staticFilePlugin = () => ({
@@ -13,7 +16,7 @@ const staticFilePlugin = () => ({
     // Intercept requests for static files before they reach the SPA fallback
     server.middlewares.use((req: IncomingMessage, res: ServerResponse, next: () => void) => {
       if (req.url === '/sitemap.xml') {
-        const filePath = path.join(__dirname, 'public', 'sitemap.xml');
+        const filePath = path.resolve(__dirname, 'public', 'sitemap.xml');
         if (fs.existsSync(filePath)) {
           res.setHeader('Content-Type', 'application/xml');
           res.setHeader('Cache-Control', 'public, max-age=3600');
@@ -23,7 +26,7 @@ const staticFilePlugin = () => ({
       }
       
       if (req.url === '/robots.txt') {
-        const filePath = path.join(__dirname, 'public', 'robots.txt');
+        const filePath = path.resolve(__dirname, 'public', 'robots.txt');
         if (fs.existsSync(filePath)) {
           res.setHeader('Content-Type', 'text/plain');
           res.setHeader('Cache-Control', 'public, max-age=86400');
@@ -42,18 +45,12 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
-    // Configure middleware to serve static files before SPA
     middlewareMode: false,
-    fs: {
-      strict: false
-    }
+    fs: { strict: false }
   },
   build: {
-    // Ensure static files are copied to dist
     rollupOptions: {
-      external: [],
       output: {
-        // Don't process sitemap.xml and robots.txt as JS modules
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'sitemap.xml' || assetInfo.name === 'robots.txt') {
             return '[name][extname]';
@@ -66,8 +63,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     staticFilePlugin(),
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger()
   ].filter(Boolean),
   resolve: {
     alias: {
