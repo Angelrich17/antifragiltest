@@ -1,17 +1,21 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOLanguageLinks from "@/components/SEOLanguageLinks";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 
 const Contacto = () => {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
+  const { getLocalizedPath } = useLocalizedPath();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-neutral-100">
+      <SEOLanguageLinks />
       <Header />
       
       <section className="pt-32 pb-24 px-4">
@@ -124,7 +128,7 @@ const Contacto = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/">
+            <Link to={getLocalizedPath("/")}>
               <Button size="lg" className="bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl px-8 py-4 font-light">
                 {t('contact.back-home')}
                 <ArrowRight className="ml-2 h-4 w-4" />

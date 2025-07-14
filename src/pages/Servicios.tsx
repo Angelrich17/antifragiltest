@@ -4,12 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOLanguageLinks from "@/components/SEOLanguageLinks";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 
 const Servicios = () => {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
+  const { getLocalizedPath } = useLocalizedPath();
 
   const serviceIcons = [Users, Search, DollarSign, FileText, FileText, Hammer];
   const serviceColors = [
@@ -23,6 +26,7 @@ const Servicios = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <SEOLanguageLinks />
       <Header />
       
       {/* Hero Section */}
@@ -215,7 +219,7 @@ const Servicios = () => {
             <p className="text-lg text-slate-600 mb-6">
               {t('services.rental-question')}
             </p>
-            <Link to="/contacto">
+            <Link to={getLocalizedPath("/contacto")}>
               <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800">
                 <span className="sm:hidden">{t('services.rental-button-mobile')}</span>
                 <span className="hidden sm:inline">{t('services.rental-button')}</span>
