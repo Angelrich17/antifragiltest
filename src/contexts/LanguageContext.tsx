@@ -72,6 +72,45 @@ const translations = {
     'process.step3.title': 'Ejecución & Gestión',
     'process.step3.description': 'Cierre notarial remoto, optimización del activo y gestión integral de renta desde el primer día.',
     'process.explore-methodology': 'Explorar metodología completa',
+
+    // Blog Page
+    'blog.title': 'Insights & Análisis',
+    'blog.subtitle': 'Perspectivas profundas sobre inversiones inmobiliarias en Argentina',
+    'blog.featured-articles': 'Artículos destacados',
+    'blog.all-articles': 'Todos los artículos',
+    'blog.newsletter.title': 'Mantente informado',
+    'blog.newsletter.subtitle': 'Recibe análisis exclusivos y oportunidades de inversión directamente en tu email',
+    'blog.newsletter.placeholder': 'Tu email',
+    'blog.newsletter.subscribe': 'Suscribirse',
+    'blog.newsletter.success': '¡Suscripción exitosa!',
+    'blog.newsletter.success.description': 'Te has suscrito correctamente a nuestro newsletter',
+    'blog.newsletter.error': 'Error',
+    'blog.newsletter.error.invalid': 'Por favor ingresa un email válido',
+    'blog.newsletter.error.general': 'Hubo un error al suscribirse. Inténtalo nuevamente.',
+    'blog.read-more': 'Leer más',
+    'blog.back-to-blog': 'Volver al blog',
+    'blog.reading-time': 'lectura',
+
+    // Why Argentina Page
+    'why-argentina.title': '¿Por qué Argentina ahora?',
+    'why-argentina.subtitle': 'Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica de comprar activos de calidad mundial a precios de mercados emergentes.',
+    'why-argentina.watch-analysis': 'Ver análisis completo',
+    'why-argentina.download-pdf': 'Descargar PDF gratuito',
+    'why-argentina.macroeconomic-data': 'Datos macroeconómicos',
+    'why-argentina.historical-cycles': 'Ciclos históricos',
+    'why-argentina.expert-analysis': 'Análisis experto',
+
+    // Common
+    'common.loading': 'Cargando...',
+    'common.error': 'Error',
+    'common.success': 'Éxito',
+    'common.contact': 'Contacto',
+    'common.email': 'Email',
+    'common.phone': 'Teléfono',
+    'common.name': 'Nombre',
+    'common.send': 'Enviar',
+    'common.read-more': 'Leer más',
+    'common.learn-more': 'Saber más',
   },
   en: {
     // Header
@@ -134,6 +173,45 @@ const translations = {
     'process.step3.title': 'Execution & Management',
     'process.step3.description': 'Remote notarial closing, asset optimization and comprehensive rental management from day one.',
     'process.explore-methodology': 'Explore complete methodology',
+
+    // Blog Page
+    'blog.title': 'Insights & Analysis',
+    'blog.subtitle': 'Deep perspectives on real estate investments in Argentina',
+    'blog.featured-articles': 'Featured articles',
+    'blog.all-articles': 'All articles',
+    'blog.newsletter.title': 'Stay informed',
+    'blog.newsletter.subtitle': 'Receive exclusive analysis and investment opportunities directly in your email',
+    'blog.newsletter.placeholder': 'Your email',
+    'blog.newsletter.subscribe': 'Subscribe',
+    'blog.newsletter.success': 'Subscription successful!',
+    'blog.newsletter.success.description': 'You have successfully subscribed to our newsletter',
+    'blog.newsletter.error': 'Error',
+    'blog.newsletter.error.invalid': 'Please enter a valid email',
+    'blog.newsletter.error.general': 'There was an error subscribing. Please try again.',
+    'blog.read-more': 'Read more',
+    'blog.back-to-blog': 'Back to blog',
+    'blog.reading-time': 'read',
+
+    // Why Argentina Page
+    'why-argentina.title': 'Why Argentina now?',
+    'why-argentina.subtitle': 'An investment thesis backed by hard data, economic cycles and a historic opportunity to buy world-class assets at emerging market prices.',
+    'why-argentina.watch-analysis': 'Watch complete analysis',
+    'why-argentina.download-pdf': 'Download free PDF',
+    'why-argentina.macroeconomic-data': 'Macroeconomic data',
+    'why-argentina.historical-cycles': 'Historical cycles',
+    'why-argentina.expert-analysis': 'Expert analysis',
+
+    // Common
+    'common.loading': 'Loading...',
+    'common.error': 'Error',
+    'common.success': 'Success',
+    'common.contact': 'Contact',
+    'common.email': 'Email',
+    'common.phone': 'Phone',
+    'common.name': 'Name',
+    'common.send': 'Send',
+    'common.read-more': 'Read more',
+    'common.learn-more': 'Learn more',
   }
 };
 

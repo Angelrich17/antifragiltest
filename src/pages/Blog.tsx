@@ -9,18 +9,20 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 import bitcoinBuenosAires from "@/assets/bitcoin-buenos-aires.jpg";
 
 const Blog = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const handleSubscribe = async () => {
     if (!email || !email.includes('@')) {
       toast({
-        title: "Error",
-        description: "Por favor ingresa un email válido",
+        title: t('blog.newsletter.error'),
+        description: t('blog.newsletter.error.invalid'),
         variant: "destructive",
       });
       return;
@@ -37,14 +39,14 @@ const Blog = () => {
       }
 
       toast({
-        title: "¡Suscripción exitosa!",
-        description: "Te has suscrito correctamente a nuestro newsletter",
+        title: t('blog.newsletter.success'),
+        description: t('blog.newsletter.success.description'),
       });
       setEmail("");
     } catch (error: any) {
       toast({
-        title: "Error",
-        description: error.message || "Hubo un error al suscribirse. Inténtalo nuevamente.",
+        title: t('blog.newsletter.error'),
+        description: error.message || t('blog.newsletter.error.general'),
         variant: "destructive",
       });
     } finally {
@@ -154,11 +156,10 @@ const Blog = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center space-y-6">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-slate-900 leading-tight">
-              Blog de <span className="font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent">inversiones</span>
+              {t('blog.title')} <span className="font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent"></span>
             </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Insights, análisis y guías prácticas sobre inversión inmobiliaria en Argentina. 
-              Mantente actualizado con las últimas tendencias del mercado.
+              {t('blog.subtitle')}
             </p>
           </div>
         </div>
@@ -185,7 +186,7 @@ const Blog = () => {
       {/* Articles Grid */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">Artículos recientes</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">{t('blog.featured-articles')}</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredArticles.map((article) => (
@@ -227,7 +228,7 @@ const Blog = () => {
       {/* Recent Articles List */}
       <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">Más artículos</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">{t('blog.all-articles')}</h2>
           
           <div className="space-y-6">
             {recentArticles.map((article) => (
@@ -241,7 +242,7 @@ const Blog = () => {
                           <div className="flex items-center space-x-3 text-xs text-slate-500">
                             <span>{article.date}</span>
                             <span>•</span>
-                            <span>{article.readTime} lectura</span>
+                            <span>{article.readTime} {t('blog.reading-time')}</span>
                           </div>
                         </div>
                         <h3 className="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
@@ -270,15 +271,15 @@ const Blog = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-slate-800">
-              Suscríbete a nuestro newsletter
+              {t('blog.newsletter.title')}
             </h2>
             <p className="text-xl text-slate-600">
-              Recibe los mejores insights sobre inversión inmobiliaria directamente en tu email
+              {t('blog.newsletter.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input 
                 type="email" 
-                placeholder="Tu email" 
+                placeholder={t('blog.newsletter.placeholder')} 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -288,7 +289,7 @@ const Blog = () => {
                 disabled={isLoading}
                 className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8"
               >
-                {isLoading ? "Suscribiendo..." : "Suscribirse"}
+                {isLoading ? t('common.loading') : t('blog.newsletter.subscribe')}
               </Button>
             </div>
           </div>
