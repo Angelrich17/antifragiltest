@@ -29,7 +29,7 @@ const LanguageRedirect = () => {
     const path = location.pathname;
     
     // Skip redirection for static files (sitemap.xml, robots.txt, etc.)
-    if (path.match(/\.(xml|txt|json|ico|png|jpg|jpeg|gif|svg)$/)) {
+    if (path.match(/\.(xml|txt|json|ico|png|jpg|jpeg|gif|svg)$/) || path === '/sitemap.xml' || path === '/robots.txt') {
       return;
     }
     
