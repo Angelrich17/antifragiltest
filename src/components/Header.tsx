@@ -4,27 +4,24 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import LanguageSelector from "@/components/LanguageSelector";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const { language, t } = useLanguage();
-
-  // Determine current language prefix
-  const langPrefix = language === 'en' ? '/en' : '/es';
+  const { t } = useLanguage();
 
   const navigation = [
-    { name: t('nav.home'), href: language === 'en' ? '/en' : '/es' },
-    { name: t('nav.whyArgentina'), href: `${langPrefix}${language === 'en' ? '/why-argentina' : '/por-que-argentina'}` },
-    { name: t('nav.services'), href: `${langPrefix}${language === 'en' ? '/services' : '/servicios'}` },
-    { name: t('nav.process'), href: `${langPrefix}${language === 'en' ? '/process' : '/proceso'}` },
-    { name: t('nav.realCases'), href: `${langPrefix}${language === 'en' ? '/real-cases' : '/casos-reales'}` },
-    { name: t('nav.resources'), href: `${langPrefix}${language === 'en' ? '/resources' : '/recursos'}` },
-    { name: t('nav.rates'), href: `${langPrefix}${language === 'en' ? '/rates' : '/tarifas'}` },
-    { name: t('nav.blog'), href: `${langPrefix}/blog` },
-    { name: t('nav.aboutUs'), href: `${langPrefix}${language === 'en' ? '/about-us' : '/nosotros'}` },
-    { name: t('nav.contact'), href: `${langPrefix}${language === 'en' ? '/contact' : '/contacto'}` },
+    { name: t('nav.home'), href: "/" },
+    { name: t('nav.why-argentina'), href: "/por-que-argentina" },
+    { name: t('nav.services'), href: "/servicios" },
+    { name: t('nav.process'), href: "/proceso" },
+    { name: t('nav.case-studies'), href: "/casos-reales" },
+    { name: t('nav.resources'), href: "/recursos" },
+    { name: t('nav.pricing'), href: "/tarifas" },
+    { name: t('nav.blog'), href: "/blog" },
+    { name: t('nav.about'), href: "/nosotros" },
+    { name: t('nav.contact'), href: "/contacto" },
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -61,14 +58,14 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Language Switcher & CTA Button */}
+          {/* Language Selector & CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <LanguageSwitcher />
+            <LanguageSelector />
             <Button 
               className="bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl px-6 py-2 font-light shadow-sm"
               onClick={() => window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600')}
             >
-              {t('common.scheduleConsultation')}
+              {t('header.schedule-consultation')}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
@@ -102,7 +99,7 @@ const Header = () => {
               ))}
               <div className="pt-4 border-t border-neutral-200 space-y-3">
                 <div className="flex justify-center">
-                  <LanguageSwitcher />
+                  <LanguageSelector />
                 </div>
                 <Button 
                   className="w-full bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl font-light"
@@ -111,7 +108,7 @@ const Header = () => {
                     window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600');
                   }}
                 >
-                  {t('common.scheduleConsultation')}
+                  {t('header.schedule-consultation')}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
