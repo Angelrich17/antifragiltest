@@ -111,6 +111,22 @@ const translations = {
     'why-argentina.exchange-rate.description': 'Unificación cambiaria inminente. Corrección hacia equilibrio de largo plazo favorece activos locales.',
     'why-argentina.risks-title': '¿Riesgos y cómo los mitigamos?',
     'why-argentina.risks-subtitle': 'Transparencia total sobre los desafíos y nuestras estrategias de mitigación',
+    'why-argentina.numbers-dont-lie': 'Los números no mienten',
+    'why-argentina.numbers-subtitle': 'Datos comparativos que demuestran el momento excepcional para invertir en Buenos Aires',
+    'why-argentina.catalysts-title': 'Catalizadores de crecimiento',
+    'why-argentina.catalysts-subtitle': 'Factores macro que impulsan la revalorización inmobiliaria en el mediano plazo',
+    
+    // Footer
+    'footer.company': 'Empresa',
+    'footer.services': 'Servicios',
+    'footer.resources': 'Recursos',
+    'footer.newsletter': 'Newsletter',
+    'footer.newsletter-subtitle': 'Mantente al día con insights exclusivos',
+    'footer.email-placeholder': 'Tu email',
+    'footer.subscribe': 'Suscribirse',
+    'footer.rights': 'Todos los derechos reservados',
+    'footer.privacy': 'Política de Privacidad',
+    'footer.terms': 'Términos de Servicio',
 
     // Common
     'common.loading': 'Cargando...',
@@ -224,6 +240,22 @@ const translations = {
     'why-argentina.exchange-rate.description': 'Imminent currency unification. Long-term equilibrium correction favors local assets.',
     'why-argentina.risks-title': 'Risks and how we mitigate them?',
     'why-argentina.risks-subtitle': 'Total transparency about challenges and our mitigation strategies',
+    'why-argentina.numbers-dont-lie': 'Numbers don\'t lie',
+    'why-argentina.numbers-subtitle': 'Comparative data demonstrating the exceptional moment to invest in Buenos Aires',
+    'why-argentina.catalysts-title': 'Growth Catalysts',
+    'why-argentina.catalysts-subtitle': 'Macro factors driving real estate appreciation in the medium term',
+    
+    // Footer
+    'footer.company': 'Company',
+    'footer.services': 'Services',
+    'footer.resources': 'Resources',
+    'footer.newsletter': 'Newsletter',
+    'footer.newsletter-subtitle': 'Stay updated with exclusive insights',
+    'footer.email-placeholder': 'Your email',
+    'footer.subscribe': 'Subscribe',
+    'footer.rights': 'All rights reserved',
+    'footer.privacy': 'Privacy Policy',
+    'footer.terms': 'Terms of Service',
 
     // Common
     'common.loading': 'Loading...',
