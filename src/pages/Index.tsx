@@ -303,14 +303,13 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-neutral-50 rounded-full border border-neutral-200 mb-8">
-              <span className="text-sm font-medium text-neutral-600">Casos de Éxito</span>
+              <span className="text-sm font-medium text-neutral-600">{t('testimonials.badge')}</span>
             </div>
             <h2 className="text-5xl font-light text-neutral-900 mb-6 tracking-tight">
-              Inversionistas que
-              <span className="font-medium text-amber-600"> confiaron</span>
+              {t('testimonials.title')}
             </h2>
             <p className="text-xl text-neutral-600 font-light max-w-3xl mx-auto leading-relaxed">
-              Profesionales de todo el mundo han elegido nuestra expertise para sus inversiones en Buenos Aires
+              {t('testimonials.subtitle')}
             </p>
           </div>
           
@@ -321,8 +320,7 @@ const Index = () => {
                   {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
                 </div>
                 <p className="text-neutral-700 italic leading-relaxed font-light text-lg">
-                  "ROI del 14% en el primer año. El proceso fue impecablemente profesional 
-                  y completamente transparente desde el inicio."
+                  {t('testimonials.quote1')}
                 </p>
                 <div className="flex items-center space-x-4 pt-4 border-t border-neutral-100">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center">
@@ -342,8 +340,7 @@ const Index = () => {
                   {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
                 </div>
                 <p className="text-neutral-700 italic leading-relaxed font-light text-lg">
-                  "Operación 100% remota desde Madrid. Seguridad jurídica absoluta 
-                  y acompañamiento en cada detalle del proceso."
+                  {t('testimonials.quote2')}
                 </p>
                 <div className="flex items-center space-x-4 pt-4 border-t border-neutral-100">
                   <div className="w-12 h-12 bg-gradient-to-br from-amber-600 to-amber-700 rounded-full flex items-center justify-center">
@@ -363,8 +360,7 @@ const Index = () => {
                   {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
                 </div>
                 <p className="text-neutral-700 italic leading-relaxed font-light text-lg">
-                  "Mejor decisión de inversión en años. Combina rentabilidad 
-                  excepcional con un servicio verdaderamente boutique."
+                  {t('testimonials.quote3')}
                 </p>
                 <div className="flex items-center space-x-4 pt-4 border-t border-neutral-100">
                   <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-full flex items-center justify-center">
@@ -382,7 +378,7 @@ const Index = () => {
           <div className="text-center mt-16">
             <Link to="/casos-reales">
               <Button size="lg" variant="outline" className="border-2 border-amber-300 text-amber-700 hover:bg-amber-50 hover:border-amber-400 rounded-xl px-8 py-4 font-light">
-                Ver más casos de éxito
+                {t('testimonials.see-more')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

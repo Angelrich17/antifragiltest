@@ -74,9 +74,13 @@ const translations = {
     'process.explore-methodology': 'Explorar metodología completa',
 
     // Testimonials
+    'testimonials.badge': 'Casos de Éxito',
     'testimonials.title': 'Inversionistas que confiaron',
     'testimonials.subtitle': 'Profesionales de todo el mundo han elegido nuestra expertise para sus inversiones en Buenos Aires',
     'testimonials.see-more': 'Ver más casos de éxito',
+    'testimonials.quote1': '"ROI del 14% en el primer año. El proceso fue impecablemente profesional y completamente transparente desde el inicio."',
+    'testimonials.quote2': '"Operación 100% remota desde Madrid. Seguridad jurídica absoluta y acompañamiento en cada detalle del proceso."',
+    'testimonials.quote3': '"Mejor decisión de inversión en años. Combina rentabilidad excepcional con un servicio verdaderamente boutique."',
 
     // Blog Page
     'blog.title': 'Insights & Análisis',
@@ -208,9 +212,13 @@ const translations = {
     'process.explore-methodology': 'Explore complete methodology',
 
     // Testimonials
+    'testimonials.badge': 'Success Stories',
     'testimonials.title': 'Investors who trusted',
     'testimonials.subtitle': 'Professionals from around the world have chosen our expertise for their investments in Buenos Aires',
     'testimonials.see-more': 'See more success stories',
+    'testimonials.quote1': '"14% ROI in the first year. The process was impeccably professional and completely transparent from the start."',
+    'testimonials.quote2': '"100% remote operation from Madrid. Absolute legal security and support in every detail of the process."',
+    'testimonials.quote3': '"Best investment decision in years. Combines exceptional profitability with truly boutique service."',
 
     // Blog Page
     'blog.title': 'Insights & Analysis',
