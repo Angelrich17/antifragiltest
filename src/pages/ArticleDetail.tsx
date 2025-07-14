@@ -1102,7 +1102,416 @@ const ArticleDetail = () => {
             </div>
           </div>
         </div>
-      ` : t('articles.bitcoin.content')
+      ` : `
+        <div class="space-y-8">
+          <!-- Highlighted Intro -->
+          <div class="bg-gradient-to-r from-blue-50 to-amber-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+            <p class="text-sm text-blue-700 font-medium mb-2">📈 Updated: July 10, 2025 | Bitcoin reference price: <strong>USD 111,405</strong></p>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-8 mb-4">
+            🏠 Introduction: when the bitcoiner wants bricks
+          </h2>
+          <p class="text-lg leading-relaxed text-slate-700 mb-6">
+            Bitcoin has been one of the best-performing assets of the last decade. Many holders want to diversify into tangible assets, but <strong>selling BTC means losing future exposure and paying capital gains taxes</strong>. Argentine bank mortgages require rates close to 9% and complex procedures.
+          </p>
+          <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg mb-8">
+            <p class="text-green-800">💡 <strong>The solution:</strong> With a DeFi loan secured with BTC (for example on Aave v3) you can obtain liquidity at 5%, maintaining exposure to the cryptocurrency and closing the purchase in cash in Buenos Aires.</p>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            📊 Financing options compared
+          </h2>
+          ${isMobile ? `
+          <div class="space-y-4 mb-8">
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3">Sell BTC and pay cash</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-600">Annual rate in USD:</span>
+                  <span class="text-green-600 font-bold">0%</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-600">Maintains BTC exposure?:</span>
+                  <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-sm">❌ No</span>
+                </div>
+                <div class="pt-2 border-t border-slate-100">
+                  <span class="text-slate-600 text-sm">Requirements:</span>
+                  <p class="text-slate-700 text-sm mt-1">KYC and capital gains taxes</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3">Argentine bank mortgage</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-600">Annual rate in USD:</span>
+                  <span class="text-red-600 font-bold">9%-10%</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-600">Maintains BTC exposure?:</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">✅ Yes</span>
+                </div>
+                <div class="pt-2 border-t border-slate-100">
+                  <span class="text-slate-600 text-sm">Requirements:</span>
+                  <p class="text-slate-700 text-sm mt-1">Tax residency, local credit history</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 shadow-md">
+              <h3 class="font-bold text-blue-800 mb-3">🌟 DeFi loan with BTC (Aave v3)</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-700">Annual rate in USD:</span>
+                  <span class="text-blue-600 font-bold text-lg">≈ 5%</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-700">Maintains BTC exposure?:</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">✅ Yes</span>
+                </div>
+                <div class="pt-2 border-t border-blue-200">
+                  <span class="text-blue-700 text-sm">Requirements:</span>
+                  <p class="text-blue-800 font-medium text-sm mt-1">Only BTC as on‑chain collateral</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          ` : `
+          <div class="overflow-x-auto shadow-lg rounded-lg mb-8">
+            <table class="w-full bg-white">
+              <thead class="bg-gradient-to-r from-slate-700 to-slate-800 text-white">
+                <tr>
+                  <th class="px-6 py-4 text-left font-semibold">Strategy</th>
+                  <th class="px-6 py-4 text-left font-semibold">Annual rate in USD</th>
+                  <th class="px-6 py-4 text-left font-semibold">Maintains BTC exposure?</th>
+                  <th class="px-6 py-4 text-left font-semibold">Key requirements</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="px-6 py-4 font-medium">Sell BTC and pay cash</td>
+                  <td class="px-6 py-4 text-green-600 font-bold">0%</td>
+                  <td class="px-6 py-4"><span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-sm">❌ No</span></td>
+                  <td class="px-6 py-4 text-slate-600">KYC and capital gains taxes</td>
+                </tr>
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="px-6 py-4 font-medium">Argentine bank mortgage</td>
+                  <td class="px-6 py-4 text-red-600 font-bold">9%-10%</td>
+                  <td class="px-6 py-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">✅ Yes</span></td>
+                  <td class="px-6 py-4 text-slate-600">Tax residency, local credit history</td>
+                </tr>
+                <tr class="hover:bg-blue-50 transition-colors bg-blue-25 border-l-4 border-blue-500">
+                  <td class="px-6 py-4 font-bold text-blue-800">DeFi loan with BTC (Aave v3)</td>
+                  <td class="px-6 py-4 text-blue-600 font-bold text-lg">≈ 5%</td>
+                  <td class="px-6 py-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">✅ Yes</span></td>
+                  <td class="px-6 py-4 text-blue-700 font-medium">Only BTC as on‑chain collateral</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          `}
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            🏦 Real estate financing panorama 2025
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-red-800 mb-4 flex items-center gap-2">
+                🏛️ Traditional banking
+              </h3>
+              <ul class="space-y-2 text-slate-700">
+                <li>📈 <strong>Fixed rate in dollars:</strong> 9%-9.5%</li>
+                <li>📊 <strong>Maximum LTV:</strong> 70%</li>
+                <li>⏰ <strong>Term:</strong> 15‑20 years</li>
+              </ul>
+            </div>
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 class="text-lg font-bold text-blue-800 mb-4 flex items-center gap-2">
+                ⚡ DeFi credit with BTC
+              </h3>
+              <ul class="space-y-2 text-slate-700">
+                <li>📉 <strong>Variable rate USDC‑e (Aave v3):</strong> 4.5%-5.5%</li>
+                <li>📊 <strong>Recommended LTV:</strong> ≤ 50%</li>
+                <li>🔄 <strong>Term:</strong> open, no early payment penalty</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            ⚡ Traditional bank vs. DeFi
+          </h2>
+          ${isMobile ? `
+          <div class="space-y-4 mb-8">
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                <span>📊</span> Nominal rate
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-3 bg-red-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">🏛️ Bank AR</span>
+                  <span class="text-red-600 font-bold text-lg">9%</span>
+                </div>
+                <div class="text-center p-3 bg-green-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">⚡ Aave / DeFi</span>
+                  <span class="text-green-600 font-bold text-lg">≈ 5%</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                <span>⏰</span> Term
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-3 bg-red-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">🏛️ Bank AR</span>
+                  <span class="text-slate-700 font-medium">15‑20 years</span>
+                </div>
+                <div class="text-center p-3 bg-green-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">⚡ Aave / DeFi</span>
+                  <span class="text-green-600 font-medium">Open</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                <span>💰</span> Opening fee
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-3 bg-red-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">🏛️ Bank AR</span>
+                  <span class="text-red-600 font-bold">1%-2%</span>
+                </div>
+                <div class="text-center p-3 bg-green-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">⚡ Aave / DeFi</span>
+                  <span class="text-green-600 font-bold">0.09%</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                <span>📋</span> Personal requirements
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-3 bg-red-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">🏛️ Bank AR</span>
+                  <span class="text-slate-700 text-sm">Residency + income</span>
+                </div>
+                <div class="text-center p-3 bg-blue-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">⚡ Aave / DeFi</span>
+                  <span class="text-blue-600 font-medium text-sm">Only BTC</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+              <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                <span>⚡</span> Approval speed
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-3 bg-red-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">🏛️ Bank AR</span>
+                  <span class="text-red-600 font-bold">4‑8 weeks</span>
+                </div>
+                <div class="text-center p-3 bg-green-50 rounded-lg">
+                  <span class="text-xs text-slate-600 block">⚡ Aave / DeFi</span>
+                  <span class="text-green-600 font-bold">15 minutes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          ` : `
+          <div class="overflow-x-auto shadow-lg rounded-lg mb-8">
+            <table class="w-full bg-white">
+              <thead class="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                <tr>
+                  <th class="px-6 py-4 text-left font-semibold">Concept</th>
+                  <th class="px-6 py-4 text-left font-semibold">🏛️ Bank AR</th>
+                  <th class="px-6 py-4 text-left font-semibold">⚡ Aave / DeFi</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="px-6 py-4 font-medium">Nominal rate</td>
+                  <td class="px-6 py-4 text-red-600 font-bold">9%</td>
+                  <td class="px-6 py-4 text-green-600 font-bold">≈ 5%</td>
+                </tr>
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="px-6 py-4 font-medium">Term</td>
+                  <td class="px-6 py-4">15‑20 years</td>
+                  <td class="px-6 py-4 text-green-600 font-medium">Open</td>
+                </tr>
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="px-6 py-4 font-medium">Opening fee</td>
+                  <td class="px-6 py-4 text-red-600">1%-2%</td>
+                  <td class="px-6 py-4 text-green-600 font-bold">0.09%</td>
+                </tr>
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="px-6 py-4 font-medium">Personal requirements</td>
+                  <td class="px-6 py-4">Residency + income</td>
+                  <td class="px-6 py-4 text-blue-600 font-medium">Only BTC</td>
+                </tr>
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="px-6 py-4 font-medium">Approval speed</td>
+                  <td class="px-6 py-4 text-red-600">4‑8 weeks</td>
+                  <td class="px-6 py-4 text-green-600 font-bold">15 minutes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          `}
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            🏢 Example: office‑loft in Microcentro at USD 1,000/m²
+          </h2>
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-8 mb-8">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-bold text-amber-800 mb-4 text-lg">📐 Property details</h4>
+                <ul class="space-y-2 text-slate-700">
+                  <li>📏 <strong>Area:</strong> 80 m² (open floor, 4 m ceilings)</li>
+                  <li>💰 <strong>Purchase price:</strong> USD 80,000 (1,000 USD/m²)</li>
+                  <li>🏗️ <strong>Apart‑hotel renovation cost:</strong> USD 20,000</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold text-blue-800 mb-4 text-lg">₿ DeFi financing</h4>
+                <ul class="space-y-2 text-slate-700">
+                  <li>💎 <strong>Collateral:</strong> 2 BTC (≈ USD 222,810)</li>
+                  <li>📊 <strong>Loan (45% LTV):</strong> USD 36,000 in USDC‑e</li>
+                  <li>📈 <strong>Estimated DeFi rate:</strong> 5%</li>
+                  <li>💸 <strong>Annual interest:</strong> USD 1,800 (USD 150/month)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-6 p-4 bg-green-100 rounded-lg">
+              <h4 class="font-bold text-green-800 mb-2">📊 Projected profitability</h4>
+              <p class="text-green-700">
+                <strong>Airbnb income:</strong> 45 USD/night × 70% occupancy = <span class="text-xl font-bold">USD 11,500/year</span><br>
+                <strong>Net cash flow before fixed expenses:</strong> <span class="text-xl font-bold text-green-600">~USD 9,700/year</span>
+              </p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            🚀 Why the BTC‑leveraged strategy is attractive
+          </h2>
+          <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+              <h4 class="font-bold text-blue-800 mb-2">📈 Double appreciation</h4>
+              <p class="text-blue-700">BTC upside potential + real estate capital gains</p>
+            </div>
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+              <h4 class="font-bold text-green-800 mb-2">💰 Lower cost</h4>
+              <p class="text-green-700">Financial cost lower than traditional banking</p>
+            </div>
+            <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+              <h4 class="font-bold text-purple-800 mb-2">🔄 Flexibility</h4>
+              <p class="text-purple-700">Early repayment without penalties</p>
+            </div>
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
+              <h4 class="font-bold text-amber-800 mb-2">💎 Tax advantage</h4>
+              <p class="text-amber-700">No capital gains realized by not selling BTC</p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            ⚠️ Risks and mitigations
+          </h2>
+          <div class="space-y-4 mb-8">
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
+              <h4 class="font-bold text-red-800 mb-2">📉 BTC volatility</h4>
+              <p class="text-red-700">Maintain low LTV and collateral buffer</p>
+            </div>
+            <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+              <h4 class="font-bold text-orange-800 mb-2">🔧 Protocol failure</h4>
+              <p class="text-orange-700">Use audited platforms (Aave)</p>
+            </div>
+            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg">
+              <h4 class="font-bold text-yellow-800 mb-2">⚖️ Regulatory risk</h4>
+              <p class="text-yellow-700">Regulated stablecoins and controlled exchange service</p>
+            </div>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+              <h4 class="font-bold text-blue-800 mb-2">💱 Conversion spread</h4>
+              <p class="text-blue-700">Total commission < 1.5% with Antifragile Advisors</p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-12 mb-6">
+            ✅ Operational checklist (12 steps)
+          </h2>
+          <div class="bg-slate-50 rounded-xl p-6 mb-8">
+            <ol class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</span>
+                <span class="text-slate-700">Transfer BTC to own wallet</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</span>
+                <span class="text-slate-700">Convert to wBTC</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</span>
+                <span class="text-slate-700">Deposit wBTC in Aave</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">4</span>
+                <span class="text-slate-700">Request USDC‑e (≤ 50% LTV)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">5</span>
+                <span class="text-slate-700">Exchange mandate with Antifragile Advisors</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">6</span>
+                <span class="text-slate-700">USD reception at notary office</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">7</span>
+                <span class="text-slate-700">Deposit and reinforcement</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">8</span>
+                <span class="text-slate-700">Deed signing</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">9</span>
+                <span class="text-slate-700">Finance renovation</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">10</span>
+                <span class="text-slate-700">Airbnb registration</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">11</span>
+                <span class="text-slate-700">Set up LTV alerts</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">12</span>
+                <span class="text-slate-700">Repay when BTC rises or LTV drops to 20%</span>
+              </li>
+            </ol>
+          </div>
+
+          <div class="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500 p-8 rounded-r-xl mt-12">
+            <h3 class="text-2xl font-bold text-green-800 mb-4 flex items-center gap-3">
+              🎯 Conclusion
+            </h3>
+            <p class="text-lg leading-relaxed text-green-700">
+              Financing a property in Buenos Aires with a DeFi loan secured by Bitcoin combines the <strong>upside potential of the crypto asset</strong>, <strong>real estate capital gains</strong> and a <strong>significantly lower financing cost</strong> than the Argentine banking system. With comprehensive assistance from Antifragile Advisors, the process becomes simple, fast and secure.
+            </p>
+            <div class="mt-6 p-4 bg-white rounded-lg shadow-sm">
+              <p class="text-sm text-slate-600 italic">
+                💡 <strong>Next step:</strong> Contact our team for a personalized consultation about your Bitcoin investment strategy.
+              </p>
+            </div>
+          </div>
+        </div>
+      `
     },
     "2": {
       id: 2,
