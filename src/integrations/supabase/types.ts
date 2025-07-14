@@ -19,42 +19,51 @@ export type Database = {
           author: string | null
           category: string | null
           content: string | null
+          content_en: string | null
           created_at: string
           excerpt: string | null
+          excerpt_en: string | null
           featured: boolean
           id: string
           published: boolean
           published_at: string | null
           slug: string | null
           title: string
+          title_en: string | null
           updated_at: string
         }
         Insert: {
           author?: string | null
           category?: string | null
           content?: string | null
+          content_en?: string | null
           created_at?: string
           excerpt?: string | null
+          excerpt_en?: string | null
           featured?: boolean
           id?: string
           published?: boolean
           published_at?: string | null
           slug?: string | null
           title: string
+          title_en?: string | null
           updated_at?: string
         }
         Update: {
           author?: string | null
           category?: string | null
           content?: string | null
+          content_en?: string | null
           created_at?: string
           excerpt?: string | null
+          excerpt_en?: string | null
           featured?: boolean
           id?: string
           published?: boolean
           published_at?: string | null
           slug?: string | null
           title?: string
+          title_en?: string | null
           updated_at?: string
         }
         Relationships: []
