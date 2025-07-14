@@ -73,6 +73,11 @@ const translations = {
     'process.step3.description': 'Cierre notarial remoto, optimización del activo y gestión integral de renta desde el primer día.',
     'process.explore-methodology': 'Explorar metodología completa',
 
+    // Testimonials
+    'testimonials.title': 'Inversionistas que confiaron',
+    'testimonials.subtitle': 'Profesionales de todo el mundo han elegido nuestra expertise para sus inversiones en Buenos Aires',
+    'testimonials.see-more': 'Ver más casos de éxito',
+
     // Blog Page
     'blog.title': 'Insights & Análisis',
     'blog.subtitle': 'Perspectivas profundas sobre inversiones inmobiliarias en Argentina',
@@ -201,6 +206,11 @@ const translations = {
     'process.step3.title': 'Execution & Management',
     'process.step3.description': 'Remote notarial closing, asset optimization and comprehensive rental management from day one.',
     'process.explore-methodology': 'Explore complete methodology',
+
+    // Testimonials
+    'testimonials.title': 'Investors who trusted',
+    'testimonials.subtitle': 'Professionals from around the world have chosen our expertise for their investments in Buenos Aires',
+    'testimonials.see-more': 'See more success stories',
 
     // Blog Page
     'blog.title': 'Insights & Analysis',

@@ -4,10 +4,13 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const handleSubscribe = async () => {
     if (!email || !email.includes('@')) {
@@ -87,7 +90,7 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-8">
-            <h3 className="text-lg font-light">Servicios</h3>
+            <h3 className="text-lg font-light">{t('footer.services')}</h3>
             <ul className="space-y-3">
               <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">Consultoría Estratégica</Link></li>
               <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">Curación de Inmuebles</Link></li>
@@ -100,7 +103,7 @@ const Footer = () => {
 
           {/* Resources */}
           <div className="space-y-8">
-            <h3 className="text-lg font-light">Recursos</h3>
+            <h3 className="text-lg font-light">{t('footer.resources')}</h3>
             <ul className="space-y-3">
               <li><Link to="/por-que-argentina" className="text-neutral-400 hover:text-white transition-colors font-light">Tesis de Inversión</Link></li>
               <li><Link to="/recursos" className="text-neutral-400 hover:text-white transition-colors font-light">Research & Análisis</Link></li>
@@ -113,15 +116,14 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div className="space-y-8">
-            <h3 className="text-lg font-light">Newsletter</h3>
+            <h3 className="text-lg font-light">{t('footer.newsletter')}</h3>
             <p className="text-neutral-400 font-light">
-              Recibe artículos exclusivos sobre la actualidad del mundo inmobiliario 
-              y económico de Argentina directamente en tu inbox.
+              {t('footer.newsletter-subtitle')}
             </p>
             <div className="space-y-4">
               <input 
                 type="email" 
-                placeholder="Tu email" 
+                placeholder={t('footer.email-placeholder')} 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white placeholder-neutral-500 focus:outline-none focus:border-neutral-500 font-light" 
@@ -131,7 +133,7 @@ const Footer = () => {
                 disabled={isLoading}
                 className="w-full bg-gradient-to-r from-white to-neutral-100 hover:from-neutral-100 hover:to-neutral-200 text-neutral-900 rounded-xl font-light disabled:opacity-50"
               >
-                {isLoading ? "Suscribiendo..." : "Suscribirse al Newsletter"}
+                {isLoading ? t('common.loading') : t('footer.subscribe')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
