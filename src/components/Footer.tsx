@@ -5,12 +5,14 @@ import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
   const { t } = useLanguage();
+  const { getLocalizedPath } = useLocalizedPath();
 
   const handleSubscribe = async () => {
     if (!email || !email.includes('@')) {
@@ -51,7 +53,7 @@ const Footer = () => {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
           {/* Company Info */}
           <div className="space-y-8">
-            <Link to="/" className="flex items-center space-x-4">
+            <Link to={getLocalizedPath("/")} className="flex items-center space-x-4">
               <div className="w-10 h-10 bg-gradient-to-br from-white to-neutral-200 rounded-xl flex items-center justify-center">
                 <span className="text-neutral-900 font-bold text-lg">A</span>
               </div>
@@ -91,12 +93,12 @@ const Footer = () => {
           <div className="space-y-8">
             <h3 className="text-lg font-light">{t('footer.services')}</h3>
             <ul className="space-y-3">
-              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.strategic-consulting')}</Link></li>
-              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.property-curation')}</Link></li>
-              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.financial-structuring')}</Link></li>
-              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.legal-due-diligence')}</Link></li>
-              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.asset-optimization')}</Link></li>
-              <li><Link to="/servicios" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.integral-management')}</Link></li>
+              <li><Link to={getLocalizedPath("/servicios")} className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.strategic-consulting')}</Link></li>
+              <li><Link to={getLocalizedPath("/servicios")} className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.property-curation')}</Link></li>
+              <li><Link to={getLocalizedPath("/servicios")} className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.financial-structuring')}</Link></li>
+              <li><Link to={getLocalizedPath("/servicios")} className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.legal-due-diligence')}</Link></li>
+              <li><Link to={getLocalizedPath("/servicios")} className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.asset-optimization')}</Link></li>
+              <li><Link to={getLocalizedPath("/servicios")} className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.service.integral-management')}</Link></li>
             </ul>
           </div>
 
@@ -104,12 +106,12 @@ const Footer = () => {
           <div className="space-y-8">
             <h3 className="text-lg font-light">{t('footer.resources')}</h3>
             <ul className="space-y-3">
-              <li><Link to="/por-que-argentina" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.investment-thesis')}</Link></li>
-              <li><Link to="/recursos" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.research-analysis')}</Link></li>
-              <li><Link to="/recursos" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.market-intelligence')}</Link></li>
-              <li><Link to="/recursos" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.roi-calculator')}</Link></li>
-              <li><Link to="/casos-reales" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.success-cases')}</Link></li>
-              <li><Link to="/nosotros" className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.team')}</Link></li>
+              <li><Link to={getLocalizedPath("/por-que-argentina")} className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.investment-thesis')}</Link></li>
+              <li><Link to={getLocalizedPath("/recursos")} className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.research-analysis')}</Link></li>
+              <li><Link to={getLocalizedPath("/recursos")} className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.market-intelligence')}</Link></li>
+              <li><Link to={getLocalizedPath("/recursos")} className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.roi-calculator')}</Link></li>
+              <li><Link to={getLocalizedPath("/casos-reales")} className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.success-cases')}</Link></li>
+              <li><Link to={getLocalizedPath("/nosotros")} className="text-neutral-400 hover:text-white transition-colors font-light">{t('footer.resource.team')}</Link></li>
             </ul>
           </div>
 
@@ -145,10 +147,10 @@ const Footer = () => {
               © 2024 Antifragile Advisors. Todos los derechos reservados.
             </p>
             <div className="flex items-center space-x-8 text-sm">
-              <Link to="/terminos" className="text-neutral-400 hover:text-white transition-colors font-light">
+              <Link to={getLocalizedPath("/terminos")} className="text-neutral-400 hover:text-white transition-colors font-light">
                 Términos
               </Link>
-              <Link to="/privacidad" className="text-neutral-400 hover:text-white transition-colors font-light">
+              <Link to={getLocalizedPath("/privacidad")} className="text-neutral-400 hover:text-white transition-colors font-light">
                 Privacidad
               </Link>
             </div>

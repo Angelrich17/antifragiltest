@@ -7,9 +7,11 @@ import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 
 const Proceso = () => {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
+  const { getLocalizedPath } = useLocalizedPath();
 
   const stepIcons = [Phone, Search, FileCheck, Hammer, Home];
   const stepColors = [
@@ -193,14 +195,14 @@ const Proceso = () => {
               {t('process.cta-subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contacto">
+              <Link to={getLocalizedPath("/contacto")}>
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-lg px-8 py-6">
                   <span className="sm:hidden">{t('process.cta-button-mobile')}</span>
                   <span className="hidden sm:inline">{t('process.cta-button')}</span>
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link to="/tarifas">
+              <Link to={getLocalizedPath("/tarifas")}>
                 <Button size="lg" variant="outline" className="border-2 text-lg px-8 py-6">
                   {t('process.cta-pricing')}
                 </Button>

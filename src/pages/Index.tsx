@@ -6,8 +6,10 @@ import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 const Index = () => {
   const { t } = useLanguage();
+  const { getLocalizedPath } = useLocalizedPath();
   
   const openCalendly = () => {
     // Simple direct approach - open Calendly in new tab
@@ -288,7 +290,7 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-16">
-            <Link to="/proceso">
+            <Link to={getLocalizedPath("/proceso")}>
               <Button size="lg" variant="outline" className="rounded-xl px-4 py-2 sm:px-8 sm:py-4 font-light">
                 {t('process.explore-methodology')}
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -376,7 +378,7 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-16">
-            <Link to="/casos-reales">
+            <Link to={getLocalizedPath("/casos-reales")}>
               <Button size="lg" variant="outline" className="border-2 border-amber-300 text-amber-700 hover:bg-amber-50 hover:border-amber-400 rounded-xl px-8 py-4 font-light">
                 {t('testimonials.see-more')}
                 <ArrowRight className="ml-2 h-5 w-5" />

@@ -1,14 +1,16 @@
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 
 const CasosReales = () => {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
+  const { getLocalizedPath } = useLocalizedPath();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-neutral-100">
@@ -29,7 +31,7 @@ const CasosReales = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/">
+            <Link to={getLocalizedPath("/")}>
               <Button size="lg" className="bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white rounded-xl px-8 py-4 font-light">
                 {t('case-studies.back-home')}
                 <ArrowRight className="ml-2 h-4 w-4" />

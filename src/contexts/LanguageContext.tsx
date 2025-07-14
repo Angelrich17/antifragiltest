@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 
 export type Language = 'es' | 'en';
 
@@ -1002,21 +1003,48 @@ For investors with a 3-5 year horizon and moderate risk tolerance, this opportun
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { lang } = useParams<{ lang: string }>();
+  const navigate = useNavigate();
+  const location = useLocation();
+  
   const [language, setLanguage] = useState<Language>(() => {
+    // First try to get from URL parameter
+    if (lang === 'es' || lang === 'en') {
+      return lang;
+    }
+    // Fallback to localStorage or default
     const saved = localStorage.getItem('language');
     return (saved as Language) || 'es';
   });
 
+  // Update language when URL parameter changes
+  useEffect(() => {
+    if (lang === 'es' || lang === 'en') {
+      setLanguage(lang);
+    }
+  }, [lang]);
+
+  // Save to localStorage when language changes
   useEffect(() => {
     localStorage.setItem('language', language);
   }, [language]);
+
+  const handleSetLanguage = (newLang: Language) => {
+    if (newLang !== language) {
+      // Update URL with new language
+      const currentPath = location.pathname;
+      const pathWithoutLang = currentPath.replace(/^\/(es|en)/, '');
+      const newPath = `/${newLang}${pathWithoutLang || '/'}`;
+      navigate(newPath, { replace: true });
+    }
+  };
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations[typeof language]] || key;
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );

@@ -4,24 +4,26 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 import LanguageSelector from "@/components/LanguageSelector";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const { t } = useLanguage();
+  const { getLocalizedPath } = useLocalizedPath();
 
   const navigation = [
-    { name: t('nav.home'), href: "/" },
-    { name: t('nav.why-argentina'), href: "/por-que-argentina" },
-    { name: t('nav.services'), href: "/servicios" },
-    { name: t('nav.process'), href: "/proceso" },
-    { name: t('nav.case-studies'), href: "/casos-reales" },
-    { name: t('nav.resources'), href: "/recursos" },
-    { name: t('nav.pricing'), href: "/tarifas" },
-    { name: t('nav.blog'), href: "/blog" },
-    { name: t('nav.about'), href: "/nosotros" },
-    { name: t('nav.contact'), href: "/contacto" },
+    { name: t('nav.home'), href: getLocalizedPath("/") },
+    { name: t('nav.why-argentina'), href: getLocalizedPath("/por-que-argentina") },
+    { name: t('nav.services'), href: getLocalizedPath("/servicios") },
+    { name: t('nav.process'), href: getLocalizedPath("/proceso") },
+    { name: t('nav.case-studies'), href: getLocalizedPath("/casos-reales") },
+    { name: t('nav.resources'), href: getLocalizedPath("/recursos") },
+    { name: t('nav.pricing'), href: getLocalizedPath("/tarifas") },
+    { name: t('nav.blog'), href: getLocalizedPath("/blog") },
+    { name: t('nav.about'), href: getLocalizedPath("/nosotros") },
+    { name: t('nav.contact'), href: getLocalizedPath("/contacto") },
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -31,7 +33,7 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-4">
+          <Link to={getLocalizedPath("/")} className="flex items-center space-x-4">
             <div className="w-10 h-10 bg-gradient-to-br from-neutral-900 to-neutral-700 rounded-xl flex items-center justify-center shadow-sm">
               <span className="text-white font-bold text-lg">A</span>
             </div>

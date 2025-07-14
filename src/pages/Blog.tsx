@@ -10,6 +10,7 @@ import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 import bitcoinBuenosAires from "@/assets/bitcoin-buenos-aires.jpg";
 
 const Blog = () => {
@@ -17,6 +18,7 @@ const Blog = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
   const { t } = useLanguage();
+  const { getLocalizedPath } = useLocalizedPath();
 
   const handleSubscribe = async () => {
     if (!email || !email.includes('@')) {
@@ -194,7 +196,7 @@ const Blog = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredArticles.map((article) => (
-              <Link key={article.id} to={`/blog/${article.slug}`}>
+              <Link key={article.id} to={getLocalizedPath(`/blog/${article.slug}`)}>
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
                   <div className="aspect-[4/3] overflow-hidden">
                     <img 
@@ -236,7 +238,7 @@ const Blog = () => {
           
           <div className="space-y-6">
             {recentArticles.map((article) => (
-              <Link key={article.id} to={`/blog/${article.slug}`}>
+              <Link key={article.id} to={getLocalizedPath(`/blog/${article.slug}`)}>
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between">
