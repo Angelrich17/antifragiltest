@@ -224,6 +224,9 @@ const translations = {
 
 
     // Process Page
+    'process.badge': 'Proceso Comprobado',
+    'process.title.part1': 'Un proceso que',
+    'process.title.part2': 'funciona',
     'process.title': 'Nuestro Proceso',
     'process.subtitle': 'Un proceso probado que te lleva de la idea inicial a generar renta pasiva en menos de 3 meses. Transparente, predecible y con seguimiento paso a paso.',
     'process.average-time-title': 'Tiempo promedio',
@@ -714,6 +717,9 @@ Para inversores con horizonte de 3-5 años y tolerancia al riesgo moderada, esta
 
 
     // Process Page
+    'process.badge': 'Proven Process',
+    'process.title.part1': 'A process that',
+    'process.title.part2': 'works',
     'process.title': 'Our Process',
     'process.subtitle': 'A proven process that takes you from initial idea to generating passive income in less than 3 months. Transparent, predictable and with step-by-step tracking.',
     'process.average-time-title': 'Average time',
