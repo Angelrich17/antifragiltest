@@ -20,13 +20,13 @@ const ArticleDetail = () => {
   const articles = {
     "microcentro-porteno-mejor-oportunidad-inmobiliaria-2025": {
       id: 5,
-      title: "Por qué el Microcentro porteño es la mejor oportunidad inmobiliaria (2025)",
-      excerpt: "Análisis completo del ciclo argentino, comparativas con Madrid y Barcelona, y cómo invertir en oficinas a reciclar con yields del 8-10%.",
-      date: "13 Julio 2025",
+      title: language === 'es' ? t('articles.microcentro.title') : t('articles.microcentro.title'),
+      excerpt: language === 'es' ? t('articles.microcentro.excerpt') : t('articles.microcentro.excerpt'),
+      date: language === 'es' ? "13 Julio 2025" : "July 13, 2025",
       readTime: "12 min",
-      category: "Análisis",
+      category: language === 'es' ? "Análisis" : "Analysis",
       image: "/lovable-uploads/4e8673e3-ad6b-447f-8b19-3a5983846972.png",
-      content: `
+      content: language === 'es' ? `
         <div class="space-y-8">
           <!-- Intro destacado -->
           <div class="bg-gradient-to-r from-blue-50 to-green-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
@@ -353,17 +353,17 @@ const ArticleDetail = () => {
             </div>
           </div>
         </div>
-      `
+      ` : t('articles.microcentro.content')
     },
     "comprar-vivienda-buenos-aires-bitcoin": {
       id: 1,
-      title: "Comprar una vivienda en Buenos Aires con Bitcoin sin venderlo",
-      excerpt: "Cómo apalancar tu BTC al 5 % en DeFi, comprar metros a USD 1 000/m² y conservar el potencial alcista de la criptomoneda.",
-      date: "10 Julio 2025",
+      title: language === 'es' ? t('articles.bitcoin.title') : t('articles.bitcoin.title'),
+      excerpt: language === 'es' ? t('articles.bitcoin.excerpt') : t('articles.bitcoin.excerpt'),
+      date: language === 'es' ? "10 Julio 2025" : "July 10, 2025",
       readTime: "8 min",
-      category: "Guías",
+      category: language === 'es' ? "Guías" : "Guides",
       image: bitcoinBuenosAires,
-      content: `
+      content: language === 'es' ? `
         <div class="space-y-8">
           <!-- Intro destacado -->
           <div class="bg-gradient-to-r from-blue-50 to-amber-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
@@ -772,7 +772,7 @@ const ArticleDetail = () => {
             </div>
           </div>
         </div>
-      `
+      ` : t('articles.bitcoin.content')
     },
     "2": {
       id: 2,

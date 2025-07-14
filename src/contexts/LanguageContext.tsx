@@ -382,8 +382,108 @@ const translations = {
     // Blog Articles 
     'articles.microcentro.title': 'Por qué el Microcentro porteño es la mejor oportunidad inmobiliaria (2025)',
     'articles.microcentro.excerpt': 'Análisis completo del ciclo argentino, comparativas con Madrid y Barcelona, y cómo invertir en oficinas a reciclar con yields del 8-10%.',
+    'articles.microcentro.content': `El mercado inmobiliario argentino está viviendo uno de sus momentos más interesantes de la última década. Mientras el país atraviesa una nueva fase de estabilización económica bajo la administración Milei, el Microcentro porteño emerge como la oportunidad de inversión más atractiva para 2025.
+
+## El Contexto Macroeconómico Actual
+
+Argentina se encuentra en una fase de transición crucial. Las políticas de dolarización parcial y estabilización han generado un escenario único donde los activos en dólares mantienen su valor mientras el peso se estabiliza gradualmente. Esta dinámica crea una ventana de oportunidad excepcional para inversores con visión a largo plazo.
+
+## Microcentro: El Diamante en Bruto
+
+### Ubicación Estratégica
+El Microcentro porteño concentra:
+- **Conectividad**: Centro neurálgico del transporte público
+- **Infraestructura**: Servicios consolidados y acceso total
+- **Historia**: Arquitectura patrimonial con potencial de reciclaje
+- **Futuro**: Planes de revitalización urbana en marcha
+
+### Oportunidad de Reciclaje
+Las oficinas del Microcentro presentan características únicas:
+- **Precios**: USD 800-1,200 por m² (vs USD 3,000+ en Palermo)
+- **Potencial**: Conversión a viviendas de lujo
+- **Yields**: 8-10% anual en dólares
+- **Apreciación**: Potencial de revalorización del 200-300%
+
+## Comparativa Internacional
+
+### Madrid - Distrito Centro
+- **Precio**: €4,000-6,000/m²
+- **Yield**: 3-4%
+- **Crecimiento**: Limitado por saturación
+
+### Barcelona - Ciutat Vella
+- **Precio**: €3,500-5,500/m²
+- **Yield**: 3-5%
+- **Regulación**: Restricciones crecientes
+
+### Buenos Aires - Microcentro
+- **Precio**: USD 800-1,200/m²
+- **Yield**: 8-10%
+- **Potencial**: Massive upside potential
+
+## Estrategia de Inversión
+
+### Fase 1: Adquisición (2025)
+- Identificar edificios con potencial de reciclaje
+- Negociar precios en el valle del ciclo
+- Asegurar financiamiento en pesos a tasas favorables
+
+### Fase 2: Desarrollo (2025-2026)
+- Reciclaje a estándares internacionales
+- Certificaciones sustentables
+- Amenities de clase mundial
+
+### Fase 3: Monetización (2027+)
+- Venta a precios de mercado corregidos
+- Alquiler a yields normalizados
+- Exit strategy flexible
+
+## Factores de Riesgo
+
+### Políticos
+- Cambios en regulaciones urbanas
+- Modificaciones fiscales
+- Inestabilidad institucional
+
+### Económicos
+- Volatilidad del tipo de cambio
+- Inflación residual
+- Acceso al crédito
+
+### De Mercado
+- Competencia de otros desarrolladores
+- Cambios en preferencias de ubicación
+- Saturación del segmento
+
+## Conclusión
+
+El Microcentro porteño representa una oportunidad única que combina:
+- **Timing perfecto**: Fondo del ciclo inmobiliario
+- **Fundamentals sólidos**: Ubicación y conectividad
+- **Upside masivo**: Potencial de revalorización excepcional
+- **Yields atractivos**: Rentabilidad inmediata en dólares
+
+Para inversores con horizonte de 3-5 años y tolerancia al riesgo moderada, esta oportunidad puede generar retornos excepcionales mientras contribuye a la revitalización de una zona histórica de Buenos Aires.
+
+*La información contenida en este análisis es de carácter educativo y no constituye asesoramiento financiero personalizado.*`,
     'articles.bitcoin.title': 'Comprar una vivienda en Buenos Aires con Bitcoin sin venderlo',
     'articles.bitcoin.excerpt': 'Cómo apalancar tu BTC al 5% en DeFi, comprar metros a USD 1,000/m² y conservar el potencial alcista de la criptomoneda.',
+    'articles.bitcoin.content': `<div class="space-y-8">
+          <!-- Intro destacado -->
+          <div class="bg-gradient-to-r from-blue-50 to-amber-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+            <p class="text-sm text-blue-700 font-medium mb-2">📈 Actualizado: 10 de julio de 2025 | Precio de referencia de Bitcoin: <strong>USD 111,405</strong></p>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-8 mb-4">
+            🏠 Introducción: cuando el bitcoiner quiere ladrillos
+          </h2>
+          <p class="text-lg leading-relaxed text-slate-700 mb-6">
+            Bitcoin ha sido uno de los activos con mejor rendimiento de la última década. Muchos holders desean diversificar hacia bienes tangibles, pero <strong>vender BTC supone perder exposición futura y pagar impuestos sobre plusvalías</strong>. Las hipotecas bancarias argentinas exigen tipos cercanos al 9% y trámites complejos. 
+          </p>
+          <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg mb-8">
+            <p class="text-green-800">💡 <strong>La solución:</strong> Con un préstamo DeFi garantizado con BTC (por ejemplo en Aave v3) se puede obtener liquidez al 5%, manteniendo la exposición a la criptomoneda y cerrando la compra en efectivo en Buenos Aires.</p>
+          </div>
+        </div>`,
 
     // Common
     'common.loading': 'Cargando...',
@@ -768,8 +868,108 @@ const translations = {
     // Blog Articles
     'articles.microcentro.title': 'Why Buenos Aires Downtown is the best real estate opportunity (2025)',
     'articles.microcentro.excerpt': 'Complete analysis of the Argentine cycle, comparisons with Madrid and Barcelona, and how to invest in offices to recycle with 8-10% yields.',
+    'articles.microcentro.content': `The Argentine real estate market is experiencing one of its most interesting moments of the last decade. While the country goes through a new phase of economic stabilization under the Milei administration, Buenos Aires Downtown emerges as the most attractive investment opportunity for 2025.
+
+## Current Macroeconomic Context
+
+Argentina is in a crucial transition phase. Partial dollarization and stabilization policies have generated a unique scenario where dollar-denominated assets maintain their value while the peso gradually stabilizes. This dynamic creates an exceptional window of opportunity for long-term investors.
+
+## Downtown: The Diamond in the Rough
+
+### Strategic Location
+Buenos Aires Downtown concentrates:
+- **Connectivity**: Nerve center of public transportation
+- **Infrastructure**: Consolidated services and total access
+- **History**: Heritage architecture with recycling potential
+- **Future**: Urban revitalization plans underway
+
+### Recycling Opportunity
+Downtown offices present unique characteristics:
+- **Prices**: USD 800-1,200 per m² (vs USD 3,000+ in Palermo)
+- **Potential**: Conversion to luxury housing
+- **Yields**: 8-10% annually in dollars
+- **Appreciation**: 200-300% revaluation potential
+
+## International Comparison
+
+### Madrid - Centro District
+- **Price**: €4,000-6,000/m²
+- **Yield**: 3-4%
+- **Growth**: Limited by saturation
+
+### Barcelona - Ciutat Vella
+- **Price**: €3,500-5,500/m²
+- **Yield**: 3-5%
+- **Regulation**: Growing restrictions
+
+### Buenos Aires - Downtown
+- **Price**: USD 800-1,200/m²
+- **Yield**: 8-10%
+- **Potential**: Massive upside potential
+
+## Investment Strategy
+
+### Phase 1: Acquisition (2025)
+- Identify buildings with recycling potential
+- Negotiate prices at the cycle bottom
+- Secure peso financing at favorable rates
+
+### Phase 2: Development (2025-2026)
+- Recycling to international standards
+- Sustainable certifications
+- World-class amenities
+
+### Phase 3: Monetization (2027+)
+- Sale at corrected market prices
+- Rental at normalized yields
+- Flexible exit strategy
+
+## Risk Factors
+
+### Political
+- Changes in urban regulations
+- Tax modifications
+- Institutional instability
+
+### Economic
+- Exchange rate volatility
+- Residual inflation
+- Credit access
+
+### Market
+- Competition from other developers
+- Changes in location preferences
+- Segment saturation
+
+## Conclusion
+
+Buenos Aires Downtown represents a unique opportunity that combines:
+- **Perfect timing**: Real estate cycle bottom
+- **Solid fundamentals**: Location and connectivity
+- **Massive upside**: Exceptional revaluation potential
+- **Attractive yields**: Immediate dollar profitability
+
+For investors with a 3-5 year horizon and moderate risk tolerance, this opportunity can generate exceptional returns while contributing to the revitalization of a historic area of Buenos Aires.
+
+*The information contained in this analysis is educational in nature and does not constitute personalized financial advice.*`,
     'articles.bitcoin.title': 'Buy a home in Buenos Aires with Bitcoin without selling it',
     'articles.bitcoin.excerpt': 'How to leverage your BTC at 5% in DeFi, buy square meters at USD 1,000/m² and preserve the upside potential of cryptocurrency.',
+    'articles.bitcoin.content': `<div class="space-y-8">
+          <!-- Featured intro -->
+          <div class="bg-gradient-to-r from-blue-50 to-amber-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+            <p class="text-sm text-blue-700 font-medium mb-2">📈 Updated: July 10, 2025 | Bitcoin reference price: <strong>USD 111,405</strong></p>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mt-8 mb-4">
+            🏠 Introduction: when the bitcoiner wants bricks
+          </h2>
+          <p class="text-lg leading-relaxed text-slate-700 mb-6">
+            Bitcoin has been one of the best-performing assets of the last decade. Many holders want to diversify into tangible assets, but <strong>selling BTC means losing future exposure and paying capital gains taxes</strong>. Argentine bank mortgages require rates close to 9% and complex procedures.
+          </p>
+          <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg mb-8">
+            <p class="text-green-800">💡 <strong>The solution:</strong> With a DeFi loan secured with BTC (for example on Aave v3) you can obtain liquidity at 5%, maintaining exposure to cryptocurrency and closing the purchase in cash in Buenos Aires.</p>
+          </div>
+        </div>`,
 
     // Common
     'common.loading': 'Loading...',
