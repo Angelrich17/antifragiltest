@@ -5,7 +5,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { useLanguage } from "@/contexts/LanguageContext";
 const Index = () => {
+  const { t } = useLanguage();
+  
   const openCalendly = () => {
     // Simple direct approach - open Calendly in new tab
     window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600');
@@ -31,39 +34,39 @@ const Index = () => {
               <div className="space-y-6">
                 
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-neutral-900 leading-tight tracking-tight">
-                  Tu acceso al
+                  {t('hero.title.part1')}
                   <span className="block font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent">
-                    futuro inmobiliario
+                    {t('hero.title.part2')}
                   </span>
-                  de Buenos Aires
+                  {t('hero.title.part3')}
                 </h1>
                 
-                <p className="text-lg sm:text-xl text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">Navegamos la complejidad del mercado argentino para transformar las dudas en oportunidades de renta excepcionales. Acompañamiento integral desde la estrategia hasta la ejecución.</p>
+                <p className="text-lg sm:text-xl text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">{t('hero.subtitle')}</p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button onClick={openCalendly} size="lg" className="bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-neutral-800 hover:to-neutral-700 text-white text-lg px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                  Agenda tu consulta
+                  {t('hero.schedule-consultation')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button variant="outline" size="lg" className="text-lg px-10 py-6 rounded-xl border-2 border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50 transition-all duration-300">
                   <Play className="mr-2 h-5 w-5" />
-                  Ver presentación
+                  {t('hero.watch-presentation')}
                 </Button>
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-8 text-sm text-neutral-500">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="h-4 w-4 text-emerald-500" />
-                  <span>Consulta inicial sin costo</span>
+                  <span>{t('hero.free-consultation')}</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="h-4 w-4 text-emerald-500" />
-                  <span>Transparencia total</span>
+                  <span>{t('hero.total-transparency')}</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="h-4 w-4 text-emerald-500" />
-                  <span>Operación remota segura</span>
+                  <span>{t('hero.secure-remote')}</span>
                 </div>
               </div>
             </div>
@@ -74,12 +77,12 @@ const Index = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Button size="lg" className="bg-white/90 hover:bg-white text-neutral-900 rounded-2xl px-8 py-4">
                     <Play className="mr-3 h-6 w-6 fill-current" />
-                    <span className="font-medium">Reproducir teaser</span>
+                    <span className="font-medium">{t('hero.play-teaser')}</span>
                   </Button>
                 </div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="bg-black/60 backdrop-blur-md text-white p-4 rounded-2xl border border-white/10">
-                    <p className="text-sm font-light">Descubre cómo convertimos la volatilidad argentina en rentabilidad predecible</p>
+                    <p className="text-sm font-light">{t('hero.teaser-description')}</p>
                   </div>
                 </div>
               </div>
@@ -87,12 +90,12 @@ const Index = () => {
               {/* Floating elements - hidden on mobile to avoid overlap */}
               <div className="hidden lg:block absolute -top-4 -right-4 bg-white/90 backdrop-blur-sm p-3 rounded-2xl shadow-lg border border-neutral-200">
                 <div className="text-2xl font-bold text-emerald-600">12%</div>
-                <div className="text-xs text-neutral-500">ROI promedio</div>
+                <div className="text-xs text-neutral-500">{t('hero.average-roi')}</div>
               </div>
               
               <div className="hidden lg:block absolute -bottom-4 -left-4 bg-white/90 backdrop-blur-sm p-3 rounded-2xl shadow-lg border border-neutral-200">
                 <div className="text-2xl font-bold text-blue-600">180%</div>
-                <div className="text-xs text-neutral-500">Potencial alcista</div>
+                <div className="text-xs text-neutral-500">{t('hero.upside-potential')}</div>
               </div>
             </div>
           </div>
@@ -104,10 +107,10 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-light text-neutral-900 mb-4 tracking-tight">
-              Los números no mienten
+              {t('data.title')}
             </h2>
             <p className="text-xl text-neutral-600 font-light max-w-3xl mx-auto leading-relaxed">
-              Datos comparativos que demuestran el momento excepcional para invertir en Buenos Aires
+              {t('data.subtitle')}
             </p>
           </div>
           
@@ -115,7 +118,7 @@ const Index = () => {
             <CardContent className="p-8">
               <div className="flex items-center justify-center mb-8">
                 <BarChart3 className="mr-3 h-7 w-7 text-amber-600" />
-                <h3 className="text-2xl font-light text-neutral-900">Comparativa internacional (USD/m²)</h3>
+                <h3 className="text-2xl font-light text-neutral-900">{t('data.international-comparison')}</h3>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
                 <div className="text-center space-y-3">
@@ -164,15 +167,14 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 sm:mb-20">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-neutral-50 rounded-full border border-neutral-200 mb-8">
-              <span className="text-sm font-medium text-neutral-600">Filosofía Antifragile</span>
+              <span className="text-sm font-medium text-neutral-600">{t('philosophy.badge')}</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-neutral-900 mb-6 tracking-tight">
-              Prosperamos en la
-              <span className="font-medium text-amber-600"> incertidumbre</span>
+              {t('philosophy.title.part1')}
+              <span className="font-medium text-amber-600"> {t('philosophy.title.part2')}</span>
             </h2>
             <p className="text-xl text-neutral-600 font-light max-w-3xl mx-auto leading-relaxed">
-              Mientras otros temen la volatilidad, nosotros la aprovechamos. Buenos Aires ofrece 
-              oportunidades únicas para inversionistas que entienden cómo navegar la complejidad.
+              {t('philosophy.subtitle')}
             </p>
           </div>
           
@@ -182,14 +184,13 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <TrendingUp className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-light text-neutral-900">Retornos Excepcionales</h3>
+                <h3 className="text-2xl font-light text-neutral-900">{t('philosophy.exceptional-returns.title')}</h3>
                 <p className="text-neutral-600 leading-relaxed font-light">
-                  ROI del 8-15% anual en USD. Precios 60% por debajo de máximos históricos 
-                  crean oportunidades irrepetibles.
+                  {t('philosophy.exceptional-returns.description')}
                 </p>
                 <div className="pt-4 border-t border-neutral-100">
                   <span className="text-4xl font-light text-blue-600">+200%</span>
-                  <p className="text-sm text-neutral-500 font-light">potencial de apreciación</p>
+                  <p className="text-sm text-neutral-500 font-light">{t('philosophy.exceptional-returns.stat')}</p>
                 </div>
               </CardContent>
             </Card>
@@ -199,14 +200,13 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-amber-600 to-amber-700 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Shield className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-light text-neutral-900">Seguridad Jurídica</h3>
+                <h3 className="text-2xl font-light text-neutral-900">{t('philosophy.legal-security.title')}</h3>
                 <p className="text-neutral-600 leading-relaxed font-light">
-                  Due diligence exhaustivo, escribano certificado y poder notarial 
-                  para operaciones 100% remotas y seguras.
+                  {t('philosophy.legal-security.description')}
                 </p>
                 <div className="pt-4 border-t border-neutral-100">
                   <span className="text-4xl font-light text-amber-600">100%</span>
-                  <p className="text-sm text-neutral-500 font-light">operaciones exitosas</p>
+                  <p className="text-sm text-neutral-500 font-light">{t('philosophy.legal-security.stat')}</p>
                 </div>
               </CardContent>
             </Card>
@@ -216,14 +216,13 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Users className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-light text-neutral-900">Servicio Boutique</h3>
+                <h3 className="text-2xl font-light text-neutral-900">{t('philosophy.boutique-service.title')}</h3>
                 <p className="text-neutral-600 leading-relaxed font-light">
-                  Desde estrategia hasta gestión de renta. Un equipo especializado 
-                  dedicado exclusivamente a tu éxito.
+                  {t('philosophy.boutique-service.description')}
                 </p>
                 <div className="pt-4 border-t border-neutral-100">
                   <span className="text-4xl font-light text-emerald-600">360°</span>
-                  <p className="text-sm text-neutral-500 font-light">acompañamiento integral</p>
+                  <p className="text-sm text-neutral-500 font-light">{t('philosophy.boutique-service.stat')}</p>
                 </div>
               </CardContent>
             </Card>
@@ -236,14 +235,14 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-neutral-200 mb-8">
-              <span className="text-sm font-medium text-neutral-600">Metodología Probada</span>
+              <span className="text-sm font-medium text-neutral-600">{t('process.badge')}</span>
             </div>
             <h2 className="text-5xl font-light text-neutral-900 mb-6 tracking-tight">
-              De la estrategia a la
-              <span className="font-medium text-blue-600"> rentabilidad</span>
+              {t('process.title.part1')}
+              <span className="font-medium text-blue-600"> {t('process.title.part2')}</span>
             </h2>
             <p className="text-xl text-neutral-600 font-light max-w-3xl mx-auto leading-relaxed">
-              Un proceso refinado que transforma conceptos complejos en resultados tangibles
+              {t('process.subtitle')}
             </p>
           </div>
           
@@ -256,10 +255,9 @@ const Index = () => {
                 <span className="text-2xl font-light text-white">01</span>
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl font-light text-neutral-900">Consulta Estratégica</h3>
+                <h3 className="text-2xl font-light text-neutral-900">{t('process.step1.title')}</h3>
                 <p className="text-neutral-600 leading-relaxed font-light">
-                  Sesión inicial de 30 minutos para comprender tus objetivos, 
-                  apetito de riesgo y definir la estrategia de inversión óptima.
+                  {t('process.step1.description')}
                 </p>
               </div>
             </div>
@@ -269,10 +267,9 @@ const Index = () => {
                 <span className="text-2xl font-light text-white">02</span>
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl font-light text-neutral-900">Curación & Análisis</h3>
+                <h3 className="text-2xl font-light text-neutral-900">{t('process.step2.title')}</h3>
                 <p className="text-neutral-600 leading-relaxed font-light">
-                  Identificación de oportunidades premium. Due diligence completo 
-                  de propiedades, documentación y potencial de rentabilidad.
+                  {t('process.step2.description')}
                 </p>
               </div>
             </div>
@@ -282,10 +279,9 @@ const Index = () => {
                 <span className="text-2xl font-light text-white">03</span>
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl font-light text-neutral-900">Ejecución & Gestión</h3>
+                <h3 className="text-2xl font-light text-neutral-900">{t('process.step3.title')}</h3>
                 <p className="text-neutral-600 leading-relaxed font-light">
-                  Cierre notarial remoto, optimización del activo y gestión 
-                  integral de renta desde el primer día.
+                  {t('process.step3.description')}
                 </p>
               </div>
             </div>
@@ -294,7 +290,7 @@ const Index = () => {
           <div className="text-center mt-16">
             <Link to="/proceso">
               <Button size="lg" variant="outline" className="border-2 border-neutral-300 text-neutral-700 hover:bg-neutral-50 hover:border-neutral-400 rounded-xl px-4 py-2 sm:px-8 sm:py-4 font-light">
-                Explorar metodología completa
+                {t('process.explore-methodology')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
