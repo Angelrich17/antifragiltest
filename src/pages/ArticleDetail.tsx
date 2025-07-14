@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useLanguage } from "@/contexts/LanguageContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -13,6 +14,7 @@ const ArticleDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const isMobile = useIsMobile();
+  const { t, language } = useLanguage();
 
   // Datos de artículos (en una app real, esto vendría de una API o base de datos)
   const articles = {
@@ -833,12 +835,12 @@ const ArticleDetail = () => {
             className={`${isMobile ? 'mx-4 mb-6' : 'mb-8'} hover:bg-white/80`}
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Volver al blog
+            {t('blog.back-to-blog')}
           </Button>
 
           {/* Article Header */}
           <div className={`${isMobile ? 'px-4 mb-6' : 'mb-8'}`}>
-            <Badge variant="default" className="mb-4">{article.category}</Badge>
+            <Badge variant="default" className="mb-4">{language === 'es' ? 'Análisis' : 'Analysis'}</Badge>
             <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl sm:text-5xl'} font-bold text-slate-800 leading-tight mb-4`}>
               {article.title}
             </h1>
@@ -861,7 +863,7 @@ const ArticleDetail = () => {
           {/* Featured Image */}
           <div className={`aspect-[16/9] overflow-hidden ${isMobile ? 'mb-6' : 'rounded-xl mb-8'}`}>
             <img 
-              src={article.image} 
+              src="/lovable-uploads/c3fd08a1-3820-4862-ba17-78694bcc2cab.png" 
               alt={article.title}
               className="w-full h-full object-cover"
             />

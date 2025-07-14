@@ -4,7 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { useLanguage } from "@/contexts/LanguageContext";
 const PorQueArgentina = () => {
+  const { t } = useLanguage();
+  
   return <div className="min-h-screen max-w-screen overflow-x-hidden bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
       
@@ -26,21 +29,21 @@ const PorQueArgentina = () => {
             <div className="space-y-10 text-center sm:text-center lg:text-left px-2 sm:px-0">
               <div className="space-y-6">
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-slate-900 leading-tight tracking-tight">
-                  ¿Por qué <span className="font-medium bg-gradient-to-r from-blue-700 via-blue-600 to-amber-600 bg-clip-text text-transparent">Argentina</span> ahora?
+                  {t('why-argentina.title')}
                 </h1>
                 <p className="text-lg sm:text-xl text-slate-700 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
-                  Una tesis de inversión respaldada por datos duros, ciclos económicos y una oportunidad histórica de comprar activos de calidad mundial a precios de mercados emergentes.
+                  {t('why-argentina.subtitle')}
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start justify-center sm:justify-center lg:justify-start w-full">
                 <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                   <Play className="mr-2 h-5 w-5" />
-                  Ver análisis completo
+                  {t('why-argentina.watch-analysis')}
                 </Button>
                 <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-xl border-2 border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50 transition-all duration-300">
                   <Download className="mr-2 h-5 w-5" />
-                  Descargar PDF gratuito
+                  {t('why-argentina.download-pdf')}
                 </Button>
               </div>
 
