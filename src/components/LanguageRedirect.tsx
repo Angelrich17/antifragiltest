@@ -28,6 +28,11 @@ const LanguageRedirect = () => {
   useEffect(() => {
     const path = location.pathname;
     
+    // Skip redirection for static files (sitemap.xml, robots.txt, etc.)
+    if (path.match(/\.(xml|txt|json|ico|png|jpg|jpeg|gif|svg)$/)) {
+      return;
+    }
+    
     // If path doesn't start with /es or /en, redirect with language detection
     if (!path.match(/^\/(es|en)($|\/)/)) {
       const detectedLang = detectBrowserLanguage();
