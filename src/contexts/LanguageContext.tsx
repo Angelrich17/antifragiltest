@@ -128,6 +128,13 @@ const translations = {
     'why-argentina.exchange-rate.description': 'Unificación cambiaria inminente. Corrección hacia equilibrio de largo plazo favorece activos locales.',
     'why-argentina.risks-title': '¿Riesgos y cómo los mitigamos?',
     'why-argentina.risks-subtitle': 'Transparencia total sobre los desafíos y nuestras estrategias de mitigación',
+    'why-argentina.risk1.title': 'Riesgo: Inestabilidad política / económica',
+    'why-argentina.risk1.mitigation': 'Inversión en activos físicos (ladrillo) denominados en USD. Diversificación por barrios y tipos de propiedad. Contratos de alquiler en moneda dura.',
+    'why-argentina.risk2.title': 'Riesgo: Regulaciones de alquiler',
+    'why-argentina.risk2.mitigation': 'Estructuras legales robustas. Monitoreo regulatorio constante. Flexibilidad entre alquiler tradicional y temporario (Airbnb) según cambios normativos.',
+    'why-argentina.risk3.title': 'Riesgo: Liquidez y salida',
+    'why-argentina.risk3.mitigation': 'Selección de propiedades en zonas prime con alta demanda. Red de compradores locales e internacionales. Estrategia de salida planificada desde el día 1.',
+    'why-argentina.schedule-consultation': 'Agenda una consulta',
     
     // Footer
     'footer.company': 'Empresa',
@@ -283,6 +290,13 @@ const translations = {
     'why-argentina.exchange-rate.description': 'Imminent currency unification. Long-term equilibrium correction favors local assets.',
     'why-argentina.risks-title': 'Risks and how we mitigate them?',
     'why-argentina.risks-subtitle': 'Total transparency about challenges and our mitigation strategies',
+    'why-argentina.risk1.title': 'Risk: Political/economic instability',
+    'why-argentina.risk1.mitigation': 'Mitigation: Investment in physical assets (brick) denominated in USD. Diversification by neighborhoods and property types. Rental contracts in hard currency.',
+    'why-argentina.risk2.title': 'Risk: Rental regulations',
+    'why-argentina.risk2.mitigation': 'Mitigation: Robust legal structures. Constant regulatory monitoring. Flexibility between traditional rental and temporary (Airbnb) according to regulatory changes.',
+    'why-argentina.risk3.title': 'Risk: Liquidity and exit',
+    'why-argentina.risk3.mitigation': 'Mitigation: Selection of properties in prime areas with high demand. Network of local and international buyers. Exit strategy planned from day 1.',
+    'why-argentina.schedule-consultation': 'Schedule a consultation',
     
     // Footer
     'footer.company': 'Company',

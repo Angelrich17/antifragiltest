@@ -241,10 +241,9 @@ const PorQueArgentina = () => {
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-slate-800">Riesgo: Inestabilidad política / económica</h3>
+                    <h3 className="text-xl font-bold text-slate-800">{t('why-argentina.risk1.title')}</h3>
                     <p className="text-slate-600 leading-relaxed">
-                      <strong>Mitigación:</strong> Inversión en activos físicos (ladrillo) denominados en USD. 
-                      Diversificación por barrios y tipos de propiedad. Contratos de alquiler en moneda dura.
+                      <strong>Mitigación:</strong> {t('why-argentina.risk1.mitigation')}
                     </p>
                   </div>
                 </div>
@@ -258,10 +257,9 @@ const PorQueArgentina = () => {
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-slate-800">Riesgo: Regulaciones de alquiler</h3>
+                    <h3 className="text-xl font-bold text-slate-800">{t('why-argentina.risk2.title')}</h3>
                     <p className="text-slate-600 leading-relaxed">
-                      <strong>Mitigación:</strong> Estructuras legales robustas. Monitoreo regulatorio constante. 
-                      Flexibilidad entre alquiler tradicional y temporario (Airbnb) según cambios normativos.
+                      <strong>Mitigación:</strong> {t('why-argentina.risk2.mitigation')}
                     </p>
                   </div>
                 </div>
@@ -275,10 +273,9 @@ const PorQueArgentina = () => {
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-slate-800">Riesgo: Liquidez y salida</h3>
+                    <h3 className="text-xl font-bold text-slate-800">{t('why-argentina.risk3.title')}</h3>
                     <p className="text-slate-600 leading-relaxed">
-                      <strong>Mitigación:</strong> Selección de propiedades en zonas prime con alta demanda. 
-                      Red de compradores locales e internacionales. Estrategia de salida planificada desde el día 1.
+                      <strong>Mitigación:</strong> {t('why-argentina.risk3.mitigation')}
                     </p>
                   </div>
                 </div>
@@ -288,7 +285,7 @@ const PorQueArgentina = () => {
           
           <div className="text-center mt-12">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base" onClick={() => window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600')}>
-              Agenda una consulta
+              {t('why-argentina.schedule-consultation')}
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
           </div>
