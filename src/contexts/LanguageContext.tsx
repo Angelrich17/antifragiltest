@@ -21,13 +21,13 @@ const translations = {
     'nav.aboutUs': 'Nosotros',
     'nav.blog': 'Blog',
     'nav.contact': 'Contacto',
-    'nav.language': 'Idioma',
     
     // Common
     'common.readMore': 'Leer más',
     'common.contactUs': 'Contáctanos',
     'common.getStarted': 'Comenzar',
     'common.learnMore': 'Aprender más',
+    'common.scheduleConsultation': 'Agenda consulta',
   },
   en: {
     // Navigation
@@ -41,13 +41,13 @@ const translations = {
     'nav.aboutUs': 'About Us',
     'nav.blog': 'Blog',
     'nav.contact': 'Contact',
-    'nav.language': 'Language',
     
     // Common
     'common.readMore': 'Read more',
     'common.contactUs': 'Contact us',
     'common.getStarted': 'Get started',
     'common.learnMore': 'Learn more',
+    'common.scheduleConsultation': 'Schedule consultation',
   }
 };
 
@@ -63,7 +63,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     const path = window.location.pathname;
     if (path.startsWith('/en')) {
       setLanguage('en');
-    } else {
+    } else if (path.startsWith('/es')) {
       setLanguage('es');
     }
   }, []);

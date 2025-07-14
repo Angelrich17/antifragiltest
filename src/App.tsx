@@ -34,18 +34,21 @@ const App = () => (
           <LanguageProvider>
             <LanguageDetection />
             <Routes>
-              {/* Spanish routes */}
+              {/* Redirect root to Spanish */}
               <Route path="/" element={<Index />} />
-              <Route path="/por-que-argentina" element={<PorQueArgentina />} />
-              <Route path="/servicios" element={<Servicios />} />
-              <Route path="/proceso" element={<Proceso />} />
-              <Route path="/casos-reales" element={<CasosReales />} />
-              <Route path="/recursos" element={<Recursos />} />
-              <Route path="/tarifas" element={<Tarifas />} />
-              <Route path="/nosotros" element={<Nosotros />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<ArticleDetail />} />
-              <Route path="/contacto" element={<Contacto />} />
+              
+              {/* Spanish routes */}
+              <Route path="/es" element={<Index />} />
+              <Route path="/es/por-que-argentina" element={<PorQueArgentina />} />
+              <Route path="/es/servicios" element={<Servicios />} />
+              <Route path="/es/proceso" element={<Proceso />} />
+              <Route path="/es/casos-reales" element={<CasosReales />} />
+              <Route path="/es/recursos" element={<Recursos />} />
+              <Route path="/es/tarifas" element={<Tarifas />} />
+              <Route path="/es/nosotros" element={<Nosotros />} />
+              <Route path="/es/blog" element={<Blog />} />
+              <Route path="/es/blog/:slug" element={<ArticleDetail />} />
+              <Route path="/es/contacto" element={<Contacto />} />
               
               {/* English routes */}
               <Route path="/en" element={<Index />} />
@@ -59,6 +62,18 @@ const App = () => (
               <Route path="/en/blog" element={<Blog />} />
               <Route path="/en/blog/:slug" element={<ArticleDetail />} />
               <Route path="/en/contact" element={<Contacto />} />
+              
+              {/* Legacy Spanish routes (redirect to /es) */}
+              <Route path="/por-que-argentina" element={<PorQueArgentina />} />
+              <Route path="/servicios" element={<Servicios />} />
+              <Route path="/proceso" element={<Proceso />} />
+              <Route path="/casos-reales" element={<CasosReales />} />
+              <Route path="/recursos" element={<Recursos />} />
+              <Route path="/tarifas" element={<Tarifas />} />
+              <Route path="/nosotros" element={<Nosotros />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<ArticleDetail />} />
+              <Route path="/contacto" element={<Contacto />} />
               
               {/* Utility routes */}
               <Route path="/sitemap.xml" element={<Sitemap />} />
