@@ -20,6 +20,7 @@ import Blog from "./pages/Blog";
 import ArticleDetail from "./pages/ArticleDetail";
 import NotFound from "./pages/NotFound";
 import Sitemap from "./pages/Sitemap";
+import Robots from "./pages/Robots";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
           <Routes>
             {/* Static files */}
             <Route path="/sitemap.xml" element={<Sitemap />} />
+            <Route path="/robots.txt" element={<Robots />} />
             
             {/* Redirect routes without language */}
             <Route path="/" element={<LanguageRedirect />} />
