@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useLocalizedPath } from "@/hooks/useLocalizedPath";
-import congressHero from "@/assets/congress-hero-optimized.webp";
 const Index = () => {
   const { t } = useLanguage();
   const { getLocalizedPath } = useLocalizedPath();
@@ -24,17 +23,10 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
-          {/* Optimized hero image with high priority loading */}
-          <img 
-            src={congressHero}
-            alt="Inversión inmobiliaria en Buenos Aires - Congreso Nacional" 
-            width="1200" 
-            height="675"
-            fetchPriority="high"
-            loading="eager"
-            decoding="sync"
-            className="absolute inset-0 w-full h-full object-cover opacity-20"
-          />
+          {/* Background image with transparency */}
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
+          backgroundImage: "url('/lovable-uploads/21e4c240-bc54-4cdd-97b6-0f61ba0c6be5.png')"
+        }}></div>
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>

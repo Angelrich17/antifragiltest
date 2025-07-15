@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import SEOLanguageLinks from "@/components/SEOLanguageLinks";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
-import congressHero from "@/assets/congress-hero-optimized.webp";
 const PorQueArgentina = () => {
   const { t } = useLanguage();
   
@@ -17,17 +16,10 @@ const PorQueArgentina = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 px-6 sm:px-6 lg:px-4 overflow-hidden">
         <div className="absolute inset-0">
-          {/* Optimized hero image with high priority loading */}
-          <img 
-            src={congressHero}
-            alt="Por qué invertir en Argentina - Congreso Nacional Buenos Aires" 
-            width="1200" 
-            height="675"
-            fetchPriority="high"
-            loading="eager"
-            decoding="sync"
-            className="absolute inset-0 w-full h-full object-cover opacity-10"
-          />
+          {/* Background image with transparency */}
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
+          backgroundImage: "url('/lovable-uploads/b499d954-153b-4ff6-8f76-fb7776c58a03.png')"
+        }}></div>
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
           <div className="hidden sm:block absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
           <div className="hidden sm:block absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
