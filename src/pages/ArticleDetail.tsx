@@ -611,8 +611,8 @@ const ArticleDetail = () => {
               <p class="text-red-700 text-sm">Turnkey contracts at fixed price; 100% internal supervision</p>
             </div>
             <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <h4 class="font-bold text-blue-800 mb-2">📋 Airbnb legal framework</h4>
-              <p class="text-blue-700 text-sm">Approved zones and license management</p>
+              <h4 class="font-bold text-blue-800 mb-2">📋 Marco legal Airbnb</h4>
+              <p class="text-blue-700 text-sm">Zonas habilitadas y gestión de licencias</p>
             </div>
           </div>
 
@@ -943,7 +943,7 @@ const ArticleDetail = () => {
                 </tr>
                 <tr class="hover:bg-slate-50 transition-colors">
                   <td class="px-6 py-4 font-medium">Requisitos personales</td>
-                  <td class="px-6 py-4">Residencia + ingresos</td>
+                  <td class="px-6 py-4">Residency + income</td>
                   <td class="px-6 py-4 text-blue-600 font-medium">Solo BTC</td>
                 </tr>
                 <tr class="hover:bg-slate-50 transition-colors">
@@ -1287,7 +1287,7 @@ const ArticleDetail = () => {
                 </div>
                 <div class="text-center p-3 bg-green-50 rounded-lg">
                   <span class="text-xs text-slate-600 block">⚡ Aave / DeFi</span>
-                  <span class="text-green-600 font-bold">0.09%</span>
+                  <span class="text-green-600 font-bold">0,09%</span>
                 </div>
               </div>
             </div>
@@ -1603,7 +1603,7 @@ const ArticleDetail = () => {
           {/* Featured Image */}
           <div className={`aspect-[16/9] overflow-hidden ${isMobile ? 'mb-6' : 'rounded-xl mb-8'}`}>
             <img 
-              src="/lovable-uploads/c3fd08a1-3820-4862-ba17-78694bcc2cab.png" 
+              src="/lovable-uploads/congreso.webp" 
               alt={article.title}
               className="w-full h-full object-cover"
             />

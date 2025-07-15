@@ -27,7 +27,7 @@ const Index = () => {
         <div className="absolute inset-0">
           {/* Background image with transparency */}
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{
-          backgroundImage: "url('/lovable-uploads/21e4c240-bc54-4cdd-97b6-0f61ba0c6be5.png')"
+          backgroundImage: "url('/lovable-uploads/congreso.webp')"
         }}></div>
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
