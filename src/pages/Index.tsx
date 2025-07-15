@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useLocalizedPath } from "@/hooks/useLocalizedPath";
-import heroImage from "@/assets/hero-image.webp";
+import heroImage from "@/assets/hero-image-new.webp";
 const Index = () => {
   const { t } = useLanguage();
   const { getLocalizedPath } = useLocalizedPath();
