@@ -49,8 +49,14 @@ export default defineConfig(({ mode }) => ({
     fs: { strict: false }
   },
   build: {
+    minify: 'terser',
     rollupOptions: {
       output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) return 'vendor';
+          if (id.includes('Footer')) return 'footer';
+          if (id.includes('WhatsAppButton')) return 'whatsapp';
+        },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'sitemap.xml' || assetInfo.name === 'robots.txt') {
             return '[name][extname]';
