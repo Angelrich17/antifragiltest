@@ -52,10 +52,7 @@ export default defineConfig(({ mode }) => ({
     minify: 'esbuild',
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          utils: ['lucide-react', 'clsx', 'tailwind-merge']
-        },
+        // Removed manualChunks to fix component loading issues
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'sitemap.xml' || assetInfo.name === 'robots.txt') {
             return '[name][extname]';
