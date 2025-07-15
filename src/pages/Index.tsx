@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useLocalizedPath } from "@/hooks/useLocalizedPath";
-// import heroImage from "@/assets/hero-image-new.webp";
+import heroImage from "@/assets/hero-congress-optimized.webp";
 const Index = () => {
   const { t } = useLanguage();
   const { getLocalizedPath } = useLocalizedPath();
@@ -25,16 +25,19 @@ const Index = () => {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           {/* Optimized hero image with high priority loading */}
-          <img 
-            src="/lovable-uploads/6419a827-95a6-413f-8e09-90492db601e9.png" 
-            alt="Inversión inmobiliaria en Buenos Aires" 
-            width="1200" 
-            height="800"
-            fetchPriority="high"
-            loading="eager"
-            decoding="sync"
-            className="absolute inset-0 w-full h-full object-cover opacity-20"
-          />
+          <picture>
+            <source srcSet={heroImage} type="image/webp" />
+            <img 
+              src={heroImage}
+              alt="Inversión inmobiliaria en Buenos Aires" 
+              width="800" 
+              height="533"
+              fetchPriority="high"
+              loading="eager"
+              decoding="sync"
+              className="absolute inset-0 w-full h-full object-cover opacity-20"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
