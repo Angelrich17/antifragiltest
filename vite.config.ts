@@ -46,7 +46,8 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     middlewareMode: false,
-    fs: { strict: false }
+    fs: { strict: false },
+    hmr: { overlay: false }
   },
   build: {
     minify: 'esbuild',
