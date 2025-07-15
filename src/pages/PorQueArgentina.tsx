@@ -23,6 +23,8 @@ const PorQueArgentina = () => {
             width="1200" 
             height="675"
             fetchPriority="high"
+            loading="eager"
+            decoding="sync"
             className="absolute inset-0 w-full h-full object-cover opacity-10"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>

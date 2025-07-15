@@ -31,6 +31,8 @@ const Index = () => {
             width="1200" 
             height="800"
             fetchPriority="high"
+            loading="eager"
+            decoding="sync"
             className="absolute inset-0 w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
