@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import SEOLanguageLinks from "@/components/SEOLanguageLinks";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
-import argentinaImage from "@/assets/argentina-floralis-optimized.webp";
 const PorQueArgentina = () => {
   const { t } = useLanguage();
   
@@ -18,19 +17,16 @@ const PorQueArgentina = () => {
       <section className="relative pt-32 pb-24 px-6 sm:px-6 lg:px-4 overflow-hidden">
         <div className="absolute inset-0">
           {/* Optimized hero image with high priority loading */}
-          <picture>
-            <source srcSet={argentinaImage} type="image/webp" />
-            <img 
-              src={argentinaImage}
-              alt="Por qué invertir en Argentina - Buenos Aires" 
-              width="800" 
-              height="533"
-              fetchPriority="high"
-              loading="eager"
-              decoding="sync"
-              className="absolute inset-0 w-full h-full object-cover opacity-10"
-            />
-          </picture>
+          <img 
+            src="/lovable-uploads/5b87f66c-24d7-4712-8cc5-6a3e65b6e7a6.png" 
+            alt="Por qué invertir en Argentina - Buenos Aires" 
+            width="1200" 
+            height="675"
+            fetchPriority="high"
+            loading="eager"
+            decoding="sync"
+            className="absolute inset-0 w-full h-full object-cover opacity-10"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
           <div className="hidden sm:block absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
           <div className="hidden sm:block absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
