@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import SEOLanguageLinks from "@/components/SEOLanguageLinks";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
+import congressHero from "@/assets/congress-hero-optimized.webp";
 const PorQueArgentina = () => {
   const { t } = useLanguage();
   
@@ -18,10 +19,10 @@ const PorQueArgentina = () => {
         <div className="absolute inset-0">
           {/* Optimized hero image with high priority loading */}
           <img 
-            src="/lovable-uploads/43f5f859-a049-4a26-8fdd-f1b56ec302cd.png" 
+            src={congressHero}
             alt="Por qué invertir en Argentina - Congreso Nacional Buenos Aires" 
             width="1200" 
-            height="800"
+            height="675"
             fetchPriority="high"
             loading="eager"
             decoding="sync"

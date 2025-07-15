@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useLocalizedPath } from "@/hooks/useLocalizedPath";
-// import heroImage from "@/assets/hero-image-new.webp";
+import congressHero from "@/assets/congress-hero-optimized.webp";
 const Index = () => {
   const { t } = useLanguage();
   const { getLocalizedPath } = useLocalizedPath();
@@ -26,10 +26,10 @@ const Index = () => {
         <div className="absolute inset-0">
           {/* Optimized hero image with high priority loading */}
           <img 
-            src="/lovable-uploads/43f5f859-a049-4a26-8fdd-f1b56ec302cd.png" 
+            src={congressHero}
             alt="Inversión inmobiliaria en Buenos Aires - Congreso Nacional" 
             width="1200" 
-            height="800"
+            height="675"
             fetchPriority="high"
             loading="eager"
             decoding="sync"
