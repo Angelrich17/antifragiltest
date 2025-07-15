@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import SEOLanguageLinks from "@/components/SEOLanguageLinks";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
-import argentinaHero from "@/assets/argentina-hero.webp";
 const PorQueArgentina = () => {
   const { t } = useLanguage();
   
@@ -19,7 +18,7 @@ const PorQueArgentina = () => {
         <div className="absolute inset-0">
           {/* Optimized hero image with high priority loading */}
           <img 
-            src={argentinaHero} 
+            src="/lovable-uploads/5b87f66c-24d7-4712-8cc5-6a3e65b6e7a6.png" 
             alt="Por qué invertir en Argentina - Buenos Aires" 
             width="1200" 
             height="675"
