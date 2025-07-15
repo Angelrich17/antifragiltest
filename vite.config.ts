@@ -53,9 +53,11 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes('node_modules')) return 'vendor';
-          if (id.includes('Footer')) return 'footer';
-          if (id.includes('WhatsAppButton')) return 'whatsapp';
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) return 'react-vendor';
+            if (id.includes('lucide-react')) return 'icons';
+            return 'vendor';
+          }
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'sitemap.xml' || assetInfo.name === 'robots.txt') {
