@@ -56,13 +56,6 @@ export default defineConfig(({ mode }) => ({
             return '[name][extname]';
           }
           return 'assets/[name]-[hash][extname]';
-        },
-        manualChunks: {
-          // Separate vendor chunks for better caching
-          react: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['@radix-ui/react-slot', '@radix-ui/react-toast'],
-          icons: ['lucide-react']
         }
       }
     }
