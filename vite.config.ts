@@ -46,7 +46,10 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     middlewareMode: false,
-    fs: { strict: false }
+    fs: { strict: false },
+    headers: {
+      'Cache-Control': 'public, max-age=31536000, immutable'
+    }
   },
   build: {
     rollupOptions: {
@@ -56,6 +59,11 @@ export default defineConfig(({ mode }) => ({
             return '[name][extname]';
           }
           return 'assets/[name]-[hash][extname]';
+        },
+        manualChunks: {
+          'vendor': ['react', 'react-dom'],
+          'router': ['react-router-dom'],
+          'ui': ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-toast']
         }
       }
     }

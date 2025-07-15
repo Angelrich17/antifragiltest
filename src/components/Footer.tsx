@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, ArrowRight, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, Linkedin, Twitter } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";

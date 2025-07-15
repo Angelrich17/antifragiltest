@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { RotateCcw } from 'lucide-react';
+import { RotateCcw } from '@/components/icons';
 
 interface DatosPorBarrio {
   [barrio: string]: {

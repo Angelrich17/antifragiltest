@@ -1,13 +1,14 @@
-import { Play, Shield, TrendingUp, Users, ArrowRight, Star, CheckCircle, Sparkles, BarChart3 } from "lucide-react";
+import { Play, Shield, TrendingUp, Users, ArrowRight, Star, CheckCircle, Sparkles, BarChart3 } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import SEOLanguageLinks from "@/components/SEOLanguageLinks";
+import { LazyFooter } from "@/components/LazyFooter";
+import { LazySEOLanguageLinks } from "@/components/LazySEOLanguageLinks";
 import { Link } from "react-router-dom";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import { LazyWhatsAppButton } from "@/components/LazyWhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useLocalizedPath } from "@/hooks/useLocalizedPath";
+import LazySection from "@/components/LazySection";
 const Index = () => {
   const { t } = useLanguage();
   const { getLocalizedPath } = useLocalizedPath();
@@ -17,7 +18,9 @@ const Index = () => {
     window.open('https://calendly.com/anruizzzi/30min', '_blank', 'width=800,height=600');
   };
   return <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-neutral-100">
-      <SEOLanguageLinks />
+      <LazySection>
+        <LazySEOLanguageLinks />
+      </LazySection>
       <Header />
       
       {/* Hero Section */}
@@ -303,95 +306,101 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 px-6 sm:px-8 lg:px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-neutral-50 rounded-full border border-neutral-200 mb-8">
-              <span className="text-sm font-medium text-neutral-600">{t('testimonials.badge')}</span>
+      <LazySection>
+        <section className="py-24 px-6 sm:px-8 lg:px-4 bg-white">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-20">
+              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-neutral-50 rounded-full border border-neutral-200 mb-8">
+                <span className="text-sm font-medium text-neutral-600">{t('testimonials.badge')}</span>
+              </div>
+              <h2 className="text-5xl font-light text-neutral-900 mb-6 tracking-tight">
+                {t('testimonials.title')}
+              </h2>
+              <p className="text-xl text-neutral-600 font-light max-w-3xl mx-auto leading-relaxed">
+                {t('testimonials.subtitle')}
+              </p>
             </div>
-            <h2 className="text-5xl font-light text-neutral-900 mb-6 tracking-tight">
-              {t('testimonials.title')}
-            </h2>
-            <p className="text-xl text-neutral-600 font-light max-w-3xl mx-auto leading-relaxed">
-              {t('testimonials.subtitle')}
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-0 bg-gradient-to-br from-white to-neutral-50 shadow-sm hover:shadow-lg transition-all duration-300 rounded-2xl">
-              <CardContent className="p-8 space-y-6">
-                <div className="flex text-amber-400 mb-6">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-                </div>
-                <p className="text-neutral-700 italic leading-relaxed font-light text-lg">
-                  {t('testimonials.quote1')}
-                </p>
-                <div className="flex items-center space-x-4 pt-4 border-t border-neutral-100">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center">
-                    <span className="text-white font-medium text-sm">MR</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-neutral-900">Miguel Ramírez</p>
-                    <p className="text-sm text-neutral-500 font-light">Executive, México</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
             
-            <Card className="border-0 bg-gradient-to-br from-white to-neutral-50 shadow-sm hover:shadow-lg transition-all duration-300 rounded-2xl">
-              <CardContent className="p-8 space-y-6">
-                <div className="flex text-amber-400 mb-6">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-                </div>
-                <p className="text-neutral-700 italic leading-relaxed font-light text-lg">
-                  {t('testimonials.quote2')}
-                </p>
-                <div className="flex items-center space-x-4 pt-4 border-t border-neutral-100">
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-600 to-amber-700 rounded-full flex items-center justify-center">
-                    <span className="text-white font-medium text-sm">AS</span>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <Card className="border-0 bg-gradient-to-br from-white to-neutral-50 shadow-sm hover:shadow-lg transition-all duration-300 rounded-2xl">
+                <CardContent className="p-8 space-y-6">
+                  <div className="flex text-amber-400 mb-6">
+                    {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
                   </div>
-                  <div>
-                    <p className="font-medium text-neutral-900">Ana Silva</p>
-                    <p className="text-sm text-neutral-500 font-light">Empresaria, España</p>
+                  <p className="text-neutral-700 italic leading-relaxed font-light text-lg">
+                    {t('testimonials.quote1')}
+                  </p>
+                  <div className="flex items-center space-x-4 pt-4 border-t border-neutral-100">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center">
+                      <span className="text-white font-medium text-sm">MR</span>
+                    </div>
+                    <div>
+                      <p className="font-medium text-neutral-900">Miguel Ramírez</p>
+                      <p className="text-sm text-neutral-500 font-light">Executive, México</p>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+              
+              <Card className="border-0 bg-gradient-to-br from-white to-neutral-50 shadow-sm hover:shadow-lg transition-all duration-300 rounded-2xl">
+                <CardContent className="p-8 space-y-6">
+                  <div className="flex text-amber-400 mb-6">
+                    {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
+                  </div>
+                  <p className="text-neutral-700 italic leading-relaxed font-light text-lg">
+                    {t('testimonials.quote2')}
+                  </p>
+                  <div className="flex items-center space-x-4 pt-4 border-t border-neutral-100">
+                    <div className="w-12 h-12 bg-gradient-to-br from-amber-600 to-amber-700 rounded-full flex items-center justify-center">
+                      <span className="text-white font-medium text-sm">AS</span>
+                    </div>
+                    <div>
+                      <p className="font-medium text-neutral-900">Ana Silva</p>
+                      <p className="text-sm text-neutral-500 font-light">Empresaria, España</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="border-0 bg-gradient-to-br from-white to-neutral-50 shadow-sm hover:shadow-lg transition-all duration-300 rounded-2xl md:col-span-2 lg:col-span-1">
+                <CardContent className="p-8 space-y-6">
+                  <div className="flex text-amber-400 mb-6">
+                    {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
+                  </div>
+                  <p className="text-neutral-700 italic leading-relaxed font-light text-lg">
+                    {t('testimonials.quote3')}
+                  </p>
+                  <div className="flex items-center space-x-4 pt-4 border-t border-neutral-100">
+                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-full flex items-center justify-center">
+                      <span className="text-white font-medium text-sm">JC</span>
+                    </div>
+                    <div>
+                      <p className="font-medium text-neutral-900">James Cooper</p>
+                      <p className="text-sm text-neutral-500 font-light">Investor, USA</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
             
-            <Card className="border-0 bg-gradient-to-br from-white to-neutral-50 shadow-sm hover:shadow-lg transition-all duration-300 rounded-2xl md:col-span-2 lg:col-span-1">
-              <CardContent className="p-8 space-y-6">
-                <div className="flex text-amber-400 mb-6">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-                </div>
-                <p className="text-neutral-700 italic leading-relaxed font-light text-lg">
-                  {t('testimonials.quote3')}
-                </p>
-                <div className="flex items-center space-x-4 pt-4 border-t border-neutral-100">
-                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-full flex items-center justify-center">
-                    <span className="text-white font-medium text-sm">JC</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-neutral-900">James Cooper</p>
-                    <p className="text-sm text-neutral-500 font-light">Investor, USA</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="text-center mt-16">
+              <Link to={getLocalizedPath("/casos-reales")}>
+                <Button size="lg" variant="outline" className="border-2 border-amber-300 text-amber-700 hover:bg-amber-50 hover:border-amber-400 rounded-xl px-8 py-4 font-light">
+                  {t('testimonials.see-more')}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
           </div>
-          
-          <div className="text-center mt-16">
-            <Link to={getLocalizedPath("/casos-reales")}>
-              <Button size="lg" variant="outline" className="border-2 border-amber-300 text-amber-700 hover:bg-amber-50 hover:border-amber-400 rounded-xl px-8 py-4 font-light">
-                {t('testimonials.see-more')}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
+      </LazySection>
 
-      <Footer />
-      <WhatsAppButton />
+      <LazySection>
+        <LazyFooter />
+      </LazySection>
+      <LazySection>
+        <LazyWhatsAppButton />
+      </LazySection>
     </div>;
 };
 export default Index;
