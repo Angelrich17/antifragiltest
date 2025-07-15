@@ -49,15 +49,11 @@ export default defineConfig(({ mode }) => ({
     fs: { strict: false }
   },
   build: {
-    minify: 'terser',
     rollupOptions: {
       output: {
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) return 'react-vendor';
-            if (id.includes('lucide-react')) return 'icons';
-            return 'vendor';
-          }
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          utils: ['lucide-react', 'clsx', 'tailwind-merge']
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'sitemap.xml' || assetInfo.name === 'robots.txt') {
