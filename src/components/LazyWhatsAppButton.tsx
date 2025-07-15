@@ -1,3 +1,5 @@
 import { lazy } from 'react';
 
-export const LazyWhatsAppButton = lazy(() => import('./WhatsAppButton'));
+const LazyWhatsAppButton = lazy(() => import('./WhatsAppButton'));
+
+export default LazyWhatsAppButton;

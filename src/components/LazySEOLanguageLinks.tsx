@@ -1,3 +1,5 @@
 import { lazy } from 'react';
 
-export const LazySEOLanguageLinks = lazy(() => import('./SEOLanguageLinks'));
+const LazySEOLanguageLinks = lazy(() => import('./SEOLanguageLinks'));
+
+export default LazySEOLanguageLinks;

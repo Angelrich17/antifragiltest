@@ -2,10 +2,10 @@ import { Play, Shield, TrendingUp, Users, ArrowRight, Star, CheckCircle, Sparkle
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
-import { LazyFooter } from "@/components/LazyFooter";
-import { LazySEOLanguageLinks } from "@/components/LazySEOLanguageLinks";
+import LazyFooter from "@/components/LazyFooter";
+import LazySEOLanguageLinks from "@/components/LazySEOLanguageLinks";
 import { Link } from "react-router-dom";
-import { LazyWhatsAppButton } from "@/components/LazyWhatsAppButton";
+import LazyWhatsAppButton from "@/components/LazyWhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 import LazySection from "@/components/LazySection";

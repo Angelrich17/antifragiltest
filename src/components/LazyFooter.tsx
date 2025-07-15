@@ -1,3 +1,5 @@
 import { lazy } from 'react';
 
-export const LazyFooter = lazy(() => import('./Footer'));
+const LazyFooter = lazy(() => import('./Footer'));
+
+export default LazyFooter;
