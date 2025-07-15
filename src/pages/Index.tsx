@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useLocalizedPath } from "@/hooks/useLocalizedPath";
-import heroImage from "@/assets/hero-image-new.webp";
+// import heroImage from "@/assets/hero-image-new.webp";
 const Index = () => {
   const { t } = useLanguage();
   const { getLocalizedPath } = useLocalizedPath();
@@ -24,14 +24,14 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
-          {/* Hero image with high priority loading */}
+          {/* Optimized hero image with high priority loading */}
           <img 
-            src={heroImage} 
+            src="/lovable-uploads/6419a827-95a6-413f-8e09-90492db601e9.png" 
             alt="Inversión inmobiliaria en Buenos Aires" 
             width="1200" 
-            height="675"
+            height="800"
             fetchPriority="high"
-            className="absolute inset-0 w-full h-full object-cover opacity-10"
+            className="absolute inset-0 w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/5 to-amber-900/5"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/50 to-amber-100/50 rounded-full blur-3xl"></div>
