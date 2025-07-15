@@ -49,6 +49,7 @@ export default defineConfig(({ mode }) => ({
     fs: { strict: false }
   },
   build: {
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         manualChunks: {
