@@ -1,9 +1,6 @@
 import { Play, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import SEOLanguageLinks from "@/components/SEOLanguageLinks";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LazySection from "@/components/LazySection";
 import { lazy } from "react";
@@ -15,6 +12,11 @@ const ProcessSection = lazy(() => import("@/components/sections/ProcessSection")
 const TestimonialsSection = lazy(() => import("@/components/sections/TestimonialsSection"));
 const CTASection = lazy(() => import("@/components/sections/CTASection"));
 
+// Lazy load non-critical components
+const Footer = lazy(() => import("@/components/Footer"));
+const SEOLanguageLinks = lazy(() => import("@/components/SEOLanguageLinks"));
+const WhatsAppButton = lazy(() => import("@/components/WhatsAppButton"));
+
 const Index = () => {
   const { t } = useLanguage();
   
@@ -25,7 +27,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-neutral-100">
-      <SEOLanguageLinks />
+      <LazySection>
+        <SEOLanguageLinks />
+      </LazySection>
       <Header />
       
       {/* Hero Section */}
@@ -135,8 +139,13 @@ const Index = () => {
         <CTASection />
       </LazySection>
 
-      <Footer />
-      <WhatsAppButton />
+      <LazySection>
+        <Footer />
+      </LazySection>
+      
+      <LazySection>
+        <WhatsAppButton />
+      </LazySection>
     </div>
   );
 };
