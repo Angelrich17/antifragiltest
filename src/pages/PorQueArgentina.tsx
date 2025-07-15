@@ -18,10 +18,10 @@ const PorQueArgentina = () => {
         <div className="absolute inset-0">
           {/* Optimized hero image with high priority loading */}
           <img 
-            src="/lovable-uploads/5b87f66c-24d7-4712-8cc5-6a3e65b6e7a6.png" 
-            alt="Por qué invertir en Argentina - Buenos Aires" 
+            src="/lovable-uploads/43f5f859-a049-4a26-8fdd-f1b56ec302cd.png" 
+            alt="Por qué invertir en Argentina - Congreso Nacional Buenos Aires" 
             width="1200" 
-            height="675"
+            height="800"
             fetchPriority="high"
             loading="eager"
             decoding="sync"

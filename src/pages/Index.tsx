@@ -26,8 +26,8 @@ const Index = () => {
         <div className="absolute inset-0">
           {/* Optimized hero image with high priority loading */}
           <img 
-            src="/lovable-uploads/6419a827-95a6-413f-8e09-90492db601e9.png" 
-            alt="Inversión inmobiliaria en Buenos Aires" 
+            src="/lovable-uploads/43f5f859-a049-4a26-8fdd-f1b56ec302cd.png" 
+            alt="Inversión inmobiliaria en Buenos Aires - Congreso Nacional" 
             width="1200" 
             height="800"
             fetchPriority="high"
