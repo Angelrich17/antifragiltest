@@ -46,14 +46,11 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     middlewareMode: false,
-    fs: { strict: false },
-    hmr: { overlay: false }
+    fs: { strict: false }
   },
   build: {
-    minify: 'esbuild',
     rollupOptions: {
       output: {
-        // Removed manualChunks to fix component loading issues
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'sitemap.xml' || assetInfo.name === 'robots.txt') {
             return '[name][extname]';

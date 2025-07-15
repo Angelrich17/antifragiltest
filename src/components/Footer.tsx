@@ -159,4 +159,4 @@ const Footer = () => {
       </div>
     </footer>;
 };
-export default Footer; // Footer component export
+export default Footer;
