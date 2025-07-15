@@ -66,7 +66,8 @@ export default defineConfig(({ mode }) => ({
           'ui': ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-toast']
         }
       }
-    }
+    },
+    assetsInlineLimit: 0 // Don't inline any assets to ensure proper caching
   },
   plugins: [
     staticFilePlugin(),
